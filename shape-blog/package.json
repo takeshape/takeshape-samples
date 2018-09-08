@@ -1,0 +1,38 @@
+{
+  "name": "takeshape-shape-blog",
+  "version": "1.0.0",
+  "description": "Shape Blog - A Sample Project for TakeShape - www.takeshape.io",
+  "author": {
+    "name": "TakeShape",
+    "email": "contact@takeshape.io"
+  },
+  "license": "MIT",
+  "homepage": "https://github.com/takeshape/takeshape-demo",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/takeshape/takeshape-demo.git"
+  },
+  "bugs": {
+    "url": "https://github.com/takeshape/takeshape-demo"
+  },
+  "engines": {
+    "node": ">= 8.10"
+  },
+  "scripts": {
+    "init": "tsg init",
+    "serve": "browser-sync start --server build --port 5000 --files 'build/**/*' --reload-debounce",
+    "build": "tsg build",
+    "deploy": "tsg deploy",
+    "watch:tsg": "tsg watch -W",
+    "watch": "npm-run-all --serial build && npm-run-all --continue-on-error --parallel watch:* serve",
+    "start": "npm run watch"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.24.7",
+    "eslint": "^5.5.0",
+    "npm-run-all": "^3.1.0",
+    "stylelint": "^9.5.0",
+    "stylelint-config-recommended": "^2.1.0",
+    "takeshape-cli": "^4.46.0"
+  }
+}

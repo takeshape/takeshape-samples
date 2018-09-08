@@ -1,0 +1,44 @@
+query {
+  page: getHomepage {
+    title
+    hero {
+      image {
+        path
+      }
+      heading
+      text
+      button {
+        text
+        url
+      }
+    }
+    introduction {
+      image {
+        path
+      }
+      heading
+      text
+    }
+    statBar {
+      value
+      label
+    }
+    featuredPosts {
+      title
+      featureImage {
+        path
+      }
+      author {
+        name
+      }
+    }
+    trapdoor {
+      heading
+      text
+      button {
+        text
+        url
+      }
+    }
+  }
+}

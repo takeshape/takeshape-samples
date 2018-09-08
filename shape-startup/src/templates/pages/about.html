@@ -1,0 +1,51 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <div class="hero hero--text" style="background-image: url('{{ page.hero.image | image }}');">
+    <div class="container">
+      <div class="hero__content">
+        <h1>{{ page.hero.heading }}</h1>
+        <p>{{ page.hero.text }}</p>
+      </div>
+    </div>
+  </div>
+
+  <div class="fact-bar">
+    <div class="container">
+      <ul>
+        {% for fact in page.factBar %}
+          <li>
+            <img src="{{ fact.image | image }}"/>
+
+            <h4>{{ fact.heading }}</h4>
+            <p>{{ fact.text }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  <div class="content">
+    <div class="container">
+      {{ page.bodyHtml | safe }}
+    </div>
+  </div>
+
+  <div class="team">
+    <div class="container">
+      <ul>
+        {% for member in page.team %}
+          <li>
+            <img src="{{ member.image | image }}"/>
+
+            <h4>{{ member.name }}</h4>
+            <p>{{ member.biography }}</p>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  {% include "partials/trapdoor.html" %}
+
+{% endblock %}

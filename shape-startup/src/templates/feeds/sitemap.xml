@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>http://www.takeshapesampleproject.com{{ homepage|route('homepage') }}</loc>
+        <lastmod>{{ homepage._updatedAt }}</lastmod>
+    </url>
+
+    {% for post in posts.items %}
+        <url>
+            <loc>http://www.takeshapesampleproject.com{{ post|route('posts') }}</loc>
+            <lastmod>{{ post._updatedAt }}</lastmod>
+        </url>
+    {% endfor %}
+
+    {% for book in books.items %}
+        <url>
+            <loc>http://www.takeshapesampleproject.com{{ book|route('books') }}</loc>
+            <lastmod>{{ book._updatedAt }}</lastmod>
+        </url>
+    {% endfor %}
+
+    {% for author in authors.items %}
+        <url>
+            <loc>http://www.takeshapesampleproject.com{{ author|route('authors') }}</loc>
+            <lastmod>{{ author._updatedAt }}</lastmod>
+        </url>
+    {% endfor %}
+</urlset>

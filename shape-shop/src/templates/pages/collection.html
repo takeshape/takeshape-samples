@@ -1,0 +1,37 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <header class="header">
+    <div class="container">
+      <h1>{{ collection.title }}</h1>
+    </div>
+  </header>
+
+  <div class="thumb-list thumb-list--two">
+    <div class="container">
+      <ul>
+        {% for product in collection.products %}
+          <li>
+            <a href="{{ product | route('product') }}">
+              <img src="{{ product.image.path | image }}"/>
+
+              <h3>{{ product.name }}</h3>
+
+              <div class="price {% if product.salePrice and product.salePrice > 0 %}price--sale{% endif %}">
+                <span>{{ product.price }}</span>
+
+                {% if product.salePrice and product.salePrice > 0 %}
+                  <span>{{ product.salePrice }}</span>
+                {% endif %}
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="button-container">
+        <a href="/products" class="button">View more products</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

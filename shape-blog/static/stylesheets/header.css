@@ -1,0 +1,19 @@
+/* Page header */
+.page-header {
+  width: 100%;
+  height: 11rem;
+  background-color: #e4f8ee;
+  border-top: 0.4rem solid #442ab9;
+}
+
+.page-header nav {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+
+.page-header svg {
+  height: 6rem;
+  width: 13rem;
+}

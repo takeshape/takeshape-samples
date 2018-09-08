@@ -1,0 +1,38 @@
+templatePath: src/templates
+staticPath: static
+buildPath: build
+
+context:
+  site: data/site.graphql
+
+routes:
+  sitemap:
+    path: /sitemap.xml
+    template: feeds/sitemap.xml
+    context: data/sitemap.graphql
+
+  homepage:
+    path: /
+    template: pages/homepage.html
+    context: data/homepage.graphql
+
+  about:
+    path: /about
+    template: pages/about.html
+    context: data/about.graphql
+
+  contact:
+    path: /contact
+    template: pages/contact.html
+    context: data/contact.graphql
+
+  post:
+    path: /blog/:title/
+    template: pages/posts/individual.html
+    paginate:
+      pageSize: 4
+      path: /blog/page-:num/
+      firstPage: /blog/
+      template: pages/posts/landing.html
+      data: data/posts.graphql
+      itemName: post

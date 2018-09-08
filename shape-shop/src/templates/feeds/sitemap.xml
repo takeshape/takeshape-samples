@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+    <url>
+        <loc>http://www.takeshapesampleproject.com{{ homepage|route('homepage') }}</loc>
+        <lastmod>{{ homepage._updatedAt }}</lastmod>
+    </url>
+
+    {% for category in categories.items %}
+        <url>
+            <loc>http://www.takeshapesampleproject.com{{ category|route('category') }}</loc>
+            <lastmod>{{ category._updatedAt }}</lastmod>
+        </url>
+    {% endfor %}
+
+    {% for collection in collections.items %}
+        <url>
+            <loc>http://www.takeshapesampleproject.com{{ collection|route('collection') }}</loc>
+            <lastmod>{{ collection._updatedAt }}</lastmod>
+        </url>
+    {% endfor %}
+
+    {% for product in products.items %}
+        <url>
+            <loc>http://www.takeshapesampleproject.com{{ product|route('product') }}</loc>
+            <lastmod>{{ product._updatedAt }}</lastmod>
+        </url>
+    {% endfor %}
+</urlset>

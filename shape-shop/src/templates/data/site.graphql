@@ -1,0 +1,11 @@
+query {
+  settings: getSiteSettings {
+    siteTitle
+  }
+  categories: getCategoryList {
+    total
+    items {
+      title
+    }
+  }
+}

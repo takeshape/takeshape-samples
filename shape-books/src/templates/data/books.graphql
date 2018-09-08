@@ -1,0 +1,22 @@
+query {
+  getBookList {
+    total
+    items {
+      _contentTypeName
+      _enabledAt
+      title
+      totalPages
+      type
+      genre {
+        title
+      }
+      author {
+        name
+      }
+      bodyHtml
+      coverImage {
+        path
+      }
+    }
+  }
+}

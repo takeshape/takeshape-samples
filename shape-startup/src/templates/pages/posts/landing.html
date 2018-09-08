@@ -1,0 +1,34 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <header class="header">
+    <h1>Blog</h1>
+  </header>
+
+  <div class="post-list">
+    <div class="container">
+      <ul>
+        {% for post in items %}
+          <li>
+            <a href="{{ post | route('post') }}" class="tout">
+              <div>
+                <img src="{{ post.featureImage | image }}">
+              </div>
+
+              <div class="tout__content">
+                <h3>{{ post.title }}</h3>
+                <p>
+                  <time>{{ post._enabledAt | date("MMMM D, YYYY") }}</time>
+                </p>
+                <p>{{ post.deck }}</p>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+
+  {% include "partials/pagination.html" %}
+
+{% endblock %}

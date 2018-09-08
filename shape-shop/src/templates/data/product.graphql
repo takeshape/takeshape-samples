@@ -1,0 +1,26 @@
+query {
+  getProductList(sort: [{field: "_enabledAt", order: "desc"}]) {
+    total
+    items {
+      _contentTypeName
+      _enabledAt
+      name
+      category {
+        title
+      }
+      image {
+        path
+      }
+      description
+      colors {
+        name
+      }
+      sizes {
+        name
+      }
+      price
+      salePrice
+      soldOut
+    }
+  }
+}

@@ -1,0 +1,63 @@
+{% set paginationString = 'post.paginate' %}
+{% set paginationFirstPage = '/blog' %}
+
+{% set firstPage = 1 %}
+{% set farPreviousPage = pagination.currentPage - 2 %}
+{% set previousPage = pagination.currentPage - 1 %}
+
+{% set nextPage = pagination.currentPage + 1 %}
+{% set farNextPage = pagination.currentPage + 2 %}
+
+{% set fourthLast = pagination.totalPages - 3 %}
+{% set thirdLast = pagination.totalPages - 2 %}
+{% set secondLast = pagination.totalPages - 1 %}
+
+<div class="pagination">
+  <div class="pagination__inner">
+    <ul class="pagination__list">
+      <li><a {% if pagination.currentPage== 1 %}class="is-disabled"
+             {% else %}href="{% if previousPage == 1 %}{{ paginationFirstPage }}{% else %}{{ previousPage | route(paginationString) }}{% endif %}"
+          {% endif %}><</a></li>
+
+      <li><a {% if pagination.currentPage== firstPage %}class="is-current"
+             {% else %}href="{{ paginationFirstPage }}" {% endif %}>1</a>
+      </li>
+
+      {% if pagination.currentPage > 4 %}
+        <li>&hellip;</li>
+      {% endif %}
+
+      {% if pagination.currentPage > 3 %}
+        <li><a href="{{ farPreviousPage | route(paginationString) }}">{{ farPreviousPage }}</a></li>
+      {% endif %}
+
+      {% if pagination.currentPage > 2 %}
+        <li><a href="{{ previousPage | route(paginationString) }}">{{ previousPage }}</a></li>
+      {% endif %}
+
+      {% if pagination.currentPage == firstPage or pagination.currentPage == pagination.totalPages %}{% else %}
+        <li><a class="is-current">{{ pagination.currentPage }}</a></li>
+      {% endif %}
+
+      {% if pagination.currentPage < secondLast %}
+        <li><a href="{{ nextPage | route(paginationString) }}">{{ nextPage }}</a></li>
+      {% endif %}
+
+      {% if pagination.currentPage < thirdLast %}
+        <li><a href="{{ farNextPage | route(paginationString) }}">{{ farNextPage }}</a></li>
+      {% endif %}
+
+      {% if pagination.currentPage < fourthLast %}
+        <li>&hellip;</li>
+      {% endif %}
+
+      <li><a {% if pagination.currentPage== pagination.totalPages %}class="is-current"
+             {% else %}href="{{ pagination.totalPages | route(paginationString) }}" {% endif %}>{{ pagination.totalPages }}</a>
+      </li>
+
+      <li><a {% if pagination.currentPage== pagination.totalPages %}class="is-disabled"
+             {% else %}href="{{ nextPage | route(paginationString) }}" {% endif %}>></a>
+      </li>
+    </ul>
+  </div>
+</div>

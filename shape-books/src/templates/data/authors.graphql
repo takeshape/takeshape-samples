@@ -1,0 +1,22 @@
+query {
+  page: getAuthorList {
+    total
+    items {
+      name
+      photo {
+        path
+      }
+      biography
+      biographyHtml
+      authored {
+        total
+        items {
+          title
+          coverImage {
+            path
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,29 @@
+query {
+  homepage: getHomepage {
+    _updatedAt
+  }
+
+  categories: getCategoryList {
+    total
+    items {
+      title
+      _updatedAt
+    }
+  }
+
+  collections: getCollectionList {
+    total
+    items {
+      title
+      _updatedAt
+    }
+  }
+
+  products: getProductList {
+    total
+    items {
+      name
+      _updatedAt
+    }
+  }
+}

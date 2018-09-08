@@ -1,0 +1,39 @@
+query {
+  page: getHomepage {
+    title
+    hero {
+      image {
+        path
+      }
+      featuredPost {
+        title
+        author {
+          name
+        }
+      }
+    }
+    featuredBook {
+      title
+      author {
+        name
+      }
+      genre {
+        title
+      }
+      coverImage {
+        path
+      }
+    }
+  }
+  posts: getPostList {
+    total
+    items {
+      title
+      _enabledAt
+      deck
+      featureImage {
+        path
+      }
+    }
+  }
+}

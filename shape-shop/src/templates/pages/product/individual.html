@@ -1,0 +1,50 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <div class="product">
+    <div class="container">
+      <div class="product__image">
+        <img src="{{ product.image.path | image }}">
+      </div>
+
+      <div class="product__content">
+        <a class="category" href="{{ product.category | route('category') }}"
+           class="product__category">{{ product.category.title }}</a>
+
+        <h2>{{ product.name }}</h2>
+
+        {% if product.description %}
+          <div class="product__description">{{ product.description | md | safe }}</div>
+        {% endif %}
+
+        <div class="price {% if product.salePrice %}price--sale{% endif %}">
+          <span>{{ product.price }}</span>
+
+          {% if product.salePrice %}
+            <span>{{ product.salePrice }}</span>
+          {% endif %}
+        </div>
+
+        <div class="product__options">
+          {% if product.colors.length > 1 %}
+            <select>
+              {% for color in product.colors %}
+                <option value="{{ color.name | lower }}">{{ color.name | capitalize }}</option>
+              {% endfor %}
+            </select>
+          {% endif %}
+
+          {% if product.sizes.length > 1 %}
+            <select>
+              {% for size in product.sizes %}
+                <option value="{{ size.name | lower }}">{{ size.name }}</option>
+              {% endfor %}
+            </select>
+          {% endif %}
+        </div>
+
+        <a href="#" class="button">Add to Cart</a>
+      </div>
+    </div>
+  </div>
+{% endblock %}

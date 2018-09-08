@@ -1,0 +1,42 @@
+templatePath: src/templates
+staticPath: static
+buildPath: build
+
+context:
+  site: data/site.graphql
+
+routes:
+  sitemap:
+    path: /sitemap.xml
+    template: feeds/sitemap.xml
+    context: data/sitemap.graphql
+
+  homepage:
+    path: /
+    template: pages/homepage.html
+    context: data/homepage.graphql
+
+  product:
+    path: /products/:name/
+    template: pages/product/individual.html
+    paginate:
+      pageSize: 4
+      path: /products/page-:num/
+      firstPage: /products/
+      template: pages/product/landing.html
+      data: data/product.graphql
+      itemName: product
+
+  collection:
+    path: /collections/:title/
+    template: pages/collection.html
+    paginate:
+      data: data/collection.graphql
+      itemName: collection
+
+  category:
+    path: /categories/:title/
+    template: pages/category.html
+    paginate:
+      data: data/category.graphql
+      itemName: category

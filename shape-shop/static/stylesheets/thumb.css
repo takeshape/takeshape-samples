@@ -1,0 +1,43 @@
+/* Thumb lists */
+.thumb-list {
+  margin: 8rem 0;
+}
+
+.thumb-list--dark {
+  background-color: #e4f8ee;
+  padding: 6.4rem 0;
+  margin: 0
+}
+
+.thumb-list ul {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  left: -1.6rem;
+  margin-top: 3.2rem;
+  width: calc(100% + 3.2rem);
+}
+
+.thumb-list li {
+  padding: 0 1.6rem;
+}
+
+.thumb-list--two li {
+  flex: 1 1 50%;
+}
+
+.thumb-list--three li {
+  flex: 1 1 33.3334%;
+}
+
+.thumb-list--two li:nth-child(n+3) {
+  margin-top: 3.2rem;
+}
+
+.thumb-list--three li:nth-child(n+4) {
+  margin-top: 3.2rem;
+}
+
+.thumb-list img {
+  margin-bottom: 1.6rem;
+}

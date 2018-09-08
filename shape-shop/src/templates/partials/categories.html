@@ -1,0 +1,16 @@
+<div class="category-list">
+  <div class="container">
+    <ul>
+      <li>
+        <p>Categories</p>
+      </li>
+
+      {% for siteCategory in site.categories.items %}
+        <li>
+          <a class="category" {% if siteCategory.title === category.title %}class="is-selected"
+             {% else %}href="{{ siteCategory | route('category') }}"{% endif %}>{{ siteCategory.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</div>

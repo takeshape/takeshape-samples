@@ -1,0 +1,21 @@
+query {
+  getPostList(sort: [{field: "_enabledAt", order: "desc"}]) {
+    total
+    items {
+      _contentTypeName
+      _enabledAt
+      title
+      tags {
+        name
+      }
+      deck
+      author {
+        name
+      }
+      featureImage {
+        path
+      }
+      bodyHtml
+    }
+  }
+}

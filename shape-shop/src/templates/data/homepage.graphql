@@ -1,0 +1,35 @@
+query {
+  page: getHomepage {
+    title
+    hero {
+      image {
+        path
+      }
+      featuredProduct {
+        name
+        image {
+          path
+        }
+        price
+        salePrice
+      }
+    }
+    featuredCollections {
+      title
+      image {
+        path
+      }
+    }
+  }
+  sales: getProductList(sort: [{field: "_enabledAt", order: "desc"}], filter:{ bool: { should: {exists: {field: "salePrice"}}}}, size: 4) {
+    total
+    items {
+      name
+      image {
+        path
+      }
+      price
+      salePrice
+    }
+  }
+}

@@ -1,0 +1,51 @@
+/* Individual Books */
+.book {
+  display: flex;
+}
+
+.book-cover {
+  max-width: 20rem;
+  margin-right: 4rem;
+  padding: 8rem 0;
+}
+
+.author-link {
+  background-color: #442ab9;
+  color: #e4f8ee;
+  padding: 1rem 1.3rem;
+  display: inline-block;
+  width: auto;
+  line-height: 1;
+  font-weight: 600;
+  font-size: 2rem;
+  margin: 2.5rem 0 1.4rem;
+}
+
+.meta {
+  text-align: right;
+  position: relative;
+}
+
+.meta:before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  transform: translateY(-50%);
+  width: 100%;
+  height: 4px;
+  border-top: 1px solid #442ab9;
+  border-bottom: 1px solid #442ab9;
+}
+
+.meta p {
+  background-color: #fff;
+  padding: 0 1rem;
+  position: relative;
+  z-index: 1;
+  display: inline-block;
+}
+
+.genre {
+  font-size: 1.8rem;
+}

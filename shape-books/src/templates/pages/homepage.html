@@ -1,0 +1,72 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <section>
+    <div class="hero" style="background-image: url('{{ page.hero.image | image }}');">
+      <div class="container">
+        <div class="feature">
+          <a href="{{ page.hero.featuredPost | route('posts') }}">
+            <p>New Series Release:</p>
+            <h2>{{ page.hero.featuredPost.title }}</h2>
+            <p>by {{ page.hero.featuredPost.author.name }}</p>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <header class="header">
+      <h2>Featured Book</h2>
+    </header>
+
+    <div class="content-block">
+      <div class="container">
+        <div>
+          {% set featuredBook = page.featuredBook %}
+          <h2>{{ featuredBook.title }}</h2>
+          <a class="button" href="{{ featuredBook | route('books') }}">Learn More</a>
+        </div>
+        <div>
+          <img src="{{ featuredBook.coverImage.path | image }}" alt="{{ featuredBook.title }}">
+        </div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <header class="header">
+      <h2>Recent Posts</h2>
+    </header>
+
+    <div class="post-list">
+      <div class="container">
+        <ul>
+          {% for post in posts.items.slice(0, 3) %}
+            <li>
+              <a href="{{ post | route('posts') }}" class="tout">
+                <div>
+                  <img src="{{ post.featureImage | image }}">
+                </div>
+
+                <div class="tout__content">
+                  <h3>{{ post.title }}</h3>
+                  <p>
+                    <time>{{ post._enabledAt | date("MMMM D, YYYY") }}</time>
+                  </p>
+                  <p>{{ post.deck }}</p>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+        <div class="button-container">
+          <a class="button" href="/blog">View all posts</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  {% include "partials/our-books.html" %}
+{% endblock %}

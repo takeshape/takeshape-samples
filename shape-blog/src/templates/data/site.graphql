@@ -1,0 +1,5 @@
+query {
+  settings: getSiteSettings {
+    siteTitle
+  }
+}

@@ -1,0 +1,49 @@
+# http://EditorConfig.org
+
+#################
+# Common Settings
+#################
+
+# This file is the top-most EditorConfig file
+root = true
+
+# All
+[*]
+charset = utf-8
+end_of_line = lf
+indent_style = space
+indent_size = 4
+insert_final_newline = false
+trim_trailing_whitespace = true
+
+#########################
+# File Extension Settings
+#########################
+
+# JSON
+[*.{json,json5}]
+indent_size = 2
+
+# YAML
+[*.{yml,yaml}]
+indent_size = 2
+
+# Markdown
+[*.md]
+trim_trailing_whitespace = false
+
+# Web
+[*.{htm,html,js,ts,tsx,css,scss,less,vue}]
+indent_size = 2
+insert_final_newline = true
+
+# Batch
+[*.{cmd,bat}]
+
+# Bash
+[*.sh]
+end_of_line = lf
+
+# GraphQL
+[*.graphql]
+indent_size = 2

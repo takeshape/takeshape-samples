@@ -1,0 +1,39 @@
+/* Our Books */
+.our-books {
+  background-color: #e4f8ee;
+  padding: 6rem 0;
+  text-align: center;
+}
+
+.our-books ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.our-books li {
+  flex: 0 1 calc(25% - 2rem);
+  margin: 2rem 1rem 0;
+}
+
+.book-tout__image {
+  margin-bottom: 2rem;
+}
+
+.book-tout h3 {
+  font-size: 16px;
+  font-weight: 700;
+  position: relative;
+  margin-bottom: 3.5rem;
+}
+
+.book-tout h3:after {
+  content: "";
+  position: absolute;
+  width: 30%;
+  height: 1px;
+  background-color: #442ab9;
+  bottom: -2rem;
+  left: 50%;
+  transform: translateX(-50%);
+}

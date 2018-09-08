@@ -1,0 +1,30 @@
+query {
+  getCollectionList(sort: [{field: "_enabledAt", order: "desc"}]) {
+    total
+    items {
+      title
+      image {
+        path
+      }
+      products {
+        name
+        category {
+          title
+        }
+        image {
+          path
+        }
+        description
+        colors {
+          name
+        }
+        sizes {
+          name
+        }
+        price
+        salePrice
+        soldOut
+      }
+    }
+  }
+}

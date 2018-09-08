@@ -1,0 +1,74 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <div class="hero" style="background-image: url('{{ page.hero.image | image }}');">
+    <div class="container">
+      {% if page.hero.featuredProduct %}
+        <div class="feature">
+          <a href="{{ page.hero.featuredProduct | route('product') }}">
+            <p>Featured Product</p>
+
+            <img src="{{ page.hero.featuredProduct.image.path | image }}"/>
+
+            <h1>{{ page.hero.featuredProduct.name }}</h1>
+
+            <div class="price {% if page.hero.featuredProduct.salePrice %}price--sale{% endif %}">
+              <span>{{ page.hero.featuredProduct.price }}</span>
+
+              {% if page.hero.featuredProduct.salePrice %}
+                <span>{{ page.hero.featuredProduct.salePrice }}</span>
+              {% endif %}
+            </div>
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+  <div class="thumb-list thumb-list--three thumb-list--dark">
+    <div class="container">
+      <h2 class="heading">Products on Sale</h2>
+
+      <ul>
+        {% for sale in sales.items %}
+          <li>
+            <a href="{{ sale | route('product') }}">
+              <img src="{{ sale.image.path | image }}"/>
+
+              <h3>{{ sale.name }}</h3>
+
+              <div class="price price--sale">
+                <span>{{ sale.price }}</span>
+                <span>{{ sale.salePrice }}</span>
+              </div>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+
+      <div class="button-container">
+        <a href="/products" class="button button--dark">View all products</a>
+      </div>
+    </div>
+  </div>
+
+  {% include "partials/categories.html" %}
+
+  <div class="thumb-list thumb-list--two">
+    <div class="container">
+      <h2 class="heading">Featured Collections</h2>
+
+      <ul>
+        {% for collection in page.featuredCollections %}
+          <li>
+            <a href="{{ collection | route('collection') }}">
+              <img src="{{ collection.image.path | image }}"/>
+
+              <h3>{{ collection.title }}</h3>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

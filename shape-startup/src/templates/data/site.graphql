@@ -1,0 +1,13 @@
+query {
+  settings: getSiteSettings {
+    siteTitle
+  }
+  trapdoor: getTrapdoor {
+    heading
+    text
+    button {
+      text
+      url
+    }
+  }
+}

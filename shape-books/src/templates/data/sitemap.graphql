@@ -1,0 +1,29 @@
+query {
+  homepage: getHomepage {
+    _updatedAt
+  }
+
+  posts: getPostList {
+    total
+    items {
+      title
+      _updatedAt
+    }
+  }
+
+  books: getBookList {
+    total
+    items {
+      title
+      _updatedAt
+    }
+  }
+
+  authors: getAuthorList {
+    total
+    items {
+      name
+      _updatedAt
+    }
+  }
+}

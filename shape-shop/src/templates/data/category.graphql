@@ -1,0 +1,19 @@
+query {
+  getCategoryList {
+    total
+    items {
+      title
+      productSet {
+        total
+        items {
+          name
+          image {
+            path
+          }
+          price
+          salePrice
+        }
+      }
+    }
+  }
+}

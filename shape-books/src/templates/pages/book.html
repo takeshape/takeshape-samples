@@ -1,0 +1,25 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <div class="container">
+    <article class="book">
+      <div class="book-cover">
+        <img src="{{ book.coverImage.path | image }}" alt="{{ book.title }}">
+      </div>
+      <div class="post-content">
+        <header class="post-header">
+          <h1>{{ book.title }}</h1>
+          <a class="author-link" href="{{ book.author | route('authors') }}">{{ book.author.name }}</a>
+          <div class="meta">
+            <p>{{ book.totalPages }} pages || {{ book.type | title }} ||
+              Published {{ book.publishDate | date('MMMM D, YYYY') }}</p>
+          </div>
+          <p class="genre">{{ book.genre.title | upper }}</p>
+        </header>
+        <div class="content">
+          {{ book.bodyHtml | safe }}
+        </div>
+      </div>
+    </article>
+  </div>
+{% endblock %}

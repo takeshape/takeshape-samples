@@ -1,0 +1,27 @@
+query {
+  page: getAbout {
+    title
+    hero {
+      image {
+        path
+      }
+      heading
+      text
+    }
+    factBar {
+      image {
+        path
+      }
+      heading
+      text
+    }
+    bodyHtml
+    team {
+      image {
+        path
+      }
+      name
+      biography
+    }
+  }
+}

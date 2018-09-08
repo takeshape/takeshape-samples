@@ -1,0 +1,21 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <header class="post-header">
+    <div class="container">
+      <div class="post-header__content">
+        <h2>{{ post.title }}</h2>
+        <p><a href="{{ post.author | route('author') }}">By {{ post.author.name }}</a></p>
+        <p><span>{{ post._enabledAt | date("MMMM D, YYYY") }}</span></p>
+        {% if post.tags | length %}<p>
+          Tags: {% for tag in post.tags %}{% if not loop.first %}, {% endif %}{{ tag.name }}{% endfor %}</p>{% endif %}
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="container">
+      {{ post.bodyHtml | safe }}
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,38 @@
+{% extends "layouts/default.html" %}
+
+
+{% block content %}
+  <header class="header">
+    <h1>{{ author.name }}</h1>
+  </header>
+
+  <div class="author">
+    <div class="container">
+      <div class="author__image">
+        <img src="{{ author.photo.path | image }}">
+      </div>
+
+      <div class="content">
+        {{ author.biographyHtml | safe }}
+      </div>
+    </div>
+  </div>
+
+  <div class="our-books">
+    <div class="container">
+      <header>
+        <h2 class="heading">Books by {{ author.name }}</h2>
+      </header>
+      <ul>
+        {% for book in author.authored.items %}
+          <li class="book-tout">
+            <a href="{{ book | route('books') }}">
+              <img class="book-tout__image" src="{{ book.coverImage.path | image }}">
+              <h3>{{ book.title }}</h3>
+            </a>
+          </li>
+        {% endfor %}
+      </ul>
+    </div>
+  </div>
+{% endblock %}

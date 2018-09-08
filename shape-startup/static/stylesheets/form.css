@@ -1,0 +1,32 @@
+/* Form */
+form {
+  max-width: 56rem;
+  margin: 8rem auto;
+}
+
+form > * + * {
+  margin-top: 2.4rem;
+}
+
+input,
+textarea,
+button {
+  appearance: none;
+  border: 0 none;
+}
+
+input,
+textarea {
+  background-color: #f1f1f1;
+  width: 100%;
+  color: #442ab9;
+  font-size: 1.6rem;
+}
+
+input {
+  padding: 1.6rem 3.2rem;
+}
+
+textarea {
+  padding: 3.2rem;
+}

@@ -1,0 +1,21 @@
+query {
+  homepage: getHomepage {
+    _updatedAt
+  }
+
+  about: getAbout {
+    _updatedAt
+  }
+
+  contact: getContact {
+    _updatedAt
+  }
+
+  posts: getPostList {
+    total
+    items {
+      title
+      _updatedAt
+    }
+  }
+}
