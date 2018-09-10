@@ -1,0 +1,116 @@
+{
+  "name": "shape-blog-react",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "autoprefixer": "7.1.6",
+    "case-sensitive-paths-webpack-plugin": "2.1.1",
+    "chalk": "1.1.3",
+    "classnames": "^2.2.6",
+    "date-fns": "^1.29.0",
+    "dotenv": "4.0.0",
+    "dotenv-expand": "4.2.0",
+    "fs-extra": "3.0.1",
+    "jest": "20.0.4",
+    "mini-css-extract-plugin": "^0.4.2",
+    "object-assign": "4.1.1",
+    "path": "^0.12.7",
+    "promise": "8.0.1",
+    "query-string": "^6.1.0",
+    "raf": "3.4.0",
+    "react": "^16.5.0",
+    "react-dom": "^16.5.0",
+    "react-refetch": "^2.0.0",
+    "react-router-dom": "^4.3.1",
+    "resolve": "1.6.0",
+    "takeshape-routing": "^4.51.1",
+    "whatwg-fetch": "2.0.3"
+  },
+  "scripts": {
+    "build": "npm run react:build && npm run tsg:build",
+    "start": "npm run ensure-manifest && npm-run-all --continue-on-error --parallel tsg:watch:tsg react:start",
+    "clean": "npm run tsg:clean && npm run react:clean",
+    "deploy": "npm run clean && npm run react:build && npm run tsg:deploy",
+    "ensure-manifest": "(mkdir -p ./static/build || exit 0) && echo \"{}\" > ./static/build/asset-manifest.json",
+    "react:start": "node config/dev-server.js",
+    "react:build": "cross-env NODE_ENV=production webpack --mode production --config ./config/webpack.config.js",
+    "react:test": "cross-env BABEL_ENV=test NODE_PATH=. ./node_modules/.bin/jest",
+    "react:clean": "rimraf static/build",
+    "tsg:init": "tsg init",
+    "tsg:build": "tsg build",
+    "tsg:deploy": "tsg deploy",
+    "tsg:watch:tsg": "tsg watch -W",
+    "tsg:watch": "npm-run-all --serial tsg:build && npm run tsg:watch:*",
+    "tsg:start": "npm run watch",
+    "tsg:clean": "rimraf public"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.0.1",
+    "@babel/plugin-proposal-class-properties": "^7.0.0",
+    "@babel/plugin-transform-runtime": "^7.0.0",
+    "@babel/preset-env": "^7.0.0",
+    "@babel/preset-react": "^7.0.0",
+    "@babel/register": "^7.0.0",
+    "@babel/runtime": "^7.0.0",
+    "babel-eslint": "^9.0.0",
+    "babel-jest": "^23.4.2",
+    "babel-loader": "^8.0.0",
+    "babel-plugin-dynamic-import-node": "^1.1.0",
+    "cross-env": "^5.2.0",
+    "css-loader": "0.28.7",
+    "eslint": "4.10.0",
+    "eslint-config-react-app": "^2.1.0",
+    "eslint-loader": "1.9.0",
+    "eslint-plugin-flowtype": "2.39.1",
+    "eslint-plugin-import": "2.8.0",
+    "eslint-plugin-jsx-a11y": "5.1.1",
+    "eslint-plugin-react": "7.4.0",
+    "file-loader": "^2.0.0",
+    "json-loader": "^0.5.7",
+    "npm-run-all": "^3.1.0",
+    "postcss-flexbugs-fixes": "3.2.0",
+    "postcss-loader": "2.0.8",
+    "react-hot-loader": "^4.3.7",
+    "style-loader": "^0.23.0",
+    "takeshape-cli": "^4.46.0",
+    "webpack": "^4.18.1",
+    "webpack-cli": "^3.1.0",
+    "webpack-dev-server": "^3.1.8",
+    "webpack-manifest-plugin": "^2.0.4",
+    "yaml-loader": "^0.5.0"
+  },
+  "jest": {
+    "collectCoverageFrom": [
+      "src/**/*.{js,jsx,mjs}"
+    ],
+    "testMatch": [
+      "<rootDir>/src/**/__tests__/**/*.{js,jsx,mjs}",
+      "<rootDir>/src/**/?(*.)(spec|test).{js,jsx,mjs}"
+    ],
+    "testEnvironment": "node",
+    "testURL": "http://localhost",
+    "transform": {
+      "^.+\\.(js|jsx|mjs)$": "<rootDir>/node_modules/babel-jest",
+      "^.+\\.css$": "<rootDir>/config/jest/cssTransform.js",
+      "^(?!.*\\.(js|jsx|mjs|css|json)$)": "<rootDir>/config/jest/fileTransform.js"
+    },
+    "transformIgnorePatterns": [
+      "[/\\\\]node_modules[/\\\\].+\\.(js|jsx|mjs)$"
+    ],
+    "moduleNameMapper": {
+      "^react-native$": "react-native-web"
+    },
+    "moduleFileExtensions": [
+      "web.js",
+      "js",
+      "json",
+      "web.jsx",
+      "jsx",
+      "node",
+      "mjs"
+    ]
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  }
+}

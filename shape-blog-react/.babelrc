@@ -1,0 +1,32 @@
+{
+  "presets": ["@babel/preset-react", ["@babel/preset-env", {
+    "modules": false,
+    "targets": {
+      "browsers": ["last 2 versions"]
+    }
+  }]],
+  "plugins": [
+    "react-hot-loader/babel",
+    [
+      "@babel/plugin-transform-runtime",
+        {
+          "regenerator": true
+        }
+    ],
+    "@babel/plugin-proposal-class-properties"
+  ],
+  "env": {
+    "test": {
+      "sourceMaps": "inline",
+      "presets": ["@babel/preset-react", ["@babel/preset-env", {
+        "targets": {
+          "node": "8.10"
+        }
+      }]],
+      "plugins": [
+        "babel-plugin-dynamic-import-node",
+        "@babel/plugin-proposal-class-properties"
+      ]
+    }
+  }
+}

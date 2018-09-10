@@ -1,0 +1,4 @@
+{
+  "items": {{ items | dump | safe }},
+  "totalPages": {{ pagination.totalPages }}
+}

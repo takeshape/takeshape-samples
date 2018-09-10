@@ -1,0 +1,17 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+<h1>All Posts</h1>
+<ul>
+  {% for post in items %}
+  <li>
+    <a href="{{ post | route('post') }}">
+      <img src="{{ post.featureImage | image({w: 35, h: 35}) }}">
+      <h3>{{ post.title }}</h3>
+      <time>{{ post._enabledAt | date("MMMM D, YYYY") }}</time>
+      <p>{{ post.deck }}</p>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

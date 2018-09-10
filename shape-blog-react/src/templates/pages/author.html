@@ -1,0 +1,9 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+<h1>{{ author.name }}</h1>
+<img src="{{ author.photo.path | image({w: 35, h: 35}) }}">
+<div>
+  {{ author.biographyHtml | safe }}
+</div>
+{% endblock %}
