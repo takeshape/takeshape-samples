@@ -9,6 +9,7 @@ A collection of sample project templates to go along with sample projects availa
 - [Shape Startup](https://shape-startup.takeshapesampleproject.com)
 
 #### Quickstart for each project
+- Blank Project `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/blank-project`
 - Shape Blog `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-blog`
 - Shape Books `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-books`
 - Shape Shop `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-shop`
