@@ -3,6 +3,7 @@
 A collection of sample project templates to go along with sample projects available on [TakeShape](https://www.takeshape.io). Each sample project is within it's own directory.
 
 #### Demos for each template
+- [Blank Project](https://blank-project.takeshapesampleproject.com)
 - [Shape Blog](https://shape-blog.takeshapesampleproject.com)
 - [Shape Books](https://shape-books.takeshapesampleproject.com)
 - [Shape Shop](https://shape-shop.takeshapesampleproject.com)
