@@ -1,0 +1,55 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <div class="hero" style="background-image: url('{{ page.hero.image | image }}');">
+    <div class="container">
+      {% if page.hero.featuredPost %}
+        <div class="feature">
+          <a href="{{ page.hero.featuredPost | route('post') }}">
+            <p>Featured Post</p>
+
+            <h2>{{ page.hero.featuredPost.title }}</h2>
+            <p>by {{ page.hero.featuredPost.author.name }}</p>
+          </a>
+        </div>
+      {% endif %}
+    </div>
+  </div>
+
+
+
+  <section>
+    <header class="header">
+      <h2>Recent Posts</h2>
+    </header>
+
+    <div class="post-list">
+      <div class="container">
+        <ul>
+          {% for post in posts.items.slice(0, 3) %}
+            <li>
+              <a href="{{ post | route('post') }}" class="tout">
+                <div>
+                  <img src="{{ post.featureImage | image }}">
+                </div>
+
+                <div class="tout__content">
+                  <h3>{{ post.title }}</h3>
+                  <p>
+                    <time>{{ post._enabledAt | date("MMMM D, YYYY") }}</time>
+                  </p>
+                  <p>{{ post.deck }}</p>
+                </div>
+              </a>
+            </li>
+          {% endfor %}
+        </ul>
+
+        <div class="button-container">
+          <a class="button" href="/blog">View all posts</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+{% endblock %}

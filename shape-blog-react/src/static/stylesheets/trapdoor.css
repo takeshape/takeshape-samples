@@ -1,0 +1,15 @@
+/* Trapdoor */
+.trapdoor {
+  background-color: #442ab9;
+  color: #fff;
+  padding: 6.4rem 0;
+  text-align: center;
+}
+
+.trapdoor h1 {
+  margin-bottom: 3.2rem;
+}
+
+.trapdoor .button {
+  margin-top: 3.2rem;
+}

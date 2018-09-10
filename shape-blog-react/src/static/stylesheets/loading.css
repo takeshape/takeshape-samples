@@ -1,0 +1,59 @@
+body, #app {
+    background-color: rgb(241, 242, 244);
+}
+
+@keyframes circular-indeterminate-bar-rotate {
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes circular-indeterminate-bar-dash {
+    0% {
+        stroke-dasharray: 1.25, 250;
+        stroke-dashoffset: 0;
+    }
+
+    50% {
+        stroke-dasharray: 111.25, 250;
+        stroke-dashoffset: -43.75;
+    }
+
+    100% {
+        stroke-dasharray: 111.25, 250;
+        stroke-dashoffset: -155;
+    }
+}
+
+.loading-static {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate3d(-50%, -50%, 0);
+}
+
+.circular-static {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 60px;
+    transform: rotate(-90deg);
+}
+
+.circular-static .circle {
+    animation: circular-indeterminate-bar-rotate 2s linear infinite;
+    width: 100%;
+    height: 100%;
+}
+
+.circular-static .path {
+    animation: circular-indeterminate-bar-dash 1.5s ease-in-out infinite;
+    transition: stroke-dasharray 0.35s cubic-bezier(0.4, 0, 0.2, 1);
+    fill: none;
+    stroke-dasharray: 1.25, 250;
+    stroke-dashoffset: 0;
+    stroke-linecap: round;
+    stroke-miterlimit: 20;
+    stroke-width: 4;
+    stroke: rgb(63,81,181);
+}

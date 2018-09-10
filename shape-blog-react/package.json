@@ -8,9 +8,21 @@
     "react-scripts": "1.1.5"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "build": "tsg build && yarn run react:build",
+    "start": "yarn run tsg:build && npm-run-all --continue-on-error --parallel tsg:watch:tsg react:start",
+    "react:start": "react-scripts start",
+    "react:build": "react-scripts build",
+    "react:test": "react-scripts test --env=jsdom",
+    "react:eject": "react-scripts eject",
+    "tsg:init": "tsg init",
+    "tsg:build": "tsg build",
+    "tsg:deploy": "tsg deploy",
+    "tsg:watch:tsg": "tsg watch -W",
+    "tsg:watch": "npm-run-all --serial tsg:build && yarn run tsg:watch:*",
+    "tsg:start": "npm run watch"
+  },
+  "devDependencies": {
+    "takeshape-cli": "^4.46.0",
+    "npm-run-all": "^3.1.0"
   }
 }

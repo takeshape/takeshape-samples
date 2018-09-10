@@ -1,0 +1,19 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <header class="header">
+    <h1>{{ author.name }}</h1>
+  </header>
+
+  <div class="author">
+    <div class="container">
+      <div class="author__image">
+        <img src="{{ author.photo.path | image }}">
+      </div>
+
+      <div class="content">
+        {{ author.biographyHtml | safe }}
+      </div>
+    </div>
+  </div>
+{% endblock %}
