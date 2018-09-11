@@ -1,8 +1,0 @@
-/* Post List */
-.post-list {
-  margin: 8rem 0;
-}
-
-.post-list li + li {
-  margin-top: 6rem;
-}

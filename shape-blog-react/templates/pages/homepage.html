@@ -1,0 +1,24 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+{% if page.hero.featuredPost %}
+<a href="{{ page.hero.featuredPost | route('post') }}">
+  <p>Featured Post</p>
+  <h2>{{ page.hero.featuredPost.title }}</h2>
+  <p>by {{ page.hero.featuredPost.author.name }}</p>
+</a>
+{% endif %}
+<h2>Recent Posts</h2>
+<ul>
+  {% for post in posts.items.slice(0, 3) %}
+  <li>
+    <a href="{{ post | route('post') }}">
+      <img src="{{ post.featureImage | image({w: 35, h: 35}) }}">
+      <h3>{{ post.title }}</h3>
+      <time>{{ post._enabledAt | date("MMMM D, YYYY") }}</time>
+      <p>{{ post.deck }}</p>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

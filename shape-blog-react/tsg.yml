@@ -1,8 +1,9 @@
-templatePath: src/templates
-staticPath: src/static
+templatePath: templates
+staticPath: static
 buildPath: public
 
 context:
+  assets: ../static/build/asset-manifest.json
   site: data/site.graphql
 
 routes:
@@ -10,12 +11,10 @@ routes:
     path: /sitemap.xml
     template: feeds/sitemap.xml
     context: data/sitemap.graphql
-
   homepage:
     path: /
     template: pages/homepage.html
     context: data/homepage.graphql
-
   post:
     path: /blog/:title/
     template: pages/posts/individual.html
@@ -26,10 +25,28 @@ routes:
       template: pages/posts/landing.html
       data: data/posts.graphql
       itemName: post
-
   author:
     path: /authors/:name/
     template: pages/author.html
     paginate:
       data: data/authors.graphql
       itemName: author
+
+  # Static Api Endpoints
+  homepageJson:
+    path: /data.json
+    template: static-api/homepage.json
+    context: data/homepage.graphql
+  postJson:
+    path: /blog/:title/data.json
+    template: static-api/individual.json
+    paginate:
+      pageSize: 4
+      path: /blog/page-:num/data.json
+      template: static-api/list.json
+      data: data/posts.graphql
+  authorJson:
+    path: /authors/:name/data.json
+    template: static-api/individual.json
+    paginate:
+      data: data/authors.graphql

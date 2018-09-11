@@ -1,0 +1,17 @@
+.author {
+  margin: 8rem 0;
+}
+
+.container {
+  composes: container from '../base.css';
+  display: flex;
+}
+
+.image {
+  width: 20rem;
+  height: 20rem;
+  flex: 0 0 20rem;
+  border-radius: 10rem;
+  overflow: hidden;
+  margin-right: 7.2rem;
+}
