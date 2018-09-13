@@ -1,4 +1,5 @@
-import React, {Component, Fragment} from 'react';
+import React, {Component} from 'react';
+import {hot} from 'react-hot-loader';
 import {BrowserRouter as Router, Route, Switch} from 'react-router-dom';
 import Header from './header';
 import Footer from './footer';
@@ -8,13 +9,13 @@ import Post from './post';
 import Author from './author';
 import theme from './base.css';
 
-export default class App extends Component {
+class App extends Component {
   render() {
     return (
       <Router>
-        <Fragment>
-          <div className={theme.page}>
-            <Header/>
+        <div className={theme.page}>
+          <Header/>
+          <div className={theme.main}>
             <Switch>
               <Route exact path={'/'} component={Homepage}/>
               <Route exact path={'/blog'} component={AllPosts}/>
@@ -23,8 +24,10 @@ export default class App extends Component {
             </Switch>
           </div>
           <Footer/>
-        </Fragment>
+        </div>
       </Router>
     );
   }
 }
+
+export default hot(module)(App);
