@@ -5,7 +5,6 @@ const CaseSensitivePathsPlugin = require('case-sensitive-paths-webpack-plugin');
 const ManifestPlugin = require('webpack-manifest-plugin');
 const webpack = require('webpack');
 const devMode = process.env.NODE_ENV !== 'production';
-const packageJson = require('../package.json');
 const autoprefixer = require('autoprefixer');
 
 const hotloader = [
@@ -13,7 +12,7 @@ const hotloader = [
   'webpack/hot/only-dev-server'
 ];
 
-const app = [path.resolve(__dirname, '../static/index.js')];
+const app = [path.resolve(__dirname, '../src/index.js')];
 
 function getFilename(name, ext) {
   return devMode ? `${name}.${ext}` : `${name}.[chunkhash].${ext}`;
@@ -69,12 +68,9 @@ module.exports = {
       '.jpeg', '.jpg', '.gif', '.png', '.svg', '.woff', '.ttf', '.wav', '.mp3'
     ],
     modules: [
-      path.resolve(__dirname),
+      path.resolve(__dirname, '../src'),
       'node_modules'
-    ],
-    alias: {
-      // net: path.join(__dirname, 'net.js'),
-    }
+    ]
   },
   plugins,
   module: {
@@ -83,7 +79,7 @@ module.exports = {
         test: /\.jsx?$/,
         loader: 'babel-loader',
         sideEffects: false,
-        include: path.join(__dirname, '../static')
+        include: path.join(__dirname, '../src')
       },
       {
         test: /\.s?css$/,
@@ -116,6 +112,10 @@ module.exports = {
             },
           },
         ]
+      },
+      {
+        test: /\.ya?ml$/,
+        use: ['json-loader', 'yaml-loader']
       },
       {
         test: /\.jpe?g$|\.gif$|\.png$|\.svg$|\.woff$|\.ttf$|\.wav$|\.mp3$/,

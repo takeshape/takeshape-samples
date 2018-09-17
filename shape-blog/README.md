@@ -49,7 +49,7 @@ templatePath: src/templates   #Sets the path to look for templates
 staticPath: static            #TS deploys this directory. All of your JS, CSS need to end up here. Files like robots.txt, humans.txt and other files that do not need processing should live here.
 buildPath: build              #Temporary build directory
  
- locale: en-us #defaut
+ locale: en-us #default
  dates:
    tz: America/New_York #default
    format: LLL #default
