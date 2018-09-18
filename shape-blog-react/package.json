@@ -27,10 +27,10 @@
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {
-    "build": "yarn run react:build && yarn run tsg:build",
-    "start": "yarn run ensure-manifest && npm-run-all --continue-on-error --parallel tsg:watch:tsg react:start",
-    "clean": "yarn run tsg:clean && yarn run react:clean",
-    "deploy": "yarn run clean && yarn run build && yarn run tsg:deploy",
+    "build": "npm run react:build && npm run tsg:build",
+    "start": "npm run ensure-manifest && npm-run-all --continue-on-error --parallel tsg:watch:tsg react:start",
+    "clean": "npm run tsg:clean && npm run react:clean",
+    "deploy": "npm run clean && npm run react:build && npm run tsg:deploy",
     "ensure-manifest": "(mkdir -p ./static/build || exit 0) && echo \"{}\" > ./static/build/asset-manifest.json",
     "react:start": "node config/dev-server.js",
     "react:build": "cross-env NODE_ENV=production webpack --mode production --config ./config/webpack.config.js",
@@ -40,7 +40,7 @@
     "tsg:build": "tsg build",
     "tsg:deploy": "tsg deploy",
     "tsg:watch:tsg": "tsg watch -W",
-    "tsg:watch": "npm-run-all --serial tsg:build && yarn run tsg:watch:*",
+    "tsg:watch": "npm-run-all --serial tsg:build && npm run tsg:watch:*",
     "tsg:start": "npm run watch",
     "tsg:clean": "rimraf public"
   },
