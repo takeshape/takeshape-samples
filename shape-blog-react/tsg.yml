@@ -1,9 +1,9 @@
-templatePath: templates
+templatePath: src/templates
 staticPath: static
 buildPath: public
 
 context:
-  assets: ../static/build/asset-manifest.json
+  assets: ../../static/build/asset-manifest.json
   site: data/site.graphql
 
 routes:

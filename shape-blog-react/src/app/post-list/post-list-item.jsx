@@ -1,8 +1,9 @@
 import React, {Component} from 'react';
 import {Link} from 'react-router-dom';
+import {getImageUrl} from 'takeshape-routing';
 import format from 'date-fns/format';
+import route from '../utils/route';
 import theme from './post-list-item.css';
-import {getImageUrl, getPostPath} from '../utils';
 
 export default class PostListItem extends Component {
   render() {
@@ -15,7 +16,7 @@ export default class PostListItem extends Component {
 
     return (
       <li>
-        <Link to={getPostPath({title})} className={theme.tout}>
+        <Link to={route('post', {title})} className={theme.tout}>
           <div>
             {featureImage &&
             <img src={getImageUrl(featureImage.path, {w: 350})} alt={''}/>

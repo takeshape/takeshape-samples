@@ -3,7 +3,7 @@ import {Link} from 'react-router-dom';
 import format from 'date-fns/format';
 import baseTheme from '../base.css';
 import theme from './post.css';
-import {getAuthorPath} from '../utils';
+import route from '../utils/route';
 import HtmlContent from '../content';
 
 export default class Post extends Component {
@@ -22,7 +22,7 @@ export default class Post extends Component {
           <div className={baseTheme.container}>
             <div className={theme.postHeaderContent}>
               <h2>{title}</h2>
-              <p><Link to={getAuthorPath(author)}>By {author.name}</Link></p>
+              <p><Link to={route('author', author)}>By {author.name}</Link></p>
               <p>{format(_enabledAt, 'MMMM D, YYYY')}</p>
               {tags.length &&
                 <p>Tags: {tags.map(t => t.name).join(', ')}</p>

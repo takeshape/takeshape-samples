@@ -1,9 +1,10 @@
 import React, {Fragment, Component} from 'react';
 import {Link} from 'react-router-dom';
+import {getImageUrl} from 'takeshape-routing';
 import cx from 'classnames';
 import baseTheme from '../base.css';
 import theme from './homepage.css';
-import {getImageUrl, getPostPath} from '../utils';
+import route from '../utils/route';
 import PostList from '../post-list';
 
 export default class Homepage extends Component {
@@ -21,7 +22,7 @@ export default class Homepage extends Component {
           <div className={cx(theme.heroContainer, baseTheme.container)}>
             {hero.featuredPost &&
             <div className={theme.feature}>
-              <Link to={getPostPath(hero.featuredPost)}>
+              <Link to={route('post', hero.featuredPost)}>
                 <p>Featured Post</p>
 
                 <h2>{hero.featuredPost.title}</h2>

@@ -12,7 +12,6 @@
     "dotenv-expand": "4.2.0",
     "fs-extra": "3.0.1",
     "jest": "20.0.4",
-    "lodash": "^4.17.10",
     "mini-css-extract-plugin": "^0.4.2",
     "object-assign": "4.1.1",
     "path": "^0.12.7",
@@ -24,6 +23,7 @@
     "react-refetch": "^2.0.0",
     "react-router-dom": "^4.3.1",
     "resolve": "1.6.0",
+    "takeshape-routing": "^4.51.1",
     "whatwg-fetch": "2.0.3"
   },
   "scripts": {

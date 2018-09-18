@@ -1,9 +1,9 @@
 import React, {Fragment, Component} from 'react';
 import cx from 'classnames';
+import {getImageUrl} from 'takeshape-routing';
 import baseTheme from '../base.css';
 import theme from './author.css';
 import HtmlContent from '../content';
-import {getImageUrl} from '../utils';
 
 export default class Author extends Component {
   render() {
