@@ -8,6 +8,6 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 #### Added
 - Add humans.txt
 
-## [1.0.0] - 2018-09-04
+## [1.0.0] - 2018-09-10
 #### Added
 - Create Project
