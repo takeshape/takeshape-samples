@@ -1,0 +1,15 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+<ul>
+  {% for project in menu.projects.items %}
+  <li>
+    <a href="{{project|route('project')}}" title="{{project.name}}">
+      <img src="{{project.coverImage.path|image({h: 300, w: 100})}}">
+      <p>{{project.name}}</p>
+      <p>{{project.startDate|date('YYYY')}}{% if not project.endDate and project.startDate|date('YYYY') !== project.endDate|date('YYYY') %} – {% if project.endDate %}{{project.endDate|date('YYYY')}}{% else %}Present{% endif %}{% endif %}</p>
+    </a>
+  </li>
+  {% endfor %}
+</ul>
+{% endblock %}

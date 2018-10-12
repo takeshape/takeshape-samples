@@ -1,0 +1,21 @@
+query {
+  projects: getProjectList {
+    items {
+      name
+      startDate
+      endDate
+      coverImage {
+        path
+      }
+    }
+  }
+  about: getAbout {
+    socialProfiles {
+      profileUrl
+      socialNetwork
+      socialNetworkIcon {
+        path
+      }
+    }
+  }
+}

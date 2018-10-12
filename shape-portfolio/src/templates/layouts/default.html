@@ -1,0 +1,16 @@
+<!doctype html>
+
+<html>
+{% include 'partials/head.html' %}
+
+<body>
+
+{% include 'partials/menu.html' %}
+
+<div class="main">
+  {% block content %}{% endblock %}
+</div>
+
+<script src="/javascripts/main.js"></script>
+</body>
+</html>
