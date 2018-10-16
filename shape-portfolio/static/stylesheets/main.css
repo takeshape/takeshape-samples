@@ -1,0 +1,145 @@
+body {
+  margin: 0;
+  font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  background: #fafafa;
+  color: #1d1d1d;
+}
+
+.container {
+  max-width: 100%;
+  margin: 2em;
+  display: grid;
+  grid-template-columns: 16em 1fr;
+  grid-gap: 1.5em;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+a:hover {
+  color: #1d1d1d;
+}
+
+ul.nostyle {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.inline li {
+  display: inline-block;
+  margin: 0.25em;
+}
+
+ul li {
+  margin-bottom: 1em;
+}
+
+.menu hr {
+  border: none;
+  border-bottom: 1px dotted #999;
+  margin: 2em 0;
+}
+
+.menu .site-name {
+  font-size: 1.125em;
+  color: #1d1d1d;
+}
+
+.menu .site-name a {
+  color: #1d1d1d;
+}
+
+.social-profile {
+  font-size: .875em;
+  margin: 1em 0;
+}
+
+.social-network-icon {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: .6;
+}
+
+a:hover .social-network-icon {
+  opacity: 1;
+}
+
+.social-network-name {
+  display: none;
+  vertical-align: middle;
+}
+
+.project header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid #999;
+  margin-bottom: 2em;
+}
+
+.project header h1 {
+  font-size: 2em;
+  margin: 1.5rem 0;
+}
+
+.project__thumbnail {
+  margin-bottom: 0;
+}
+
+.project.project--entry {
+  display: inline-flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-right: 1.5em;
+  max-width: 24em;
+}
+
+.project.project--entry img {
+  width: 100%;
+  margin-bottom: .5em;
+}
+
+.project.project--entry .project__name {
+  color: #1d1d1d;
+}
+
+.project.project--entry p {
+  margin: 0;
+  display: inline-block;
+}
+
+.project__metadata {
+  display: flex;
+  font-family: "Menlo", monospace;
+}
+
+.project__metadata > * {
+  margin: 0.25em;
+}
+
+.project__metadata > *::after {
+  content: '/';
+  color: #999;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+.project__metadata > *:last-child::after {
+  content: none;
+}
+
+.project__cover-image {
+  max-width: 100%;
+  display: block;
+}
+
+.project__description {
+  font-size: 1.125em;
+  line-height: 1.6;
+}

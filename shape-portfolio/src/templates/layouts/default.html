@@ -5,10 +5,11 @@
 
 <body>
 
-{% include 'partials/menu.html' %}
-
-<div class="main">
-  {% block content %}{% endblock %}
+<div class="container">
+  {% include 'partials/menu.html' %}
+  <div class="main">
+    {% block content %}{% endblock %}
+  </div>
 </div>
 
 <script src="/javascripts/main.js"></script>
