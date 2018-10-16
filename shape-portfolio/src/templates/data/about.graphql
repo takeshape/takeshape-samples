@@ -1,5 +1,5 @@
 query {
-  getAbout {
+  about: getAbout {
     biography: biographyHtml
     portrait {
       title
