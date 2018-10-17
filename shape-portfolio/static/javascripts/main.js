@@ -43,31 +43,6 @@ Barba.Pjax.getTransition = function () {
   return FadePageTransition
 }
 
-/*
-Barba.Dispatcher.on('newPageReady', function (e) {
-  var nav = document.getElementById('nav'),
-  anchor = nav.getElementsByTagName('a'),
-  current = window.location.pathname.split('/') [1];
-  for (var i = 0; i < anchor.length; i++) {
-    anchor[i].className = '';
-  }
-  for (var i = 0; i < anchor.length; i++) {
-    var eval = anchor[i].href.split('/') [3];
-    if (eval == current) {
-      anchor[i].className = 'active';
-    }
-  }
-  lazysizes: (function () {
-    window.lazySizesConfig = window.lazySizesConfig || {
-    };
-    return function () {
-      window.lazySizesConfig.expand = 400;
-      window.lazySizes.init();
-    };
-  })
-})
-*/
-
 Barba.Prefetch.init();
 
 document.addEventListener('DOMContentLoaded', function (e) {
