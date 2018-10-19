@@ -1,5 +1,5 @@
 query {
-  getProjectList {
+  projects: getProjectList {
     total
     items {
       name

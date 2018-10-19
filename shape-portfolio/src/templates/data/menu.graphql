@@ -2,11 +2,6 @@ query {
   projects: getProjectList {
     items {
       name
-      startDate
-      endDate
-      coverImage {
-        path
-      }
     }
   }
   about: getAbout {

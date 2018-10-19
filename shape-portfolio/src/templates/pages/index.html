@@ -2,7 +2,7 @@
 
 {% block content %}
 <ul class="nostyle project-list">
-  {% for project in menu.projects.items %}
+  {% for project in projects.items %}
   <li>
     <a class="project project-list--entry" href="{{project|route('project')}}" title="{{project.name}}">
       <img class="project__thumbnail" src="{{project.coverImage.path|image({h: 200, w: 300, fit: 'crop'})}}">
