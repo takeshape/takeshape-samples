@@ -74,6 +74,29 @@ body::after {
   color: #666;
 }
 
+@media (max-width: 36em) {
+  body {
+    font-size: .875em;
+  }
+  .container {
+    display: block;
+  }
+  .menu {
+    position: relative;
+    padding: 0 1em;
+    margin-bottom: 2em;
+    font-size: 1.125em;
+  }
+  .main {
+    border-top: 1px solid #999;
+    padding: 1em;
+  }
+  .footer {
+    position: relative;
+    padding: 1em;
+  }
+}
+
 .footer p {
   display: inline-block;
 }

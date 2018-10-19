@@ -5,10 +5,12 @@
 
 <body>
 
-<div class="container" id="barba-wrapper">
+<div class="container">
   {% include 'partials/menu.html' %}
-  <div class="main barba-container">
+  <div class="main" id="barba-wrapper">
+    <div class="barba-container">
     {% block content %}{% endblock %}
+    </div>
   </div>
   <footer class="footer">
     <p>© 2018 <a href="https://takeshape.io">TakeShape Inc.</a></p>
