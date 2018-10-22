@@ -1,0 +1,8 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <article class="about">
+    <img class="about__portrait" src="{{ about.portrait.path|image({w: 150, h: 150, fit: 'crop'}) }}">
+    <div class="about__biography">{{ about.biography|safe }}</div>
+  </article>
+{% endblock %}

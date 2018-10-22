@@ -1,0 +1,21 @@
+query {
+  projects: getProjectList {
+    total
+    items {
+      name
+      startDate
+      endDate
+      coverImage {
+        path
+      }
+      description: descriptionHtml
+      client {
+        name
+        url
+        logo {
+          path
+        }
+      }
+    }
+  }
+}

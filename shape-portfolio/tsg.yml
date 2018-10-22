@@ -1,0 +1,24 @@
+templatePath: src/templates
+staticPath: static
+buildPath: build
+
+context:
+  menu: data/menu.graphql
+
+routes:
+  homepage:
+    path: /
+    template: pages/index.html
+    context: data/projects.graphql
+
+  about:
+    path: /about
+    template: pages/about.html
+    context: data/about.graphql
+  
+  project:
+    path: /projects/:name/
+    template: pages/project.html
+    paginate:
+      data: data/projects.graphql
+      itemName: project

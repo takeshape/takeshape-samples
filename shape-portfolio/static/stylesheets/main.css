@@ -1,0 +1,247 @@
+/* Colors
+//
+// Black:   #1d1d1d
+// White:   #fafafa
+// Purple:  #442ab9
+*/
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: 'Work Sans', Helvetica, sans-serif;
+  line-height: 1.4;
+  background: #fafafa;
+  color: #1d1d1d;
+  border-left: 1em solid #442ab9;
+  border-right: 1em solid #442ab9;
+}
+
+/* These are all to give our portfolio a fancy border */
+
+body::before, body::after {
+  content: "";
+  height: 1em;
+  width: 100%;
+  position: fixed;
+  z-index: 1;
+}
+
+body::before {
+  top: 0;
+  border-top: 1em solid #442ab9;
+}
+
+body::after {
+  bottom: 0;
+  border-bottom: 1em solid #442ab9;
+}
+
+/* This lays out our portfolio using the lovely new CSS Grid syntax */
+
+.container {
+  max-width: 66em;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 16em 1fr;
+}
+
+.menu {
+  grid-column: 1/2;
+  grid-row: 1/2;
+  padding: 2em;
+  position: sticky;
+  top: 0;
+  border-top: 1em solid #442ab9;
+  margin-bottom: 3em;
+}
+
+.main {
+  grid-column: 2/3;
+  grid-row: 1/3;
+  padding: 3em 2em 2em;
+}
+
+.footer {
+  padding: 2em;
+  position: fixed;
+  z-index: 1;
+  bottom: 0;
+  font-size: 0.875em;
+  color: #666;
+}
+
+@media (max-width: 36em) {
+  body {
+    font-size: .875em;
+  }
+
+  .container {
+    display: block;
+  }
+
+  .menu {
+    position: relative;
+    padding: 0 1em;
+    margin-bottom: 2em;
+    font-size: 1.125em;
+  }
+
+  .main {
+    border-top: 1px solid #999;
+    padding: 1em;
+  }
+
+  .footer {
+    position: relative;
+    padding: 1em;
+  }
+}
+
+.footer p {
+  display: inline-block;
+}
+
+a {
+  color: #666;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #442ab9;
+}
+
+ul.nostyle {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul.inline li {
+  display: inline-block;
+  margin: 0.25em;
+}
+
+ul li {
+  margin-bottom: 1em;
+}
+
+.menu hr {
+  border: none;
+  border-bottom: 1px dotted #999;
+  margin: 2em 0;
+}
+
+.menu .site-name {
+  font-size: 1.125em;
+  text-transform: uppercase;
+}
+
+.menu .site-name a {
+  color: #442ab9;
+}
+
+.social-profile {
+  font-size: .875em;
+  margin: 1em 0;
+}
+
+.social-network-icon {
+  width: 1.5em;
+  height: 1.5em;
+  display: inline-block;
+  vertical-align: middle;
+  opacity: .6;
+}
+
+a:hover .social-network-icon {
+  opacity: 1;
+}
+
+.social-network-name {
+  display: none;
+  vertical-align: middle;
+}
+
+/* Styles for Project pages and list entries */
+
+.project header {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: baseline;
+  justify-content: space-between;
+  border-bottom: 1px solid #999;
+  margin-bottom: 2em;
+}
+
+.project header h1 {
+  font-size: 2em;
+  margin: 1.5rem 0;
+}
+
+.project__thumbnail {
+  margin-bottom: 0;
+}
+
+.project-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
+  grid-gap: 1em;
+
+}
+
+.project.project-list--entry .project__name {
+  color: #1d1d1d;
+}
+
+.project.project-list--entry:hover .project__name {
+  color: #442ab9;
+}
+
+.project.project-list--entry img {
+  width: 100%;
+  margin-bottom: .5em;
+}
+
+.project.project-list--entry p {
+  margin: 0;
+  display: inline-block;
+}
+
+.project__metadata {
+  display: flex;
+  font-family: monospace, sans-serif;
+}
+
+.project__metadata > * {
+  margin: 0.25em;
+}
+
+.project__metadata > *::after {
+  content: '/';
+  color: #999;
+  display: inline-block;
+  margin-left: 0.5em;
+}
+
+.project__metadata > *:last-child::after {
+  content: none;
+}
+
+.project__cover-image {
+  max-width: 100%;
+  display: block;
+}
+
+.project__description, .about__biography {
+  font-size: 1.125em;
+  line-height: 1.6;
+}
+
+.about__portrait {
+  float: left;
+  margin: 0 2em 1em 0;
+  border-radius: 9999px;
+}

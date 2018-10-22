@@ -1,0 +1,22 @@
+<nav class="menu">
+  <div class="menu__container">
+    <p class="site-name"><a href="{{ ''|route('homepage') }}"><strong>Shape Portfolio</strong></a></p>
+    <ul class="nostyle">
+      {% for project in menu.projects.items %}
+        <li><a href="{{ project|route('project') }}">{{ project.name }}</a></li>
+      {% endfor %}
+    </ul>
+    <hr>
+    <a href="{{ ''|route('about') }}">About</a>
+    <ul class="nostyle inline">
+      {% for profile in menu.about.socialProfiles %}
+        <li class="social-profile">
+          <a href="{{ profile.profileUrl }}" class="no-barba" target="_blank" rel="nofollow">
+            <img class="social-network-icon" src="{{ profile.socialNetworkIcon.path|image({w: 48, h: 48}) }}">
+            <span class="social-network-name">{{ profile.socialNetwork }}</span>
+          </a>
+        </li>
+      {% endfor %}
+    </ul>
+  </div>
+</nav>

@@ -1,0 +1,17 @@
+query {
+  about: getAbout {
+    biography: biographyHtml
+    portrait {
+      title
+      description
+      path
+    }
+    socialProfiles {
+      profileUrl
+      socialNetwork
+      socialNetworkIcon {
+        path
+      }
+    }
+  }
+}

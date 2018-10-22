@@ -1,0 +1,16 @@
+query {
+  projects: getProjectList {
+    items {
+      name
+    }
+  }
+  about: getAbout {
+    socialProfiles {
+      profileUrl
+      socialNetwork
+      socialNetworkIcon {
+        path
+      }
+    }
+  }
+}
