@@ -13,7 +13,7 @@
       <div class="project__metadata">
         <p>{{ project.startDate|date('YYYY') }}{% if includeEndDate %} – {{ endDate }}{% endif %}</p>
         {% if project.client %}
-          <p><a href="{{ project.client.url }}">{{ project.client.name }}</a></p>
+          <p><a href="{{ project.client.url }}" target="_blank" rel="nofollow">{{ project.client.name }}</a></p>
         {% endif %}
       </div>
     </header>
