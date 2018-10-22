@@ -9,11 +9,11 @@
   {% include 'partials/menu.html' %}
   <div class="main" id="barba-wrapper">
     <div class="barba-container">
-    {% block content %}{% endblock %}
+      {% block content %}{% endblock %}
     </div>
   </div>
   <footer class="footer">
-    <p>© 2018 <a href="https://takeshape.io">TakeShape Inc.</a></p>
+    <p>© {{ now | date('YYYY') }} <a href="https://takeshape.io">TakeShape Inc.</a></p>
   </footer>
 </div>
 

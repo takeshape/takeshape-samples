@@ -1,10 +1,10 @@
 const FadePageTransition = Barba.BaseTransition.extend({
   start: function () {
     Promise.all([this.newContainerLoading,
-    this.fadeOut()]).then(this.fadeIn.bind(this))
+      this.fadeOut()]).then(this.fadeIn.bind(this))
   },
   fadeOut: function () {
-    const oldContainer = this.oldContainer
+    const oldContainer = this.oldContainer;
     return new Promise(function (resolve) {
       anime({
         targets: oldContainer,
@@ -19,14 +19,14 @@ const FadePageTransition = Barba.BaseTransition.extend({
     })
   },
   fadeIn: function () {
-    const _this = this
-    const oldContainer = this.oldContainer
-    const newContainer = this.newContainer
-    window.scrollTo(0, 0)
-    oldContainer.style.display = 'none'
-    newContainer.style.visibility = 'visible'
-    newContainer.style.opacity = 0
-    newContainer.style.transform = 'translateY(100px)'
+    const _this = this;
+    const oldContainer = this.oldContainer;
+    const newContainer = this.newContainer;
+    window.scrollTo(0, 0);
+    oldContainer.style.display = 'none';
+    newContainer.style.visibility = 'visible';
+    newContainer.style.opacity = 0;
+    newContainer.style.transform = 'translateY(100px)';
     anime({
       targets: newContainer,
       opacity: 1,
@@ -38,13 +38,13 @@ const FadePageTransition = Barba.BaseTransition.extend({
       }
     })
   }
-})
+});
 Barba.Pjax.getTransition = function () {
   return FadePageTransition
-}
+};
 
 Barba.Prefetch.init();
 
 document.addEventListener('DOMContentLoaded', function (e) {
   Barba.Pjax.start();
-})
+});
