@@ -11,7 +11,7 @@
     <ul class="nostyle inline">
       {% for profile in menu.about.socialProfiles %}
         <li class="social-profile">
-          <a href="{{ profile.profileUrl }}" class="no-barba">
+          <a href="{{ profile.profileUrl }}" class="no-barba" target="_blank" rel="nofollow">
             <img class="social-network-icon" src="{{ profile.socialNetworkIcon.path|image({w: 48, h: 48}) }}">
             <span class="social-network-name">{{ profile.socialNetwork }}</span>
           </a>
