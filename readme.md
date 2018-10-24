@@ -8,6 +8,7 @@ A collection of sample project templates to go along with sample projects availa
 - [Shape Books](https://shape-books.takeshapesampleproject.com)
 - [Shape Shop](https://shape-shop.takeshapesampleproject.com)
 - [Shape Startup](https://shape-startup.takeshapesampleproject.com)
+- [Shape Portfolio](https://shape-portfolio.takeshapesampleproject.com)
 
 #### Quickstart for each project
 - Blank Project `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/blank-project`
@@ -15,6 +16,7 @@ A collection of sample project templates to go along with sample projects availa
 - Shape Books `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-books`
 - Shape Shop `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-shop`
 - Shape Startup `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-startup`
+- Shape Portfolio `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-portfolio`
 
 Clone this repo and then `cd` into a specific sample project to get started.
 
