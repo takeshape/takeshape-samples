@@ -1,21 +1,22 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import Helmet from 'react-helmet'
-import { StaticQuery, graphql } from 'gatsby'
 
 import Header from '../components/header'
 import Menu from '../components/menu'
+import Container from '../components/container'
 import Footer from '../components/footer'
 import './default.css'
 
 const Layout = ({ children }) => (
   <>
     <Header siteTitle="Shape Portfolio" />
-    <div className="container">
+    <Container>
       <Menu />
-      {children}
+      <div>
+        {children}
+      </div>
       <Footer />
-    </div>
+    </Container>
   </>
 )
 
