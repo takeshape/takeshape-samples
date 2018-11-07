@@ -1,7 +1,19 @@
 import React from "react"
-import { Link } from "gatsby"
+import { Link, StaticQuery, graphql } from "gatsby"
 
-const Menu = () => (
+const menuQuery = graphql`
+  query {
+    takeshape {
+      projects: getProjectList {
+        items {
+          name
+        }
+      }
+    }
+  }
+`
+
+const Menu = ({data}) => (
   <nav className="menu">
     <div className="menu__container">
       <p className="site-name">
@@ -10,9 +22,11 @@ const Menu = () => (
         </Link>
       </p>
       <ul className="nostyle">
-        <li>
-          <Link to="#project">Project Name</Link>
-        </li>
+        {data.takeshape.projects.items.map((project, i) => (
+          <li key={i}>
+            <Link to="#project">{project.name}</Link>
+          </li>
+        ))}
       </ul>
       <hr />
       <Link to="/about">About</Link>
@@ -28,4 +42,6 @@ const Menu = () => (
   </nav>
 )
 
-export default Menu
+export default () => (
+  <StaticQuery query={menuQuery} render={data => <Menu data={data} />} />
+)
