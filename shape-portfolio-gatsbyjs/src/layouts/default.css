@@ -181,7 +181,12 @@ a:hover .social-network-icon {
   margin: 1.5rem 0;
 }
 
+.project__name {
+  margin: 0;
+}
+
 .project__thumbnail {
+  max-width: 100%;
   margin-bottom: 0;
 }
 
@@ -189,23 +194,22 @@ a:hover .social-network-icon {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(16em, 1fr));
   grid-gap: 1em;
-
 }
 
-.project.project-list--entry .project__name {
+.project .project-list--entry .project__name {
   color: #1d1d1d;
 }
 
-.project.project-list--entry:hover .project__name {
+.project .project-list--entry:hover .project__name {
   color: #442ab9;
 }
 
-.project.project-list--entry img {
+.project .project-list--entry img {
   width: 100%;
   margin-bottom: .5em;
 }
 
-.project.project-list--entry p {
+.project-list--entry .project p {
   margin: 0;
   display: inline-block;
 }
