@@ -65,21 +65,3 @@ export const query = graphql`
     }
   }
 `
-
-/*
-<article class="project">
-  <header>
-    {% if project.coverImage %}
-      <img class="project__cover-image" src="{{ project.coverImage.path|image({h: 600, w: 1200, fit: 'crop'}) }}">
-    {% endif %}
-    <h1>{{ project.name }}</h1>
-    <div class="project__metadata">
-      <p>{{ project.startDate|date('YYYY') }}{% if includeEndDate %} – {{ endDate }}{% endif %}</p>
-      {% if project.client %}
-        <p><a href="{{ project.client.url }}" target="_blank" rel="nofollow">{{ project.client.name }}</a></p>
-      {% endif %}
-    </div>
-  </header>
-  <div class="project__description">{{ project.description|safe }}</div>
-</article>
-*/

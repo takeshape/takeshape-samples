@@ -27,13 +27,4 @@ const ProjectList = ({projects}) => (
   </ul>
 )
 
-export default ProjectList;
-
-/*
-<a class="project project-list--entry" href="{{ project|route('project') }}" title="{{ project.name }}">
-  <img class="project__thumbnail" src="{{ project.coverImage.path|image({h: 200, w: 300, fit: 'crop'}) }}">
-  <p class="project__name"><strong>{{ project.name }}</strong></p>
-  <p
-    class="project__metadata">{{ project.startDate|date('YYYY') }}{% if not project.endDate and project.startDate|date('YYYY') !== project.endDate|date('YYYY') %} – {% if project.endDate %}{{ project.endDate|date('YYYY') }}{% else %}Present{% endif %}{% endif %}</p>
-</a>
-*/
+export default ProjectList
