@@ -1,5 +1,5 @@
 import React from 'react'
-import { Link, graphql } from 'gatsby'
+import { graphql } from 'gatsby'
 
 import Layout from '../layouts/default'
 import ProjectList from '../components/ProjectList'
@@ -20,6 +20,7 @@ export const query = graphql`
           name
           startDate
           coverImage {
+            description
             path
           }
         }

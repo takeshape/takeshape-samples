@@ -1,6 +1,8 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 
+import { getProjectPath } from './Project'
+
 const menuQuery = graphql`
   query {
     takeshape {
@@ -24,7 +26,7 @@ const Menu = ({data}) => (
       <ul className="nostyle">
         {data.takeshape.projects.items.map((project, i) => (
           <li key={i}>
-            <Link to="#project">{project.name}</Link>
+            <Link to={getProjectPath(project.name)}>{project.name}</Link>
           </li>
         ))}
       </ul>
