@@ -2,7 +2,7 @@ import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import { getImageUrl } from 'takeshape-routing'
 
-import { getProjectPath } from './Project'
+import { getProjectPath } from './project'
 
 const menuQuery = graphql`
   query {

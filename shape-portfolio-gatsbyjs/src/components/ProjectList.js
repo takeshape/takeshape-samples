@@ -2,7 +2,7 @@ import React from 'react';
 import { Link } from 'gatsby';
 import {getImageUrl} from 'takeshape-routing';
 
-import { getProjectPath } from './Project'
+import { getProjectPath } from './project'
 
 const ProjectListItem = ({project}) => {
   const startYear = new Date(project.startDate).getFullYear();

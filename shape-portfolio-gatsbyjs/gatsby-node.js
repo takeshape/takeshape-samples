@@ -24,7 +24,7 @@
      const slug = slugify(name.toLowerCase())
      actions.createPage({
        path: `/projects/${slug}/`,
-       component: path.resolve('./src/components/Project.js'),
+       component: path.resolve('./src/components/project.js'),
        context: {
          projectId: _id
        }

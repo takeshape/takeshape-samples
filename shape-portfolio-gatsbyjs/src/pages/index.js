@@ -2,7 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Layout from '../layouts/default'
-import ProjectList from '../components/ProjectList'
+import ProjectList from '../components/projectList'
 
 const IndexPage = ({data}) => (
   <Layout>
