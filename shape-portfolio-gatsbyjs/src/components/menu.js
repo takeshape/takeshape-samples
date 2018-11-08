@@ -1,5 +1,6 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
+import { getImageUrl } from 'takeshape-routing'
 
 import { getProjectPath } from './Project'
 
@@ -9,6 +10,15 @@ const menuQuery = graphql`
       projects: getProjectList {
         items {
           name
+        }
+      }
+      about: getAbout {
+        socialProfiles {
+          profileUrl
+          socialNetwork
+          socialNetworkIcon {
+            path
+          }
         }
       }
     }
@@ -33,12 +43,14 @@ const Menu = ({data}) => (
       <hr />
       <Link to="/about">About</Link>
       <ul className="nostyle inline">
-        <li className="social-profile">
-          <a href="#profile" target="_blank" rel="noopener noreferrer">
-            <img className="social-network-icon" src="#icon" alt="Social network icon" />
-            <span className="social-network-name">Network</span>
-          </a>
-        </li>
+        {data.takeshape.about.socialProfiles.map((profile, i) => (
+          <li className="social-profile" key={i}>
+            <a href={profile.profileUrl} target="_blank" rel="noopener noreferrer">
+              <img className="social-network-icon" src={getImageUrl(profile.socialNetworkIcon.path)} alt="Social network icon" />
+              <span className="social-network-name">{profile.socialNetwork}</span>
+            </a>
+          </li>
+        ))}
       </ul>
     </div>
   </nav>
