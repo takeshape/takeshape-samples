@@ -12,7 +12,7 @@ const Layout = ({ children }) => (
     <Header siteTitle="Shape Portfolio" />
     <Container>
       <Menu />
-      <div>
+      <div className="main">
         {children}
       </div>
       <Footer />
