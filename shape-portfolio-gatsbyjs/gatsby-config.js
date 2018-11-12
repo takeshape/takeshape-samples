@@ -1,3 +1,5 @@
+require('dotenv').config();
+
 module.exports = {
   siteMetadata: {
     title: 'Gatsby Default Starter',
@@ -43,4 +45,4 @@ module.exports = {
     },
     'gatsby-plugin-offline',
   ],
-}
+};
