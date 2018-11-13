@@ -13,36 +13,35 @@ A collection of sample project templates to go along with sample projects availa
 - [Shape Portfolio](https://shape-portfolio.takeshapesampleproject.com)
 
 #### Quickstart for each project
-- Blank Project 
+Blank Project 
 ```
 git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/blank-project
 ```
-- Shape Blog 
+Shape Blog 
 ```
 git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-blog
 ```
-- Shape Blog - React 
+Shape Blog - React 
 ```
 git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-blog-react
 ```
-- Shape Books 
+Shape Books 
 ```
 git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-books
 ```
-- Shape Shop 
+Shape Shop 
 ```
 git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-shop
 ```
-- Shape Startup 
+Shape Startup 
 ```
 git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-startup
 ```
-- Shape Portfolio 
+Shape Portfolio 
 ```
 git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-portfolio
 ```
-
-- Shape Portfolio - Gatsby.js 
+Shape Portfolio - Gatsby.js 
 ```
 git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-portfolio-gatsbyjs
 ```
