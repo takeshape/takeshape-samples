@@ -2,7 +2,7 @@
 
 # TakeShape Sample Project Templates
 
-A collection of sample project templates to go along with sample projects available on [TakeShape](https://www.takeshape.io). Each sample project is within it's own directory.
+A collection of sample project templates to go along with sample projects available on [TakeShape](https://www.takeshape.io). Each sample project is within it's own directory. Clone this repo and then `cd` into a specific sample project to get started.
 
 #### Demos for each template
 - [Blank Project](https://blank-project.takeshapesampleproject.com)
@@ -45,7 +45,5 @@ Shape Portfolio - Gatsby.js
 ```
 git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-portfolio-gatsbyjs
 ```
-
-Clone this repo and then `cd` into a specific sample project to get started.
 
 For more information see the [TakeShape documentation](https://www.takeshape.io/docs/quickstart/).
