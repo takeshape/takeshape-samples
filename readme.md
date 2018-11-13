@@ -42,6 +42,11 @@ git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples &
 git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-portfolio
 ```
 
+- Shape Portfolio - Gatsby.js 
+```
+git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-portfolio-gatsbyjs
+```
+
 Clone this repo and then `cd` into a specific sample project to get started.
 
 For more information see the [TakeShape documentation](https://www.takeshape.io/docs/quickstart/).
