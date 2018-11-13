@@ -1,8 +1,8 @@
-import React from "react"
-import { Link, StaticQuery, graphql } from "gatsby"
-import { getImageUrl } from 'takeshape-routing'
+import React from "react";
+import { Link, StaticQuery, graphql } from "gatsby";
+import { getImageUrl } from "takeshape-routing";
 
-import { getProjectPath } from './Project'
+import { getProjectPath } from "./Project";
 
 const menuQuery = graphql`
   query {
@@ -23,9 +23,9 @@ const menuQuery = graphql`
       }
     }
   }
-`
+`;
 
-const Menu = ({data}) => (
+const Menu = ({ data }) => (
   <nav className="menu">
     <div className="menu__container">
       <p className="site-name">
@@ -45,17 +45,27 @@ const Menu = ({data}) => (
       <ul className="nostyle inline">
         {data.takeshape.about.socialProfiles.map((profile, i) => (
           <li className="social-profile" key={i}>
-            <a href={profile.profileUrl} target="_blank" rel="noopener noreferrer">
-              <img className="social-network-icon" src={getImageUrl(profile.socialNetworkIcon.path)} alt="Social network icon" />
-              <span className="social-network-name">{profile.socialNetwork}</span>
+            <a
+              href={profile.profileUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                className="social-network-icon"
+                src={getImageUrl(profile.socialNetworkIcon.path)}
+                alt="Social network icon"
+              />
+              <span className="social-network-name">
+                {profile.socialNetwork}
+              </span>
             </a>
           </li>
         ))}
       </ul>
     </div>
   </nav>
-)
+);
 
 export default () => (
   <StaticQuery query={menuQuery} render={data => <Menu data={data} />} />
-)
+);

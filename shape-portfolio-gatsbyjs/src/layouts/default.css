@@ -12,7 +12,7 @@
 body {
   margin: 0;
   min-height: 100vh;
-  font-family: 'Work Sans', Helvetica, sans-serif;
+  font-family: "Work Sans", Helvetica, sans-serif;
   line-height: 1.4;
   background: #fafafa;
   color: #1d1d1d;
@@ -22,7 +22,8 @@ body {
 
 /* These are all to give our portfolio a fancy border */
 
-body::before, body::after {
+body::before,
+body::after {
   content: "";
   height: 1em;
   width: 100%;
@@ -76,7 +77,7 @@ body::after {
 
 @media (max-width: 36em) {
   body {
-    font-size: .875em;
+    font-size: 0.875em;
   }
 
   .container {
@@ -144,7 +145,7 @@ ul li {
 }
 
 .social-profile {
-  font-size: .875em;
+  font-size: 0.875em;
   margin: 1em 0;
 }
 
@@ -153,7 +154,7 @@ ul li {
   height: 1.5em;
   display: inline-block;
   vertical-align: middle;
-  opacity: .6;
+  opacity: 0.6;
 }
 
 a:hover .social-network-icon {
@@ -206,7 +207,7 @@ a:hover .social-network-icon {
 
 .project .project-list--entry img {
   width: 100%;
-  margin-bottom: .5em;
+  margin-bottom: 0.5em;
 }
 
 .project-list--entry .project p {
@@ -224,7 +225,7 @@ a:hover .social-network-icon {
 }
 
 .project__metadata > *::after {
-  content: '/';
+  content: "/";
   color: #999;
   display: inline-block;
   margin-left: 0.5em;
@@ -239,7 +240,8 @@ a:hover .social-network-icon {
   display: block;
 }
 
-.project__description, .about__biography {
+.project__description,
+.about__biography {
   font-size: 1.125em;
   line-height: 1.6;
 }
