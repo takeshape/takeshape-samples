@@ -1,0 +1,8 @@
+query {
+  settings: getSiteSettings {
+    siteTitle
+    siteLogo {
+      path
+    }
+  }
+}

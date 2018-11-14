@@ -1,0 +1,19 @@
+{% extends "layouts/default.html" %}
+
+{% block content %}
+  <header class="post-header">
+    <div class="container">
+      <div class="post-header__content">
+        <h1><img src="{{ job.company.logo.path | image({w: 40, h: 40, fit: 'fill'}) }}"/> {{ job.title }}</h1>
+        <p>Posted By {{ job.company.name }}</p>
+        <p><span>Added On {{ job._enabledAt | date("MMMM D, YYYY") }}</span></p>
+      </div>
+    </div>
+  </header>
+
+  <div class="content">
+    <div class="container">
+      {{ job.bodyHtml | safe }}
+    </div>
+  </div>
+{% endblock %}

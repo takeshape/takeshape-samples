@@ -1,0 +1,21 @@
+{% macro jobList(jobList) %}
+  <ul>
+    {% for job in jobList %}
+      <li>
+        <a href="{{ job | route('job') }}" class="tout">
+          <div>
+            <img src="{{ job.company.logo.path | image({w: 200, h: 200, fit: 'fill'}) }}">
+          </div>
+
+          <div class="tout__content">
+            <h4>{{ job.title }} at {{ job.company.name }} {% if job.hotJob %}<span
+                class="hot-job">HOT JOB!</span>{% endif %}</h4>
+            <p>
+              <time>Added On {{ job._enabledAt | date("MMMM D, YYYY") }}</time>
+            </p>
+          </div>
+        </a>
+      </li>
+    {% endfor %}
+  </ul>
+{% endmacro %}

@@ -1,0 +1,36 @@
+<!doctype html>
+
+<html>
+<head>
+  <title>{% block title %}{% if page.title %}{{ page.title }} - {% endif %}{{ site.settings.siteTitle }}{% endblock %}</title>
+
+  <meta charset="utf-8">
+
+  <link href="https://fonts.googleapis.com/css?family=Work+Sans:400,500,600,700,800,900" rel="stylesheet">
+
+  <link rel="stylesheet" href="/stylesheets/base.css"/>
+  <link rel="stylesheet" href="/stylesheets/content.css"/>
+  <link rel="stylesheet" href="/stylesheets/footer.css"/>
+  <link rel="stylesheet" href="/stylesheets/header.css"/>
+  <link rel="stylesheet" href="/stylesheets/hero.css"/>
+  <link rel="stylesheet" href="/stylesheets/post-header.css"/>
+  <link rel="stylesheet" href="/stylesheets/stat-bar.css"/>
+  <link rel="stylesheet" href="/stylesheets/thumb.css"/>
+  <link rel="stylesheet" href="/stylesheets/tout.css"/>
+  <link rel="stylesheet" href="/stylesheets/jobs.css"/>
+
+  <link rel="author" href="humans.txt"/>
+</head>
+
+<body>
+{% include "partials/header.html" %}
+
+<div class="main">
+  {% block content %}{% endblock %}
+</div>
+
+{% include "partials/footer.html" %}
+
+<script src="/javascripts/main.js"></script>
+</body>
+</html>

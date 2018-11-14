@@ -1,0 +1,36 @@
+query {
+  page: getHomepage {
+    hero {
+      heading
+      backgroundImage {
+        path
+      }
+    }
+    featuredJobs {
+      title
+      hotJob
+      company {
+        name
+        logo {
+          path
+        }
+      }
+    }
+  }
+  jobs: getJobList(sort: {field: "_enabledAt", order: "asc"}) {
+    total
+    items {
+      title
+      hotJob
+      company {
+        name
+        logo {
+          path
+        }
+      }
+    }
+  }
+  companies: getCompanyList {
+    total
+  }
+}
