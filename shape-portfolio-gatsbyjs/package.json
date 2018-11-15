@@ -1,8 +1,11 @@
 {
-  "name": "gatsby-starter-default",
-  "description": "Gatsby default starter",
+  "name": "takeshape-shape-portfolio-gatsbyjs",
+  "description": "Shape Portfolio - Gatsby.js Variation - A Sample Project for TakeShape - www.takeshape.io",
   "version": "1.0.0",
-  "author": "Kyle Mathews <mathews.kyle@gmail.com>",
+  "author": {
+    "name": "TakeShape",
+    "email": "contact@takeshape.io"
+  },
   "dependencies": {
     "gatsby": "^2.0.19",
     "gatsby-image": "^2.0.15",
@@ -19,9 +22,6 @@
     "slugify": "^1.3.2",
     "takeshape-routing": "^4.53.0"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
@@ -31,10 +31,15 @@
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "devDependencies": {
-    "prettier": "^1.14.2"
+    "babel-eslint": "^10.0.1",
+    "dotenv": "^6.1.0",
+    "eslint-config-prettier": "^3.3.0",
+    "eslint-plugin-prettier": "^3.0.0",
+    "prettier": "^1.14.2",
+    "prettier-stylelint": "^0.4.2"
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/gatsbyjs/gatsby-starter-default"
+    "url": "https://github.com/takeshape/takeshape-samples"
   }
 }
