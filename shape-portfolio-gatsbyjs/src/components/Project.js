@@ -1,14 +1,8 @@
 import React from "react";
 import { graphql } from "gatsby";
 import { getImageUrl } from "takeshape-routing";
-import slugify from "slugify";
 
 import Layout from "../layouts/default";
-
-export const getProjectPath = name => {
-  const slug = slugify(name.toLowerCase());
-  return `/projects/${slug}/`;
-};
 
 export const ProjectMetadata = ({ startDate, endDate, client }) => {
   const startYear = new Date(startDate).getFullYear();

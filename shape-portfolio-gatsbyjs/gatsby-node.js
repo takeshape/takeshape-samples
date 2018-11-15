@@ -4,7 +4,7 @@
  * See: https://www.gatsbyjs.org/docs/node-apis/
  */
 const path = require("path");
-const slugify = require("slugify");
+const routes = require("./src/routes");
 
 exports.createPages = async ({ actions, graphql }) => {
   const { data } = await graphql(`
@@ -21,9 +21,8 @@ exports.createPages = async ({ actions, graphql }) => {
   `);
 
   data.takeshape.projects.items.forEach(({ _id, name }) => {
-    const slug = slugify(name.toLowerCase());
     actions.createPage({
-      path: `/projects/${slug}/`,
+      path: routes.project(name),
       component: path.resolve("./src/components/Project.js"),
       context: {
         projectId: _id

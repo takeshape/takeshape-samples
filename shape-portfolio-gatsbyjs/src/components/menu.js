@@ -2,7 +2,7 @@ import React from "react";
 import { Link, StaticQuery, graphql } from "gatsby";
 import { getImageUrl } from "takeshape-routing";
 
-import { getProjectPath } from "./Project";
+import routes from "../routes";
 
 const menuQuery = graphql`
   query {
@@ -36,7 +36,7 @@ const Menu = ({ data }) => (
       <ul className="nostyle">
         {data.takeshape.projects.items.map((project, i) => (
           <li key={i}>
-            <Link to={getProjectPath(project.name)}>{project.name}</Link>
+            <Link to={routes.project(project.name)}>{project.name}</Link>
           </li>
         ))}
       </ul>
