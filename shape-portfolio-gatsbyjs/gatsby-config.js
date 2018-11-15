@@ -2,24 +2,15 @@ require("dotenv").config();
 
 module.exports = {
   siteMetadata: {
-    title: "Gatsby Default Starter"
+    title: "Shape Portfolio"
   },
   plugins: [
     "gatsby-plugin-react-helmet",
     {
-      resolve: `gatsby-source-filesystem`,
-      options: {
-        name: `images`,
-        path: `${__dirname}/src/images`
-      }
-    },
-    "gatsby-transformer-sharp",
-    "gatsby-plugin-sharp",
-    {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: "gatsby-starter-default",
-        short_name: "starter",
+        name: "Shape Portfolio",
+        short_name: "portfolio",
         start_url: "/",
         background_color: "#5439D2",
         theme_color: "#5EDEB3",
