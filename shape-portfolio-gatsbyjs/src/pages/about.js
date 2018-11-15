@@ -9,6 +9,7 @@ const AboutPage = ({ data }) => (
     <article className="about">
       <img
         className="about__portrait"
+        alt={data.takeshape.about.portrait.description}
         src={getImageUrl(data.takeshape.about.portrait.path, {
           h: 150,
           w: 150,
