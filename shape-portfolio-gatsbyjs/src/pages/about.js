@@ -35,13 +35,6 @@ export const query = graphql`
           description
           path
         }
-        socialProfiles {
-          profileUrl
-          socialNetwork
-          socialNetworkIcon {
-            path
-          }
-        }
       }
     }
   }
