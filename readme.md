@@ -2,7 +2,7 @@
 
 # TakeShape Sample Project Templates
 
-A collection of sample project templates to go along with sample projects available on [TakeShape](https://www.takeshape.io). Each sample project is within it's own directory.
+A collection of sample project templates to go along with sample projects available on [TakeShape](https://www.takeshape.io). Each sample project is within it's own directory. Clone this repo and then `cd` into a specific sample project to get started.
 
 #### Demos for each template
 - [Blank Project](https://blank-project.takeshapesampleproject.com)
@@ -13,13 +13,37 @@ A collection of sample project templates to go along with sample projects availa
 - [Shape Portfolio](https://shape-portfolio.takeshapesampleproject.com)
 
 #### Quickstart for each project
-- Blank Project `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/blank-project`
-- Shape Blog `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-blog`
-- Shape Books `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-books`
-- Shape Shop `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-shop`
-- Shape Startup `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-startup`
-- Shape Portfolio `git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-portfolio`
-
-Clone this repo and then `cd` into a specific sample project to get started.
+Blank Project 
+```
+git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/blank-project
+```
+Shape Blog 
+```
+git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-blog
+```
+Shape Blog - React 
+```
+git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-blog-react
+```
+Shape Books 
+```
+git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-books
+```
+Shape Shop 
+```
+git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-shop
+```
+Shape Startup 
+```
+git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-startup
+```
+Shape Portfolio 
+```
+git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-portfolio
+```
+Shape Portfolio - Gatsby.js 
+```
+git clone https://github.com/takeshape/takeshape-samples.git takeshape-samples && cd takeshape-samples/shape-portfolio-gatsbyjs
+```
 
 For more information see the [TakeShape documentation](https://www.takeshape.io/docs/quickstart/).
