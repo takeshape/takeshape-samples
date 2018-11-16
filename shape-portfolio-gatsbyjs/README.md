@@ -8,17 +8,20 @@ This is a sample project to get you started building a static website with [Take
 1. [Signup](https://app.takeshape.io/signup) or [login](https://app.takeshape.io/login) at TakeShape.
 1. Create a new project and select the "Shape Portfolio" template
 1. Create a new API key in TakeShape and name is "Gatsby". Copy the API key into your clipboard
-1. `git clone https://github.com/takeshape/takeshape-samples takeshape-samples && cd takeshape-samples/shape-portfolio`
+1. `git clone https://github.com/takeshape/takeshape-samples takeshape-samples && cd takeshape-samples/shape-portfolio-gatsbyjs`
 1. Make a `.env` file that contains the following
 ```
 TAKESHAPE_PROJECT=<TAKESHAPE-PROJECT-ID-FROM-URL>
 TAKESHAPE_TOKEN=<TAKESHAPE-API-KEY-YOU-COPIED>
 ```
 1. `npm install` - This will install all dependencies
-1. `npm run develop` -  The server runs on [http://localhost:8000](http://localhost:8000) by default
+1. `npm start` -  Start the development server. It runs on [http://localhost:8000](http://localhost:8000) by default
 1. Have fun playing around with the sample site!
     - Change some markup a template file and the site will regenerate automatically
-    - Try adding a new field to an existing content type then add it to the corresponding GraphQL query and template   
+    - Try adding a new field to an existing content type then add it to the corresponding GraphQL query and template
+
+## Deploy
+Check our walkthrough for instructions on how to deploy this Gatsby site to Netlify and trigger builds with TakeShape's webhooks.
 
 ## GraphQL tips
 
