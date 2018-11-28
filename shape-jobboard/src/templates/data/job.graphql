@@ -1,0 +1,14 @@
+query {
+  getJobList {
+    items {
+      title
+      company {
+        name
+        logo {
+          path
+        }
+      }
+      bodyHtml
+    }
+  }
+}

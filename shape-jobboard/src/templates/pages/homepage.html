@@ -1,0 +1,47 @@
+{% from "macros/jobs.html" import jobList %}
+{% extends "layouts/default.html" %}
+
+{% set siteTitle = site.settings.siteTitle %}
+{% block content %}
+  <div class="hero hero--text"
+       style="background-image: url('{{ page.hero.backgroundImage.path | image }}'); background-repeat: repeat;">
+    <div class="container">
+      <div class="hero__content">
+        <h2 class="heading">{{ page.hero.heading }}</h2>
+      </div>
+    </div>
+  </div>
+
+  <div class="thumb-list thumb-list">
+    <div class="container">
+      <div class="jobs--featured">
+        <h3 class="heading">Featured Jobs</h3>
+        {{ jobList(page.featuredJobs) }}
+      </div>
+    </div>
+  </div>
+
+  <div class="thumb-list thumb-list">
+    <div class="container">
+      <div class="jobs">
+        <h3 class="heading">All Jobs</h3>
+        {{ jobList(jobs.items) }}
+      </div>
+    </div>
+  </div>
+
+  <div class="stat-bar">
+    <div class="container">
+      <ul>
+        <li>
+          <h1>{{ jobs.total }}</h1>
+          <p>Available JAMtastic Jobs</p>
+        </li>
+        <li>
+          <h1>{{ companies.total }}</h1>
+          <p>Forward Thinking Companies Hiring</p>
+        </li>
+      </ul>
+    </div>
+  </div>
+{% endblock %}

@@ -1,0 +1,52 @@
+/* Page Header */
+.page-header img {
+  display: block;
+  height: 5rem;
+  width: 5rem;
+  margin-right: 0.5rem;
+}
+
+.page-header .logo {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.page-header .logo__text {
+  font-size: 5.6rem;
+}
+
+/* Hero */
+.hero {
+  background-size: auto;
+  padding: 6.4rem 0;
+  height: auto;
+  background-color: #442ab9;
+}
+
+/* Tout */
+.tout {
+  align-items: center;
+}
+
+.tout > :first-child {
+  flex: 0 0 100px;
+}
+
+/* Jobs */
+.jobs {
+  padding: 0 3rem;
+}
+
+.jobs--featured {
+  padding: 3rem;
+  background-color: #fef4dc;
+}
+
+.hot-job {
+  font-size: 50%;
+  background-color: #FF7373;
+  padding: 0.3rem 0.5rem;
+  vertical-align: middle;
+  margin-left: 0.5rem;
+}

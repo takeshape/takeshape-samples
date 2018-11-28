@@ -1,0 +1,14 @@
+/* Stat Bar */
+.stat-bar {
+  padding: 6.4rem 0;
+  background-color: #e4f8ee;
+}
+
+.stat-bar ul {
+  display: flex;
+}
+
+.stat-bar li {
+  flex: 1 1 25%;
+  text-align: center;
+}
