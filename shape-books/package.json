@@ -23,7 +23,7 @@
     "serve": "browser-sync start --server build --port 5000 --files 'build/**/*' --reload-debounce",
     "build": "tsg build -c",
     "deploy": "tsg deploy",
-    "watch:tsg": "tsg watch -W",
+    "watch:tsg": "tsg watch -W -c",
     "watch": "npm-run-all --serial build && npm-run-all --continue-on-error --parallel watch:* serve",
     "start": "npm run watch"
   },
