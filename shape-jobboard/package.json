@@ -21,18 +21,18 @@
   "scripts": {
     "init": "tsg init",
     "serve": "browser-sync start --server build --port 5000 --files 'build/**/*' --reload-debounce",
-    "build": "tsg build",
+    "build": "tsg build -c",
     "deploy": "tsg deploy",
-    "watch:tsg": "tsg watch -W",
+    "watch:tsg": "tsg watch -W -c",
     "watch": "npm-run-all --serial build && npm-run-all --continue-on-error --parallel watch:* serve",
     "start": "npm run watch"
   },
   "devDependencies": {
-    "browser-sync": "^2.26.3",
+    "browser-sync": "^2.26.5",
     "eslint": "^5.16.0",
     "npm-run-all": "^4.1.5",
     "stylelint": "^9.10.1",
     "stylelint-config-recommended": "^2.1.0",
-    "takeshape-cli": "^4.77.0"
+    "takeshape-cli": "^4.84.0"
   }
 }

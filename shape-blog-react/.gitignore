@@ -24,4 +24,5 @@ yarn-error.log*
 # tsg
 .graphqlrc
 .tsgrc
+.cache
 graphql.config.json
