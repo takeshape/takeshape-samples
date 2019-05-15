@@ -33,6 +33,6 @@
     "npm-run-all": "^4.1.5",
     "stylelint": "^9.10.1",
     "stylelint-config-recommended": "^2.1.0",
-    "takeshape-cli": "^4.84.0"
+    "takeshape-cli": "^4.84.4"
   }
 }
