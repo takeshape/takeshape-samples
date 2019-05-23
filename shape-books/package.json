@@ -35,6 +35,6 @@
     "stylelint-config-recommended": "^2.1.0"
   },
   "dependencies": {
-    "takeshape-cli": "^4.84.4"
+    "takeshape-cli": "^4.85.0"
   }
 }
