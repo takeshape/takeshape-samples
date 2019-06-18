@@ -16,7 +16,7 @@
     "react-dom": "^16.5.1",
     "react-helmet": "^5.2.0",
     "slugify": "^1.3.2",
-    "takeshape-cli": "^4.85.0",
+    "takeshape-cli": "^4.87.0",
     "takeshape-routing": "^4.53.0"
   },
   "license": "MIT",
