@@ -1,0 +1,15 @@
+# dependencies
+/node_modules
+
+# build
+.next
+out
+
+# misc
+.DS_Store
+.env*
+.netlify
+
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
