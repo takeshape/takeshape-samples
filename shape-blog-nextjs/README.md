@@ -28,7 +28,7 @@ See the [shape-blog README for additional documentation](../shape-blog)
 
 ### [ZEIT Now](https://zeit.co/home)
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://github.com/takeshape/takeshape-samples/tree/master/shape-blog-nextjs)
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/takeshape/takeshape-samples/tree/master/shape-blog-nextjs)
 
 
 An easy way to deploy Next.js to production is with ZEIT Now, a platform from the creators of Next.js.
