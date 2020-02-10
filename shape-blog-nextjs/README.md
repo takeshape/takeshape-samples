@@ -28,12 +28,11 @@ See the [shape-blog README for additional documentation](../shape-blog)
 
 ### [ZEIT Now](https://zeit.co/home)
 
-[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/takeshape/takeshape-samples/tree/master/shape-blog-nextjs)
-
-
 An easy way to deploy Next.js to production is with ZEIT Now, a platform from the creators of Next.js.
 
-First install the Now CLI using npm or Yarn. Using npm:
+[![Deploy with ZEIT Now](https://zeit.co/button)](https://zeit.co/new/project?template=https://github.com/takeshape/takeshape-samples/tree/master/shape-blog-nextjs)
+
+Alternatively you can use the `now` CLI.
 ```bash
 npm install -g now
 ```
@@ -50,7 +49,7 @@ now secrets add takeshape-project YOUR-PROJECT-ID
 Then you can deploy using the `now` command from the project root:
 ```bash
 now
-```
+``` 
 
 ### [Netlify](https://www.netlify.com/)
 
