@@ -1,0 +1,6 @@
+name: Shape Job board
+description: A list of open jobs.
+icon: briefcase
+categories:
+  - examples
+  - quickstart
