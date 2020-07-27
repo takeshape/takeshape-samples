@@ -5,7 +5,7 @@ This is a sample project to get you started building a static website with [Take
 
 ## Quickstart
 
-<a href="//app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/takeshape-samples/tree/master/shape-blog/pattern"><img alt="Deploy To TakeShape" src="https://images.takeshape.io/2cccc825-70be-431c-9ba0-10ab38ecd3a7/dev/8e2f7bda-0e08-4ede-a546-6df59be6a8bb/Deploy%20to%20TakeShape%402x.png?auto=format%2Ccompress" width=205 height=38></a>
+<a href="//app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/takeshape-samples/tree/master/shape-startup/pattern"><img alt="Deploy To TakeShape" src="https://images.takeshape.io/2cccc825-70be-431c-9ba0-10ab38ecd3a7/dev/8e2f7bda-0e08-4ede-a546-6df59be6a8bb/Deploy%20to%20TakeShape%402x.png?auto=format%2Ccompress" width=205 height=38></a>
 
 1. Use the "Deploy to TakeShape" button to create the project in TakeShape.
 1. Set up and run the client application
