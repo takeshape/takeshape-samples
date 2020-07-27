@@ -5,10 +5,13 @@ This is a sample project to get you started building a static website with [Take
 This project references the same Shape Blog content template as the [shape-blog sample project](../shape-blog) but instead of directly generating the page source using the TakeShape Static Site Generator (SSG), it uses the Next.js framework to create a statically-generated  React application.
 
 ## Quickstart
-1. [Signup](https://app.takeshape.io/signup) or [login](https://app.takeshape.io/login) at TakeShape.
-1. Create a new project and select the "Shape Blog" template
-1. `git clone https://github.com/takeshape/takeshape-samples takeshape-samples && cd takeshape-samples/shape-blog-nextjs`
-1. `npm install` or `yarn` - This will install all dependencies 
+
+<a href="//app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/takeshape-samples/tree/master/shape-blog/pattern"><img alt="Deploy To TakeShape" src="https://images.takeshape.io/2cccc825-70be-431c-9ba0-10ab38ecd3a7/dev/8e2f7bda-0e08-4ede-a546-6df59be6a8bb/Deploy%20to%20TakeShape%402x.png?auto=format%2Ccompress" width=205 height=38></a>
+
+1. Use the "Deploy to TakeShape" button to create the project in TakeShape.
+1. Set up and run the client application
+    1. `git clone https://github.com/takeshape/takeshape-samples takeshape-samples && cd takeshape-samples/shape-blog-nextjs`
+    1. `npm install` or `yarn` - This will install all dependencies
 
 ### Connect your project
 1. In your "Shape Blog" TakeShape project, create a new API Key
@@ -49,13 +52,13 @@ now secrets add takeshape-project YOUR-PROJECT-ID
 Then you can deploy using the `now` command from the project root:
 ```bash
 now
-``` 
+```
 
 ### [Netlify](https://www.netlify.com/)
 
 Deploying to Netlify requires the use of the `next build` and `next export` commands, which are provided in `package.json` as `export`.
 
-First install the Netlify CLI using npm or Yarn. Using npm: 
+First install the Netlify CLI using npm or Yarn. Using npm:
 ```bash
 npm install netlify-cli -g
 ```
@@ -66,7 +69,7 @@ Then, build and export your project:
 
 ```bash
 npm run export
-# or 
+# or
 yarn export
 ```
 

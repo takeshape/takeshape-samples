@@ -5,12 +5,15 @@ This is a sample project to get you started building a static website with [Take
 This project references the same Shape Blog content template as the [shape-blog sample project](../shape-blog) but instead of directly generating the page source, it uses the TakeShape Static Site Generator (SSG) to create a static JSON API. This static API is then used to build a JAMStack SPA with React.
 
 ## Quickstart
-1. [Signup](https://app.takeshape.io/signup) or [login](https://app.takeshape.io/login) at TakeShape.
-1. Create a new project and select the "Shape Blog" template
-1. `git clone https://github.com/takeshape/takeshape-samples takeshape-samples && cd takeshape-samples/shape-blog`
-1. `npm install` - This will install all dependencies 
-1. `npx tsg init` - Follow the command prompts to set up your local environment to communicate with TS
-1. `npm run start` -  The server runs on [http://localhost:3000](http://localhost:3000) by default
+
+<a href="//app.takeshape.io/add-to-takeshape?repo=https://github.com/takeshape/takeshape-samples/tree/master/shape-blog/pattern"><img alt="Deploy To TakeShape" src="https://images.takeshape.io/2cccc825-70be-431c-9ba0-10ab38ecd3a7/dev/8e2f7bda-0e08-4ede-a546-6df59be6a8bb/Deploy%20to%20TakeShape%402x.png?auto=format%2Ccompress" width=205 height=38></a>
+
+1. Use the "Deploy to TakeShape" button to create the project in TakeShape.
+1. Set up and run the client application
+    1. `git clone https://github.com/takeshape/takeshape-samples takeshape-samples && cd takeshape-samples/shape-blog`
+    1. `npm install` - This will install all dependencies
+    1. `npx tsg init` - Follow the command prompts to set up your local environment to communicate with TS
+    1. `npm run start` -  The server runs on [http://localhost:3000](http://localhost:3000) by default
 1. Have fun playing around with the sample site!
     - Change some markup a template file and the site will regenerate automatically
     - Try adding a new field to an existing content type then add it to the corresponding GraphQL query and template
