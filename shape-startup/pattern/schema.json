@@ -1,1 +1,1375 @@
-{"contentTypes":{"rJoobhv8W":{"schema":{"type":"object","properties":{"body":{"draftjs":true,"title":"Body","type":"object","key":"rybsZhDU-"},"featureImage":{"relationship":{"contentTypeIds":["ASSET"]},"title":"Feature Image","type":"object","key":"BybUznPIW","properties":{"contentTypeId":{"type":"string","enum":["ASSET"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"title":{"title":"Title","type":"string","key":"BkJDGhw8W","minLength":1},"author":{"relationship":{"type":"single","contentTypeIds":["SJDIicDUZ"]},"title":"Author","type":"object","key":"rJgad7TLZ","properties":{"contentTypeId":{"type":"string","enum":["SJDIicDUZ"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"deck":{"title":"Deck","type":"string","key":"HkJzKRDUb","minLength":0},"tags":{"relationship":{"type":"multiple","contentTypeIds":["rJ4A_IJ_7"]},"title":"Tags","type":"array","items":{"type":"object","properties":{"contentTypeId":{"type":"string","enum":["rJ4A_IJ_7"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"key":"H1n0d8kd7"}},"required":["title","featureImage"]},"single":false,"name":"post","taxonomy":false,"title":"Post","forms":{"default":{"properties":{"body":{"widget":"wysiwygText"},"featureImage":{"widget":"image"},"title":{"widget":"singleLineText"},"author":{"widget":"relationship"},"deck":{"widget":"paragraphText"},"tags":{"widget":"relationship"}},"order":["title","deck","tags","author","featureImage","body"]}}},"SJDIicDUZ":{"schema":{"type":"object","properties":{"name":{"title":"Name","type":"string","key":"Hk8NiqwLb","minLength":1},"image":{"relationship":{"contentTypeIds":["ASSET"]},"title":"Image","type":"object","key":"BkyFrpUcb","properties":{"contentTypeId":{"type":"string","enum":["ASSET"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]}},"required":["name","image"]},"single":false,"name":"author","taxonomy":true,"title":"Author","forms":{"default":{"properties":{"name":{"widget":"singleLineText"},"image":{"widget":"image"}},"order":["name","image"]}}},"Hk_28HPBX":{"schema":{"type":"object","properties":{"hero":{"mutable":true,"title":"Hero","type":"object","key":"B15sbOvrm","properties":{"image":{"relationship":{"contentTypeIds":["ASSET"]},"title":"Image","type":"object","key":"BJIo8HDSX","properties":{"contentTypeId":{"type":"string","enum":["ASSET"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"heading":{"title":"Heading","type":"string","key":"S1puM_Pr7","minLength":0},"text":{"title":"Text","type":"string","key":"SJQtGdDrX","minLength":0}}},"team":{"title":"Team","type":"array","items":{"type":"object","properties":{"name":{"title":"Name","type":"string","key":"ryVn5FwBm","minLength":0},"image":{"relationship":{"contentTypeIds":["ASSET"]},"title":"Image","type":"object","key":"Syy09YvBQ","properties":{"contentTypeId":{"type":"string","enum":["ASSET"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"role":{"title":"Role","type":"string","key":"HJU0j0OSX","minLength":0},"biography":{"title":"Biography","type":"string","key":"B1Xa9FDHQ","maxLength":180}}},"key":"S1ic5tvHm"},"body":{"draftjs":true,"title":"Body","type":"object","key":"BkRs8HPSQ"},"title":{"title":"Title","type":"string","key":"By7vIHDBX","minLength":1},"factBar":{"title":"Fact Bar","type":"array","items":{"type":"object","properties":{"image":{"relationship":{"contentTypeIds":["ASSET"]},"title":"Image","type":"object","key":"SysT9tDrX","properties":{"contentTypeId":{"type":"string","enum":["ASSET"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"heading":{"title":"Heading","type":"string","key":"rkg3cFvSm","minLength":0},"text":{"title":"Text","type":"string","key":"r1Y2cFwBQ","minLength":0}}},"key":"rySiqYvBX"}},"required":["title"]},"single":true,"name":"about","title":"About","forms":{"default":{"properties":{"hero":{"properties":{"image":{"widget":"image"},"heading":{"widget":"singleLineText"},"text":{"widget":"paragraphText"}},"widget":"object","order":["image","heading","text"]},"team":{"properties":{"name":{"widget":"singleLineText"},"image":{"widget":"image"},"role":{"widget":"singleLineText"},"biography":{"widget":"paragraphText"}},"widget":"repeater","order":["image","name","role","biography"]},"body":{"widget":"wysiwygText"},"title":{"widget":"singleLineText"},"factBar":{"properties":{"image":{"widget":"image"},"heading":{"widget":"singleLineText"},"text":{"widget":"paragraphText"}},"widget":"repeater","order":["image","heading","text"]}},"order":["title","hero","factBar","body","team"]}}},"HyVFPrwSQ":{"schema":{"type":"object","properties":{"title":{"title":"Title","type":"string","key":"HyEdvHvSX","minLength":1}},"required":["title"]},"single":true,"name":"contact","title":"Contact","forms":{"default":{"properties":{"title":{"widget":"singleLineText"}},"order":["title"]}}},"H1TFgJdIb":{"schema":{"type":"object","properties":{"featuredPosts":{"relationship":{"type":"multiple","contentTypeIds":["rJoobhv8W"]},"title":"Featured Posts","type":"array","items":{"type":"object","properties":{"contentTypeId":{"type":"string","enum":["rJoobhv8W"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"key":"B1wxHYPBX"},"hero":{"mutable":true,"title":"Hero","type":"object","key":"ry4VnCD8W","properties":{"button":{"mutable":true,"title":"Button","type":"object","key":"ry6s4OPr7","properties":{"url":{"title":"URL","type":"string","key":"ryrhN_DrQ","minLength":0},"text":{"title":"Text","type":"string","key":"S1Z2NdDBm","minLength":0}}},"image":{"relationship":{"contentTypeIds":["ASSET"]},"title":"Image","type":"object","key":"H1vBnAv8-","properties":{"contentTypeId":{"type":"string","enum":["ASSET"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"text":{"title":"Text","type":"string","key":"SJOj4OvrQ","minLength":0},"heading":{"title":"Heading","type":"string","key":"Sy7o4uvBm","minLength":0}}},"statBar":{"maxItems":3,"title":"Stat Bar","type":"array","items":{"type":"object","properties":{"value":{"title":"Value","type":"integer","minimum":0,"key":"r1oQEtwSQ"},"label":{"title":"Label","type":"string","key":"SyGmEtwSm","minLength":0}}},"key":"BJhZ4FvrX"},"title":{"title":"Title","type":"string","key":"BJfmu0OIZ","minLength":0},"trapdoor":{"mutable":true,"title":"Trapdoor","type":"object","key":"B1-ywtwHQ","properties":{"button":{"mutable":true,"title":"Button","type":"object","key":"rkBMwKDH7","properties":{"url":{"title":"URL","type":"string","key":"SkRGvFvH7","minLength":0},"text":{"title":"Text","type":"string","key":"H19GPFPHm","minLength":0}}},"heading":{"title":"Heading","type":"string","key":"r1abDYPHm","minLength":0},"text":{"title":"Text","type":"string","key":"H1ZzvYwBm","minLength":0}}},"introduction":{"mutable":true,"title":"Introduction","type":"object","key":"rkAGXYwr7","properties":{"image":{"relationship":{"contentTypeIds":["ASSET"]},"title":"Image","type":"object","key":"HJn7kqvSX","properties":{"contentTypeId":{"type":"string","enum":["ASSET"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"heading":{"title":"Heading","type":"string","key":"rk9QXKwB7","minLength":0},"text":{"title":"Text","type":"string","key":"BkxN7KwSX","minLength":0}}}}},"single":true,"name":"homepage","title":"Homepage","forms":{"default":{"properties":{"featuredPosts":{"widget":"relationship"},"hero":{"properties":{"button":{"properties":{"url":{"widget":"singleLineText"},"text":{"widget":"singleLineText"}},"widget":"object","order":["text","url"]},"image":{"widget":"image"},"text":{"widget":"paragraphText"},"heading":{"widget":"singleLineText"}},"widget":"object","order":["image","heading","text","button"]},"statBar":{"properties":{"value":{"widget":"number"},"label":{"widget":"singleLineText"}},"widget":"repeater","order":["value","label"]},"title":{"widget":"singleLineText"},"trapdoor":{"properties":{"button":{"properties":{"url":{"widget":"singleLineText"},"text":{"widget":"singleLineText"}},"widget":"object","order":["text","url"]},"heading":{"widget":"singleLineText"},"text":{"widget":"paragraphText"}},"widget":"object","order":["heading","text","button"]},"introduction":{"properties":{"image":{"widget":"image"},"heading":{"widget":"singleLineText"},"text":{"widget":"paragraphText"}},"widget":"object","order":["image","heading","text"]}},"order":["title","hero","introduction","statBar","featuredPosts","trapdoor"]}}},"SJ-slyKSQ":{"schema":{"type":"object","properties":{"button":{"mutable":true,"title":"Button","type":"object","key":"r1lqxJYB7","properties":{"url":{"title":"URL","type":"string","key":"SJYclyYSm","minLength":0},"text":{"title":"Text","type":"string","key":"HJrcgyKSX","minLength":0}}},"heading":{"title":"Heading","type":"string","key":"rJPKg1YBm","minLength":0},"text":{"title":"Text","type":"string","key":"SkjKg1KSm","minLength":0}}},"single":true,"name":"trapdoor","title":"Trapdoor","forms":{"default":{"properties":{"button":{"properties":{"url":{"widget":"singleLineText"},"text":{"widget":"singleLineText"}},"widget":"object","order":["text","url"]},"heading":{"widget":"singleLineText"},"text":{"widget":"paragraphText"}},"order":["heading","text","button"]}}},"Skp0mAuUb":{"schema":{"type":"object","properties":{"siteTitle":{"title":"Site Title","type":"string","key":"SkVAQA_8Z","minLength":0}}},"single":true,"name":"siteSettings","taxonomy":false,"title":"Site Settings","forms":{"default":{"properties":{"siteTitle":{"widget":"singleLineText"}},"order":["siteTitle"]}}},"ASSET":{"schema":{"type":"object","properties":{"caption":{"draftjs":true,"title":"Caption","type":"object","key":"SyWVsd98x","builtIn":true},"description":{"title":"Description","type":"string","key":"B1Zsra3fx","builtIn":true},"uploadStatus":{"title":"Upload status","type":"string","enum":["PENDING","COMPLETE"],"key":"ByeAYXdG9","builtIn":true},"mimeType":{"title":"MIME type","type":"string","key":"SyCYX_Gq","builtIn":true},"title":{"title":"Title","type":"string","key":"By5tQOMc","builtIn":true},"_enabledAt":{"format":"date-time","title":"Enabled Date","type":"string"},"path":{"title":"Path","type":"string","key":"Hk6FQuz5","builtIn":true,"minLength":1},"filename":{"title":"Filename","type":"string","key":"H1oYQOM9","builtIn":true,"minLength":1},"s3Key":{"deprecationReason":"Use path instead","title":"s3 key","type":"string","key":"Hk6FQuz5","builtIn":true},"_createdAt":{"format":"date-time","title":"Created Date","type":"string"},"_contentTypeId":{"title":"Content Type Id","type":"string"},"_contentTypeName":{"title":"Content Type Name","type":"string"},"_id":{"title":"Id","type":"string"},"credit":{"draftjs":true,"title":"Credit","type":"object","key":"Skn_i_5Ll","builtIn":true},"_enabled":{"title":"Enabled","type":"boolean"},"_updatedAt":{"format":"date-time","title":"Updated Date","type":"string"},"_version":{"title":"Version","type":"integer"}},"required":["filename","path"]},"name":"asset","description":"The built-in TakeShape asset model","hidden":true,"title":"Asset","forms":{"default":{"properties":{"path":{"disabled":true,"widget":"singleLineText"},"filename":{"disabled":true,"widget":"singleLineText"},"s3Key":{"disabled":true,"widget":"singleLineText"},"caption":{"disabled":true,"widget":"wysiwygSingleLineText"},"description":{"disabled":true,"widget":"paragraphText"},"uploadStatus":{"disabled":true,"widget":"singleLineText"},"mimeType":{"disabled":true,"widget":"singleLineText"},"credit":{"disabled":true,"widget":"wysiwygSingleLineText"},"title":{"disabled":true,"widget":"singleLineText"}},"order":["title","description","caption","credit","filename","path","s3Key","mimeType","uploadStatus"]}}},"rJ4A_IJ_7":{"schema":{"type":"object","properties":{"name":{"title":"Name","type":"string","key":"rJZR_IkO7","minLength":0}}},"single":false,"name":"tags","taxonomy":true,"title":"Tags","forms":{"default":{"properties":{"name":{"widget":"singleLineText"}},"order":["name"]}}}},"workflows":{},"projectId":"10d1f5d1-b7a0-4b1a-8a7e-1fef0acb57e9","version":1,"updated":1536364035980,"defaultLocale":"en","locales":["en"],"created":1499973370801,"apiVersion":"2"}
+{
+  "workflows": {},
+  "apiVersion": "2",
+  "defaultLocale": "en",
+  "locales": ["en"],
+  "projectId": "5641116a-b73b-47eb-943d-90c3f6019d2d",
+  "version": 1,
+  "schemaVersion": "3",
+  "queries": {
+    "getPost": {
+      "shape": "Post",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Post"
+        }
+      },
+      "description": "Get a Post by ID",
+      "args": "TSGetArgs<Post>"
+    },
+    "getPostList": {
+      "shape": "PaginatedList<Post>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Post"
+        }
+      },
+      "description": "Returns a list Post in natural order.",
+      "args": "TSListArgs<Post>"
+    },
+    "getAuthor": {
+      "shape": "Author",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Author"
+        }
+      },
+      "description": "Get a Author by ID",
+      "args": "TSGetArgs<Author>"
+    },
+    "getAuthorList": {
+      "shape": "PaginatedList<Author>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Author"
+        }
+      },
+      "description": "Returns a list Author in natural order.",
+      "args": "TSListArgs<Author>"
+    },
+    "getAbout": {
+      "shape": "About",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "About"
+        }
+      },
+      "description": "Get a About by ID",
+      "args": "TSGetSingletonArgs<About>"
+    },
+    "getContact": {
+      "shape": "Contact",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Contact"
+        }
+      },
+      "description": "Get a Contact by ID",
+      "args": "TSGetSingletonArgs<Contact>"
+    },
+    "getHomepage": {
+      "shape": "Homepage",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Homepage"
+        }
+      },
+      "description": "Get a Homepage by ID",
+      "args": "TSGetSingletonArgs<Homepage>"
+    },
+    "getTrapdoor": {
+      "shape": "Trapdoor",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Trapdoor"
+        }
+      },
+      "description": "Get a Trapdoor by ID",
+      "args": "TSGetSingletonArgs<Trapdoor>"
+    },
+    "getSiteSettings": {
+      "shape": "SiteSettings",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "SiteSettings"
+        }
+      },
+      "description": "Get a SiteSettings by ID",
+      "args": "TSGetSingletonArgs<SiteSettings>"
+    },
+    "getAsset": {
+      "shape": "Asset",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Get a Asset by ID",
+      "args": "TSGetArgs<Asset>"
+    },
+    "getAssetList": {
+      "shape": "PaginatedList<Asset>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Returns a list Asset in natural order.",
+      "args": "TSListArgs<Asset>"
+    },
+    "getTags": {
+      "shape": "Tags",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Tags"
+        }
+      },
+      "description": "Get a Tags by ID",
+      "args": "TSGetArgs<Tags>"
+    },
+    "getTagsList": {
+      "shape": "PaginatedList<Tags>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Tags"
+        }
+      },
+      "description": "Returns a list Tags in natural order.",
+      "args": "TSListArgs<Tags>"
+    }
+  },
+  "mutations": {
+    "updatePost": {
+      "shape": "UpdateResult<Post>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Post"
+        }
+      },
+      "description": "Update Post",
+      "args": "UpdateArgs<Post>"
+    },
+    "createPost": {
+      "shape": "CreateResult<Post>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Post"
+        }
+      },
+      "description": "Create Post",
+      "args": "CreateArgs<Post>"
+    },
+    "duplicatePost": {
+      "shape": "DuplicateResult<Post>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Post"
+        }
+      },
+      "description": "Duplicate Post",
+      "args": "DuplicateArgs<Post>"
+    },
+    "deletePost": {
+      "shape": "DeleteResult<Post>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Post"
+        }
+      },
+      "description": "Delete Post",
+      "args": "DeleteArgs<Post>"
+    },
+    "updateAuthor": {
+      "shape": "UpdateResult<Author>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Author"
+        }
+      },
+      "description": "Update Author",
+      "args": "UpdateArgs<Author>"
+    },
+    "createAuthor": {
+      "shape": "CreateResult<Author>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Author"
+        }
+      },
+      "description": "Create Author",
+      "args": "CreateArgs<Author>"
+    },
+    "duplicateAuthor": {
+      "shape": "DuplicateResult<Author>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Author"
+        }
+      },
+      "description": "Duplicate Author",
+      "args": "DuplicateArgs<Author>"
+    },
+    "deleteAuthor": {
+      "shape": "DeleteResult<Author>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Author"
+        }
+      },
+      "description": "Delete Author",
+      "args": "DeleteArgs<Author>"
+    },
+    "updateAbout": {
+      "shape": "UpdateResult<About>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "About"
+        }
+      },
+      "description": "Update About",
+      "args": "UpdateArgs<About>"
+    },
+    "updateContact": {
+      "shape": "UpdateResult<Contact>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Contact"
+        }
+      },
+      "description": "Update Contact",
+      "args": "UpdateArgs<Contact>"
+    },
+    "updateHomepage": {
+      "shape": "UpdateResult<Homepage>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Homepage"
+        }
+      },
+      "description": "Update Homepage",
+      "args": "UpdateArgs<Homepage>"
+    },
+    "updateTrapdoor": {
+      "shape": "UpdateResult<Trapdoor>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Trapdoor"
+        }
+      },
+      "description": "Update Trapdoor",
+      "args": "UpdateArgs<Trapdoor>"
+    },
+    "updateSiteSettings": {
+      "shape": "UpdateResult<SiteSettings>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "SiteSettings"
+        }
+      },
+      "description": "Update SiteSettings",
+      "args": "UpdateArgs<SiteSettings>"
+    },
+    "updateAsset": {
+      "shape": "UpdateResult<Asset>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Update Asset",
+      "args": "UpdateArgs<Asset>"
+    },
+    "createAsset": {
+      "shape": "CreateResult<Asset>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Create Asset",
+      "args": "CreateArgs<Asset>"
+    },
+    "duplicateAsset": {
+      "shape": "DuplicateResult<Asset>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Duplicate Asset",
+      "args": "DuplicateArgs<Asset>"
+    },
+    "deleteAsset": {
+      "shape": "DeleteResult<Asset>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Delete Asset",
+      "args": "DeleteArgs<Asset>"
+    },
+    "updateTags": {
+      "shape": "UpdateResult<Tags>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Tags"
+        }
+      },
+      "description": "Update Tags",
+      "args": "UpdateArgs<Tags>"
+    },
+    "createTags": {
+      "shape": "CreateResult<Tags>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Tags"
+        }
+      },
+      "description": "Create Tags",
+      "args": "CreateArgs<Tags>"
+    },
+    "duplicateTags": {
+      "shape": "DuplicateResult<Tags>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Tags"
+        }
+      },
+      "description": "Duplicate Tags",
+      "args": "DuplicateArgs<Tags>"
+    },
+    "deleteTags": {
+      "shape": "DeleteResult<Tags>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Tags"
+        }
+      },
+      "description": "Delete Tags",
+      "args": "DeleteArgs<Tags>"
+    }
+  },
+  "created": "2017-07-13T19:16:10.801Z",
+  "updated": "2018-09-07T23:47:15.980Z",
+  "shapes": {
+    "Post": {
+      "id": "rJoobhv8W",
+      "name": "Post",
+      "title": "Post",
+      "model": {
+        "type": "multiple"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "object",
+            "title": "Body",
+            "@mapping": "takeshape:local:Post.rybsZhDU-",
+            "@tag": "draftjs"
+          },
+          "featureImage": {
+            "title": "Feature Image",
+            "@mapping": "takeshape:local:Post.BybUznPIW",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Post.BkJDGhw8W"
+          },
+          "author": {
+            "title": "Author",
+            "@mapping": "takeshape:local:Post.rJgad7TLZ",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["SJDIicDUZ"],
+              "type": "single"
+            }
+          },
+          "deck": {
+            "type": "string",
+            "title": "Deck",
+            "minLength": 0,
+            "@mapping": "takeshape:local:Post.HkJzKRDUb"
+          },
+          "tags": {
+            "title": "Tags",
+            "@mapping": "takeshape:local:Post.H1n0d8kd7",
+            "type": "array",
+            "items": {
+              "$ref": "#/shapes/TSRelationship/schema"
+            },
+            "@relationship": {
+              "shapeIds": ["rJ4A_IJ_7"],
+              "type": "multiple"
+            }
+          }
+        },
+        "required": ["title", "featureImage"]
+      }
+    },
+    "Author": {
+      "id": "SJDIicDUZ",
+      "name": "Author",
+      "title": "Author",
+      "model": {
+        "type": "taxonomy"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Author.Hk8NiqwLb"
+          },
+          "image": {
+            "title": "Image",
+            "@mapping": "takeshape:local:Author.BkyFrpUcb",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          }
+        },
+        "required": ["name", "image"]
+      }
+    },
+    "About": {
+      "id": "Hk_28HPBX",
+      "name": "About",
+      "title": "About",
+      "model": {
+        "type": "single"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "hero": {
+            "title": "Hero",
+            "@mapping": "takeshape:local:About.B15sbOvrm",
+            "$ref": "#/shapes/AboutHero/schema"
+          },
+          "team": {
+            "type": "array",
+            "title": "Team",
+            "items": {
+              "$ref": "#/shapes/AboutTeam/schema"
+            },
+            "@mapping": "takeshape:local:About.S1ic5tvHm"
+          },
+          "body": {
+            "type": "object",
+            "title": "Body",
+            "@mapping": "takeshape:local:About.BkRs8HPSQ",
+            "@tag": "draftjs"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 1,
+            "@mapping": "takeshape:local:About.By7vIHDBX"
+          },
+          "factBar": {
+            "type": "array",
+            "title": "Fact Bar",
+            "items": {
+              "$ref": "#/shapes/AboutFactBar/schema"
+            },
+            "@mapping": "takeshape:local:About.rySiqYvBX"
+          }
+        },
+        "required": ["title"]
+      }
+    },
+    "AboutHero": {
+      "id": "B15sbOvrm",
+      "name": "AboutHero",
+      "title": "About Hero",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "title": "Image",
+            "@mapping": "takeshape:local:AboutHero.BJIo8HDSX",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "heading": {
+            "type": "string",
+            "title": "Heading",
+            "minLength": 0,
+            "@mapping": "takeshape:local:AboutHero.S1puM_Pr7"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "minLength": 0,
+            "@mapping": "takeshape:local:AboutHero.SJQtGdDrX"
+          }
+        }
+      }
+    },
+    "AboutTeam": {
+      "id": "S1ic5tvHm",
+      "name": "AboutTeam",
+      "title": "About Team",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "minLength": 0,
+            "@mapping": "takeshape:local:AboutTeam.ryVn5FwBm"
+          },
+          "image": {
+            "title": "Image",
+            "@mapping": "takeshape:local:AboutTeam.Syy09YvBQ",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "role": {
+            "type": "string",
+            "title": "Role",
+            "minLength": 0,
+            "@mapping": "takeshape:local:AboutTeam.HJU0j0OSX"
+          },
+          "biography": {
+            "type": "string",
+            "title": "Biography",
+            "maxLength": 180,
+            "@mapping": "takeshape:local:AboutTeam.B1Xa9FDHQ"
+          }
+        }
+      }
+    },
+    "AboutFactBar": {
+      "id": "rySiqYvBX",
+      "name": "AboutFactBar",
+      "title": "About FactBar",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "title": "Image",
+            "@mapping": "takeshape:local:AboutFactBar.SysT9tDrX",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "heading": {
+            "type": "string",
+            "title": "Heading",
+            "minLength": 0,
+            "@mapping": "takeshape:local:AboutFactBar.rkg3cFvSm"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "minLength": 0,
+            "@mapping": "takeshape:local:AboutFactBar.r1Y2cFwBQ"
+          }
+        }
+      }
+    },
+    "Contact": {
+      "id": "HyVFPrwSQ",
+      "name": "Contact",
+      "title": "Contact",
+      "model": {
+        "type": "single"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Contact.HyEdvHvSX"
+          }
+        },
+        "required": ["title"]
+      }
+    },
+    "Homepage": {
+      "id": "H1TFgJdIb",
+      "name": "Homepage",
+      "title": "Homepage",
+      "model": {
+        "type": "single"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "featuredPosts": {
+            "title": "Featured Posts",
+            "@mapping": "takeshape:local:Homepage.B1wxHYPBX",
+            "type": "array",
+            "items": {
+              "$ref": "#/shapes/TSRelationship/schema"
+            },
+            "@relationship": {
+              "shapeIds": ["rJoobhv8W"],
+              "type": "multiple"
+            }
+          },
+          "hero": {
+            "title": "Hero",
+            "@mapping": "takeshape:local:Homepage.ry4VnCD8W",
+            "$ref": "#/shapes/HomepageHero/schema"
+          },
+          "statBar": {
+            "type": "array",
+            "title": "Stat Bar",
+            "items": {
+              "$ref": "#/shapes/HomepageStatBar/schema"
+            },
+            "maxItems": 3,
+            "@mapping": "takeshape:local:Homepage.BJhZ4FvrX"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 0,
+            "@mapping": "takeshape:local:Homepage.BJfmu0OIZ"
+          },
+          "trapdoor": {
+            "title": "Trapdoor",
+            "@mapping": "takeshape:local:Homepage.B1-ywtwHQ",
+            "$ref": "#/shapes/HomepageTrapdoor/schema"
+          },
+          "introduction": {
+            "title": "Introduction",
+            "@mapping": "takeshape:local:Homepage.rkAGXYwr7",
+            "$ref": "#/shapes/HomepageIntroduction/schema"
+          }
+        }
+      }
+    },
+    "HomepageHeroButton": {
+      "id": "ry6s4OPr7",
+      "name": "HomepageHeroButton",
+      "title": "Homepage Hero Button",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "title": "URL",
+            "minLength": 0,
+            "@mapping": "takeshape:local:HomepageHeroButton.ryrhN_DrQ"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "minLength": 0,
+            "@mapping": "takeshape:local:HomepageHeroButton.S1Z2NdDBm"
+          }
+        }
+      }
+    },
+    "HomepageHero": {
+      "id": "ry4VnCD8W",
+      "name": "HomepageHero",
+      "title": "Homepage Hero",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "button": {
+            "title": "Button",
+            "@mapping": "takeshape:local:HomepageHero.ry6s4OPr7",
+            "$ref": "#/shapes/HomepageHeroButton/schema"
+          },
+          "image": {
+            "title": "Image",
+            "@mapping": "takeshape:local:HomepageHero.H1vBnAv8-",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "minLength": 0,
+            "@mapping": "takeshape:local:HomepageHero.SJOj4OvrQ"
+          },
+          "heading": {
+            "type": "string",
+            "title": "Heading",
+            "minLength": 0,
+            "@mapping": "takeshape:local:HomepageHero.Sy7o4uvBm"
+          }
+        }
+      }
+    },
+    "HomepageStatBar": {
+      "id": "BJhZ4FvrX",
+      "name": "HomepageStatBar",
+      "title": "Homepage StatBar",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "value": {
+            "type": "integer",
+            "title": "Value",
+            "minimum": 0,
+            "@mapping": "takeshape:local:HomepageStatBar.r1oQEtwSQ"
+          },
+          "label": {
+            "type": "string",
+            "title": "Label",
+            "minLength": 0,
+            "@mapping": "takeshape:local:HomepageStatBar.SyGmEtwSm"
+          }
+        }
+      }
+    },
+    "HomepageTrapdoorButton": {
+      "id": "rkBMwKDH7",
+      "name": "HomepageTrapdoorButton",
+      "title": "Homepage Trapdoor Button",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "title": "URL",
+            "minLength": 0,
+            "@mapping": "takeshape:local:HomepageTrapdoorButton.SkRGvFvH7"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "minLength": 0,
+            "@mapping": "takeshape:local:HomepageTrapdoorButton.H19GPFPHm"
+          }
+        }
+      }
+    },
+    "HomepageTrapdoor": {
+      "id": "B1-ywtwHQ",
+      "name": "HomepageTrapdoor",
+      "title": "Homepage Trapdoor",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "button": {
+            "title": "Button",
+            "@mapping": "takeshape:local:HomepageTrapdoor.rkBMwKDH7",
+            "$ref": "#/shapes/HomepageTrapdoorButton/schema"
+          },
+          "heading": {
+            "type": "string",
+            "title": "Heading",
+            "minLength": 0,
+            "@mapping": "takeshape:local:HomepageTrapdoor.r1abDYPHm"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "minLength": 0,
+            "@mapping": "takeshape:local:HomepageTrapdoor.H1ZzvYwBm"
+          }
+        }
+      }
+    },
+    "HomepageIntroduction": {
+      "id": "rkAGXYwr7",
+      "name": "HomepageIntroduction",
+      "title": "Homepage Introduction",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "title": "Image",
+            "@mapping": "takeshape:local:HomepageIntroduction.HJn7kqvSX",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "heading": {
+            "type": "string",
+            "title": "Heading",
+            "minLength": 0,
+            "@mapping": "takeshape:local:HomepageIntroduction.rk9QXKwB7"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "minLength": 0,
+            "@mapping": "takeshape:local:HomepageIntroduction.BkxN7KwSX"
+          }
+        }
+      }
+    },
+    "Trapdoor": {
+      "id": "SJ-slyKSQ",
+      "name": "Trapdoor",
+      "title": "Trapdoor",
+      "model": {
+        "type": "single"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "button": {
+            "title": "Button",
+            "@mapping": "takeshape:local:Trapdoor.r1lqxJYB7",
+            "$ref": "#/shapes/TrapdoorButton/schema"
+          },
+          "heading": {
+            "type": "string",
+            "title": "Heading",
+            "minLength": 0,
+            "@mapping": "takeshape:local:Trapdoor.rJPKg1YBm"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "minLength": 0,
+            "@mapping": "takeshape:local:Trapdoor.SkjKg1KSm"
+          }
+        }
+      }
+    },
+    "TrapdoorButton": {
+      "id": "r1lqxJYB7",
+      "name": "TrapdoorButton",
+      "title": "Trapdoor Button",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "url": {
+            "type": "string",
+            "title": "URL",
+            "minLength": 0,
+            "@mapping": "takeshape:local:TrapdoorButton.SJYclyYSm"
+          },
+          "text": {
+            "type": "string",
+            "title": "Text",
+            "minLength": 0,
+            "@mapping": "takeshape:local:TrapdoorButton.HJrcgyKSX"
+          }
+        }
+      }
+    },
+    "SiteSettings": {
+      "id": "Skp0mAuUb",
+      "name": "SiteSettings",
+      "title": "Site Settings",
+      "model": {
+        "type": "single"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "siteTitle": {
+            "type": "string",
+            "title": "Site Title",
+            "minLength": 0,
+            "@mapping": "takeshape:local:SiteSettings.SkVAQA_8Z"
+          }
+        }
+      }
+    },
+    "Asset": {
+      "id": "ASSET",
+      "name": "Asset",
+      "title": "Asset",
+      "model": {
+        "type": "multiple"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "caption": {
+            "type": "object",
+            "title": "Caption",
+            "@mapping": "takeshape:local:Asset.SyWVsd98x",
+            "@tag": "draftjs"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description",
+            "@mapping": "takeshape:local:Asset.B1Zsra3fx"
+          },
+          "uploadStatus": {
+            "type": "string",
+            "title": "Upload status",
+            "@mapping": "takeshape:local:Asset.ByeAYXdG9"
+          },
+          "mimeType": {
+            "type": "string",
+            "title": "MIME type",
+            "@mapping": "takeshape:local:Asset.SyCYX_Gq"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "@mapping": "takeshape:local:Asset.By5tQOMc"
+          },
+          "_enabledAt": {
+            "type": "string",
+            "title": "Enabled Date",
+            "format": "date-time"
+          },
+          "path": {
+            "type": "string",
+            "title": "Path",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Asset.Hk6FQuz5"
+          },
+          "filename": {
+            "type": "string",
+            "title": "Filename",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Asset.H1oYQOM9"
+          },
+          "s3Key": {
+            "type": "string",
+            "title": "s3 key",
+            "@mapping": "takeshape:local:Asset.Hk6FQuz5"
+          },
+          "_createdAt": {
+            "type": "string",
+            "title": "Created Date",
+            "format": "date-time"
+          },
+          "_contentTypeId": {
+            "type": "string",
+            "title": "Content Type Id"
+          },
+          "_contentTypeName": {
+            "type": "string",
+            "title": "Content Type Name"
+          },
+          "_id": {
+            "type": "string",
+            "title": "Id"
+          },
+          "credit": {
+            "type": "object",
+            "title": "Credit",
+            "@mapping": "takeshape:local:Asset.Skn_i_5Ll",
+            "@tag": "draftjs"
+          },
+          "_enabled": {
+            "type": "boolean",
+            "title": "Enabled"
+          },
+          "_updatedAt": {
+            "type": "string",
+            "title": "Updated Date",
+            "format": "date-time"
+          },
+          "_version": {
+            "type": "integer",
+            "title": "Version"
+          }
+        },
+        "required": ["filename", "path"]
+      }
+    },
+    "Tags": {
+      "id": "rJ4A_IJ_7",
+      "name": "Tags",
+      "title": "Tags",
+      "model": {
+        "type": "taxonomy"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "minLength": 0,
+            "@mapping": "takeshape:local:Tags.rJZR_IkO7"
+          }
+        }
+      }
+    }
+  },
+  "forms": {
+    "Post": {
+      "default": {
+        "properties": {
+          "body": {
+            "widget": "wysiwygText"
+          },
+          "featureImage": {
+            "widget": "image"
+          },
+          "title": {
+            "widget": "singleLineText"
+          },
+          "author": {
+            "widget": "relationship"
+          },
+          "deck": {
+            "widget": "paragraphText"
+          },
+          "tags": {
+            "widget": "relationship"
+          }
+        },
+        "order": ["title", "deck", "tags", "author", "featureImage", "body"]
+      }
+    },
+    "Author": {
+      "default": {
+        "properties": {
+          "name": {
+            "widget": "singleLineText"
+          },
+          "image": {
+            "widget": "image"
+          }
+        },
+        "order": ["name", "image"]
+      }
+    },
+    "About": {
+      "default": {
+        "properties": {
+          "hero": {
+            "properties": {
+              "image": {
+                "widget": "image"
+              },
+              "heading": {
+                "widget": "singleLineText"
+              },
+              "text": {
+                "widget": "paragraphText"
+              }
+            },
+            "widget": "object",
+            "order": ["image", "heading", "text"]
+          },
+          "team": {
+            "properties": {
+              "name": {
+                "widget": "singleLineText"
+              },
+              "image": {
+                "widget": "image"
+              },
+              "role": {
+                "widget": "singleLineText"
+              },
+              "biography": {
+                "widget": "paragraphText"
+              }
+            },
+            "widget": "repeater",
+            "order": ["image", "name", "role", "biography"]
+          },
+          "body": {
+            "widget": "wysiwygText"
+          },
+          "title": {
+            "widget": "singleLineText"
+          },
+          "factBar": {
+            "properties": {
+              "image": {
+                "widget": "image"
+              },
+              "heading": {
+                "widget": "singleLineText"
+              },
+              "text": {
+                "widget": "paragraphText"
+              }
+            },
+            "widget": "repeater",
+            "order": ["image", "heading", "text"]
+          }
+        },
+        "order": ["title", "hero", "factBar", "body", "team"]
+      }
+    },
+    "Contact": {
+      "default": {
+        "properties": {
+          "title": {
+            "widget": "singleLineText"
+          }
+        },
+        "order": ["title"]
+      }
+    },
+    "Homepage": {
+      "default": {
+        "properties": {
+          "featuredPosts": {
+            "widget": "relationship"
+          },
+          "hero": {
+            "properties": {
+              "button": {
+                "properties": {
+                  "url": {
+                    "widget": "singleLineText"
+                  },
+                  "text": {
+                    "widget": "singleLineText"
+                  }
+                },
+                "widget": "object",
+                "order": ["text", "url"]
+              },
+              "image": {
+                "widget": "image"
+              },
+              "text": {
+                "widget": "paragraphText"
+              },
+              "heading": {
+                "widget": "singleLineText"
+              }
+            },
+            "widget": "object",
+            "order": ["image", "heading", "text", "button"]
+          },
+          "statBar": {
+            "properties": {
+              "value": {
+                "widget": "number"
+              },
+              "label": {
+                "widget": "singleLineText"
+              }
+            },
+            "widget": "repeater",
+            "order": ["value", "label"]
+          },
+          "title": {
+            "widget": "singleLineText"
+          },
+          "trapdoor": {
+            "properties": {
+              "button": {
+                "properties": {
+                  "url": {
+                    "widget": "singleLineText"
+                  },
+                  "text": {
+                    "widget": "singleLineText"
+                  }
+                },
+                "widget": "object",
+                "order": ["text", "url"]
+              },
+              "heading": {
+                "widget": "singleLineText"
+              },
+              "text": {
+                "widget": "paragraphText"
+              }
+            },
+            "widget": "object",
+            "order": ["heading", "text", "button"]
+          },
+          "introduction": {
+            "properties": {
+              "image": {
+                "widget": "image"
+              },
+              "heading": {
+                "widget": "singleLineText"
+              },
+              "text": {
+                "widget": "paragraphText"
+              }
+            },
+            "widget": "object",
+            "order": ["image", "heading", "text"]
+          }
+        },
+        "order": ["title", "hero", "introduction", "statBar", "featuredPosts", "trapdoor"]
+      }
+    },
+    "Trapdoor": {
+      "default": {
+        "properties": {
+          "button": {
+            "properties": {
+              "url": {
+                "widget": "singleLineText"
+              },
+              "text": {
+                "widget": "singleLineText"
+              }
+            },
+            "widget": "object",
+            "order": ["text", "url"]
+          },
+          "heading": {
+            "widget": "singleLineText"
+          },
+          "text": {
+            "widget": "paragraphText"
+          }
+        },
+        "order": ["heading", "text", "button"]
+      }
+    },
+    "SiteSettings": {
+      "default": {
+        "properties": {
+          "siteTitle": {
+            "widget": "singleLineText"
+          }
+        },
+        "order": ["siteTitle"]
+      }
+    },
+    "Asset": {
+      "default": {
+        "properties": {
+          "path": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "filename": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "s3Key": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "caption": {
+            "disabled": true,
+            "widget": "wysiwygSingleLineText"
+          },
+          "description": {
+            "disabled": true,
+            "widget": "paragraphText"
+          },
+          "uploadStatus": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "mimeType": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "credit": {
+            "disabled": true,
+            "widget": "wysiwygSingleLineText"
+          },
+          "title": {
+            "disabled": true,
+            "widget": "singleLineText"
+          }
+        },
+        "order": ["title", "description", "caption", "credit", "filename", "path", "s3Key", "mimeType", "uploadStatus"]
+      }
+    },
+    "Tags": {
+      "default": {
+        "properties": {
+          "name": {
+            "widget": "singleLineText"
+          }
+        },
+        "order": ["name"]
+      }
+    }
+  }
+}

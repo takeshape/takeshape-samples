@@ -1,1 +1,620 @@
-{"contentTypes":{"H1TFgJdIb":{"schema":{"type":"object","properties":{"hero":{"mutable":true,"title":"Hero","type":"object","properties":{"heading":{"title":"Heading","type":"string","key":"Sy7o4uvBm","minLength":0},"backgroundImage":{"title":"Background Image","type":"object","relationship":{"contentTypeIds":["ASSET"]},"properties":{"contentTypeId":{"type":"string","enum":["ASSET"]},"id":{"type":"string"}},"key":"BJKYxCdaX","required":["contentTypeId","id"]}},"key":"ry4VnCD8W"},"featuredJobs":{"title":"Featured Jobs","type":"array","relationship":{"type":"multiple","contentTypeIds":["rJoobhv8W"]},"items":{"type":"object","properties":{"contentTypeId":{"type":"string","enum":["rJoobhv8W"]},"id":{"type":"string"}},"required":["contentTypeId","id"]},"key":"B1wxHYPBX"}}},"single":true,"name":"homepage","taxonomy":false,"title":"Homepage","forms":{"default":{"properties":{"hero":{"properties":{"heading":{"widget":"singleLineText"},"backgroundImage":{"widget":"image"}},"widget":"object","order":["heading","backgroundImage"]},"featuredJobs":{"widget":"relationship"}},"order":["hero","featuredJobs"]}}},"Skp0mAuUb":{"schema":{"type":"object","properties":{"siteLogo":{"title":"Site Logo","relationship":{"contentTypeIds":["ASSET"]},"type":"object","key":"SyGz0SjT7","properties":{"contentTypeId":{"type":"string","enum":["ASSET"]},"id":{"type":"string"}},"required":["contentTypeId","id"]},"siteTitle":{"title":"Site Title","type":"string","key":"SkVAQA_8Z","minLength":0}}},"single":true,"name":"siteSettings","taxonomy":false,"title":"Site Settings","forms":{"default":{"properties":{"siteLogo":{"widget":"image"},"siteTitle":{"widget":"singleLineText"}},"order":["siteTitle","siteLogo"]}}},"ASSET":{"schema":{"type":"object","properties":{"path":{"l10n":false,"title":"Path","type":"string","key":"Hk6FQuz5","builtIn":true,"minLength":1},"filename":{"l10n":false,"title":"Filename","type":"string","key":"H1oYQOM9","builtIn":true,"minLength":1},"description":{"title":"Description","type":"string","key":"B1Zsra3fx","builtIn":true},"caption":{"draftjs":true,"title":"Caption","type":"object","key":"SyWVsd98x","builtIn":true},"uploadStatus":{"l10n":false,"title":"Upload status","type":"string","enum":["PENDING","COMPLETE"],"key":"ByeAYXdG9","builtIn":true},"company":{"type":"array","title":"Company","relationship":{"type":"multiple","contentTypeIds":["SJDIicDUZ"]},"items":{"type":"object","properties":{"contentTypeId":{"type":"string","enum":["SJDIicDUZ"]},"id":{"type":"string"}},"required":["contentTypeId","id"]},"key":"Hy5yhOhp7"},"mimeType":{"l10n":false,"title":"MIME type","type":"string","key":"SyCYX_Gq","builtIn":true},"title":{"title":"Title","type":"string","key":"By5tQOMc","builtIn":true},"credit":{"draftjs":true,"title":"Credit","type":"object","key":"Skn_i_5Ll","builtIn":true}},"required":["filename","path"]},"single":false,"name":"asset","description":"The built-in TakeShape asset model","taxonomy":false,"title":"Asset","forms":{"default":{"properties":{"path":{"disabled":true,"widget":"singleLineText"},"filename":{"disabled":true,"widget":"singleLineText"},"description":{"disabled":true,"widget":"paragraphText"},"caption":{"disabled":true,"widget":"wysiwygSingleLineText"},"uploadStatus":{"disabled":true,"widget":"singleLineText"},"company":{"widget":"relationship"},"mimeType":{"disabled":true,"widget":"singleLineText"},"title":{"disabled":true,"widget":"singleLineText"},"credit":{"disabled":true,"widget":"wysiwygSingleLineText"}},"order":["title","description","caption","credit","filename","path","mimeType","uploadStatus","company"]}}},"rJoobhv8W":{"schema":{"type":"object","properties":{"company":{"title":"Company","type":"object","relationship":{"type":"single","contentTypeIds":["SJDIicDUZ"]},"properties":{"contentTypeId":{"type":"string","enum":["SJDIicDUZ"]},"id":{"type":"string"}},"key":"rJgad7TLZ","required":["contentTypeId","id"]},"hotJob":{"default":false,"l10n":false,"title":"Hot Job","type":"boolean","key":"H124YyF6X"},"title":{"title":"Title","type":"string","key":"BkJDGhw8W","minLength":1},"body":{"draftjs":true,"title":"Body","type":"object","key":"rybsZhDU-"}},"required":["title"]},"single":false,"name":"job","taxonomy":false,"title":"Job","forms":{"default":{"properties":{"company":{"widget":"relationship"},"hotJob":{"widget":"toggleSwitch"},"title":{"widget":"singleLineText"},"body":{"widget":"wysiwygText"}},"order":["title","company","hotJob","body"]}}},"SJDIicDUZ":{"schema":{"type":"object","properties":{"name":{"title":"Name","type":"string","key":"Hk8NiqwLb","minLength":1},"logo":{"title":"Logo","type":"object","relationship":{"contentTypeIds":["ASSET"]},"properties":{"contentTypeId":{"type":"string","enum":["ASSET"]},"id":{"type":"string"}},"key":"BkyFrpUcb","required":["contentTypeId","id"]}},"required":["name","logo"]},"single":false,"name":"company","taxonomy":true,"title":"Company","forms":{"default":{"properties":{"name":{"widget":"singleLineText"},"logo":{"widget":"image"}},"order":["name","logo"]}}}},"workflows":{},"projectId":"97237257-783e-4fa5-940f-76ecc73381ab","version":1,"updated":1542392600662,"defaultLocale":"en","locales":["en"],"created":1499973370801,"apiVersion":"2"}
+{
+  "workflows": {},
+  "apiVersion": "2",
+  "defaultLocale": "en",
+  "locales": ["en"],
+  "projectId": "2c0b22e1-c6da-43d7-baf6-dd967861bb79",
+  "version": 1,
+  "schemaVersion": "3",
+  "queries": {
+    "getHomepage": {
+      "shape": "Homepage",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Homepage"
+        }
+      },
+      "description": "Get a Homepage by ID",
+      "args": "TSGetSingletonArgs<Homepage>"
+    },
+    "getSiteSettings": {
+      "shape": "SiteSettings",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "SiteSettings"
+        }
+      },
+      "description": "Get a SiteSettings by ID",
+      "args": "TSGetSingletonArgs<SiteSettings>"
+    },
+    "getAsset": {
+      "shape": "Asset",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Get a Asset by ID",
+      "args": "TSGetArgs<Asset>"
+    },
+    "getAssetList": {
+      "shape": "PaginatedList<Asset>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Returns a list Asset in natural order.",
+      "args": "TSListArgs<Asset>"
+    },
+    "getJob": {
+      "shape": "Job",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Job"
+        }
+      },
+      "description": "Get a Job by ID",
+      "args": "TSGetArgs<Job>"
+    },
+    "getJobList": {
+      "shape": "PaginatedList<Job>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Job"
+        }
+      },
+      "description": "Returns a list Job in natural order.",
+      "args": "TSListArgs<Job>"
+    },
+    "getCompany": {
+      "shape": "Company",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Company"
+        }
+      },
+      "description": "Get a Company by ID",
+      "args": "TSGetArgs<Company>"
+    },
+    "getCompanyList": {
+      "shape": "PaginatedList<Company>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Company"
+        }
+      },
+      "description": "Returns a list Company in natural order.",
+      "args": "TSListArgs<Company>"
+    }
+  },
+  "mutations": {
+    "updateHomepage": {
+      "shape": "UpdateResult<Homepage>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Homepage"
+        }
+      },
+      "description": "Update Homepage",
+      "args": "UpdateArgs<Homepage>"
+    },
+    "updateSiteSettings": {
+      "shape": "UpdateResult<SiteSettings>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "SiteSettings"
+        }
+      },
+      "description": "Update SiteSettings",
+      "args": "UpdateArgs<SiteSettings>"
+    },
+    "updateAsset": {
+      "shape": "UpdateResult<Asset>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Update Asset",
+      "args": "UpdateArgs<Asset>"
+    },
+    "createAsset": {
+      "shape": "CreateResult<Asset>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Create Asset",
+      "args": "CreateArgs<Asset>"
+    },
+    "duplicateAsset": {
+      "shape": "DuplicateResult<Asset>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Duplicate Asset",
+      "args": "DuplicateArgs<Asset>"
+    },
+    "deleteAsset": {
+      "shape": "DeleteResult<Asset>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Delete Asset",
+      "args": "DeleteArgs<Asset>"
+    },
+    "updateJob": {
+      "shape": "UpdateResult<Job>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Job"
+        }
+      },
+      "description": "Update Job",
+      "args": "UpdateArgs<Job>"
+    },
+    "createJob": {
+      "shape": "CreateResult<Job>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Job"
+        }
+      },
+      "description": "Create Job",
+      "args": "CreateArgs<Job>"
+    },
+    "duplicateJob": {
+      "shape": "DuplicateResult<Job>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Job"
+        }
+      },
+      "description": "Duplicate Job",
+      "args": "DuplicateArgs<Job>"
+    },
+    "deleteJob": {
+      "shape": "DeleteResult<Job>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Job"
+        }
+      },
+      "description": "Delete Job",
+      "args": "DeleteArgs<Job>"
+    },
+    "updateCompany": {
+      "shape": "UpdateResult<Company>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Company"
+        }
+      },
+      "description": "Update Company",
+      "args": "UpdateArgs<Company>"
+    },
+    "createCompany": {
+      "shape": "CreateResult<Company>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Company"
+        }
+      },
+      "description": "Create Company",
+      "args": "CreateArgs<Company>"
+    },
+    "duplicateCompany": {
+      "shape": "DuplicateResult<Company>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Company"
+        }
+      },
+      "description": "Duplicate Company",
+      "args": "DuplicateArgs<Company>"
+    },
+    "deleteCompany": {
+      "shape": "DeleteResult<Company>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Company"
+        }
+      },
+      "description": "Delete Company",
+      "args": "DeleteArgs<Company>"
+    }
+  },
+  "created": "2017-07-13T19:16:10.801Z",
+  "updated": "2018-11-16T18:23:20.662Z",
+  "shapes": {
+    "Homepage": {
+      "id": "H1TFgJdIb",
+      "name": "Homepage",
+      "title": "Homepage",
+      "model": {
+        "type": "single"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "hero": {
+            "title": "Hero",
+            "@mapping": "takeshape:local:Homepage.ry4VnCD8W",
+            "$ref": "#/shapes/HomepageHero/schema"
+          },
+          "featuredJobs": {
+            "title": "Featured Jobs",
+            "@mapping": "takeshape:local:Homepage.B1wxHYPBX",
+            "type": "array",
+            "items": {
+              "$ref": "#/shapes/TSRelationship/schema"
+            },
+            "@relationship": {
+              "shapeIds": ["rJoobhv8W"],
+              "type": "multiple"
+            }
+          }
+        }
+      }
+    },
+    "HomepageHero": {
+      "id": "ry4VnCD8W",
+      "name": "HomepageHero",
+      "title": "Homepage Hero",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "heading": {
+            "type": "string",
+            "title": "Heading",
+            "minLength": 0,
+            "@mapping": "takeshape:local:HomepageHero.Sy7o4uvBm"
+          },
+          "backgroundImage": {
+            "title": "Background Image",
+            "@mapping": "takeshape:local:HomepageHero.BJKYxCdaX",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          }
+        }
+      }
+    },
+    "SiteSettings": {
+      "id": "Skp0mAuUb",
+      "name": "SiteSettings",
+      "title": "Site Settings",
+      "model": {
+        "type": "single"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "siteLogo": {
+            "title": "Site Logo",
+            "@mapping": "takeshape:local:SiteSettings.SyGz0SjT7",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "siteTitle": {
+            "type": "string",
+            "title": "Site Title",
+            "minLength": 0,
+            "@mapping": "takeshape:local:SiteSettings.SkVAQA_8Z"
+          }
+        }
+      }
+    },
+    "Asset": {
+      "id": "ASSET",
+      "name": "Asset",
+      "title": "Asset",
+      "model": {
+        "type": "multiple"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "title": "Path",
+            "@l10n": false,
+            "minLength": 1,
+            "@mapping": "takeshape:local:Asset.Hk6FQuz5"
+          },
+          "filename": {
+            "type": "string",
+            "title": "Filename",
+            "@l10n": false,
+            "minLength": 1,
+            "@mapping": "takeshape:local:Asset.H1oYQOM9"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description",
+            "@mapping": "takeshape:local:Asset.B1Zsra3fx"
+          },
+          "caption": {
+            "type": "object",
+            "title": "Caption",
+            "@mapping": "takeshape:local:Asset.SyWVsd98x",
+            "@tag": "draftjs"
+          },
+          "uploadStatus": {
+            "type": "string",
+            "title": "Upload status",
+            "@l10n": false,
+            "@mapping": "takeshape:local:Asset.ByeAYXdG9"
+          },
+          "company": {
+            "title": "Company",
+            "@mapping": "takeshape:local:Asset.Hy5yhOhp7",
+            "type": "array",
+            "items": {
+              "$ref": "#/shapes/TSRelationship/schema"
+            },
+            "@relationship": {
+              "shapeIds": ["SJDIicDUZ"],
+              "type": "multiple"
+            }
+          },
+          "mimeType": {
+            "type": "string",
+            "title": "MIME type",
+            "@l10n": false,
+            "@mapping": "takeshape:local:Asset.SyCYX_Gq"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "@mapping": "takeshape:local:Asset.By5tQOMc"
+          },
+          "credit": {
+            "type": "object",
+            "title": "Credit",
+            "@mapping": "takeshape:local:Asset.Skn_i_5Ll",
+            "@tag": "draftjs"
+          }
+        },
+        "required": ["filename", "path"]
+      }
+    },
+    "Job": {
+      "id": "rJoobhv8W",
+      "name": "Job",
+      "title": "Job",
+      "model": {
+        "type": "multiple"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "company": {
+            "title": "Company",
+            "@mapping": "takeshape:local:Job.rJgad7TLZ",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["SJDIicDUZ"],
+              "type": "single"
+            }
+          },
+          "hotJob": {
+            "type": "boolean",
+            "default": false,
+            "title": "Hot Job",
+            "@l10n": false,
+            "@mapping": "takeshape:local:Job.H124YyF6X"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Job.BkJDGhw8W"
+          },
+          "body": {
+            "type": "object",
+            "title": "Body",
+            "@mapping": "takeshape:local:Job.rybsZhDU-",
+            "@tag": "draftjs"
+          }
+        },
+        "required": ["title"]
+      }
+    },
+    "Company": {
+      "id": "SJDIicDUZ",
+      "name": "Company",
+      "title": "Company",
+      "model": {
+        "type": "taxonomy"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Company.Hk8NiqwLb"
+          },
+          "logo": {
+            "title": "Logo",
+            "@mapping": "takeshape:local:Company.BkyFrpUcb",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          }
+        },
+        "required": ["name", "logo"]
+      }
+    }
+  },
+  "forms": {
+    "Homepage": {
+      "default": {
+        "properties": {
+          "hero": {
+            "properties": {
+              "heading": {
+                "widget": "singleLineText"
+              },
+              "backgroundImage": {
+                "widget": "image"
+              }
+            },
+            "widget": "object",
+            "order": ["heading", "backgroundImage"]
+          },
+          "featuredJobs": {
+            "widget": "relationship"
+          }
+        },
+        "order": ["hero", "featuredJobs"]
+      }
+    },
+    "SiteSettings": {
+      "default": {
+        "properties": {
+          "siteLogo": {
+            "widget": "image"
+          },
+          "siteTitle": {
+            "widget": "singleLineText"
+          }
+        },
+        "order": ["siteTitle", "siteLogo"]
+      }
+    },
+    "Asset": {
+      "default": {
+        "properties": {
+          "path": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "filename": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "description": {
+            "disabled": true,
+            "widget": "paragraphText"
+          },
+          "caption": {
+            "disabled": true,
+            "widget": "wysiwygSingleLineText"
+          },
+          "uploadStatus": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "company": {
+            "widget": "relationship"
+          },
+          "mimeType": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "title": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "credit": {
+            "disabled": true,
+            "widget": "wysiwygSingleLineText"
+          }
+        },
+        "order": ["title", "description", "caption", "credit", "filename", "path", "mimeType", "uploadStatus", "company"]
+      }
+    },
+    "Job": {
+      "default": {
+        "properties": {
+          "company": {
+            "widget": "relationship"
+          },
+          "hotJob": {
+            "widget": "toggleSwitch"
+          },
+          "title": {
+            "widget": "singleLineText"
+          },
+          "body": {
+            "widget": "wysiwygText"
+          }
+        },
+        "order": ["title", "company", "hotJob", "body"]
+      }
+    },
+    "Company": {
+      "default": {
+        "properties": {
+          "name": {
+            "widget": "singleLineText"
+          },
+          "logo": {
+            "widget": "image"
+          }
+        },
+        "order": ["name", "logo"]
+      }
+    }
+  }
+}
