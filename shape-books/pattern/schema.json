@@ -1,1 +1,1031 @@
-{"contentTypes":{"rJ9bZzk-m":{"schema":{"type":"object","properties":{"title":{"title":"Title","type":"string","key":"SJgZZzJWm","minLength":0}}},"single":false,"name":"genre","taxonomy":true,"title":"Genre","forms":{"default":{"properties":{"title":{"widget":"singleLineText"}},"order":["title"]}}},"rJBYXVyuQ":{"schema":{"type":"object","properties":{"name":{"title":"Name","type":"string","key":"rkZYm41d7","minLength":1}},"required":["name"]},"single":false,"name":"tag","taxonomy":true,"title":"Tag","forms":{"default":{"properties":{"name":{"widget":"singleLineText"}},"order":["name"]}}},"rJoobhv8W":{"schema":{"type":"object","properties":{"body":{"draftjs":true,"title":"Body","type":"object","key":"rybsZhDU-"},"featureImage":{"relationship":{"contentTypeIds":["ASSET"]},"title":"Feature Image","type":"object","key":"BybUznPIW","properties":{"contentTypeId":{"type":"string","enum":["ASSET"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"title":{"title":"Title","type":"string","key":"BkJDGhw8W","minLength":1},"author":{"relationship":{"type":"single","contentTypeIds":["SJDIicDUZ"]},"title":"Author","type":"object","key":"rJgad7TLZ","properties":{"contentTypeId":{"type":"string","enum":["SJDIicDUZ"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"deck":{"title":"Deck","type":"string","key":"HkJzKRDUb","minLength":0},"tags":{"relationship":{"type":"multiple","contentTypeIds":["rJBYXVyuQ"]},"title":"Tags","type":"array","items":{"type":"object","properties":{"contentTypeId":{"type":"string","enum":["rJBYXVyuQ"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"key":"Hkb57EkOQ"}},"required":["title","featureImage"]},"single":false,"name":"post","taxonomy":false,"title":"Post","forms":{"default":{"properties":{"body":{"widget":"wysiwygText"},"featureImage":{"widget":"image"},"title":{"widget":"singleLineText"},"author":{"widget":"relationship"},"deck":{"widget":"paragraphText"},"tags":{"widget":"relationship"}},"order":["title","deck","tags","author","featureImage","body"]}}},"SJDIicDUZ":{"schema":{"type":"object","properties":{"name":{"title":"Name","type":"string","key":"Hk8NiqwLb","minLength":1},"photo":{"relationship":{"contentTypeIds":["ASSET"]},"title":"Photo","type":"object","key":"BkyFrpUcb","properties":{"contentTypeId":{"type":"string","enum":["ASSET"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"biography":{"draftjs":true,"title":"Biography","type":"object","key":"S1tvt0Hq-"}},"required":["name","photo","biography"]},"single":false,"name":"author","taxonomy":true,"title":"Author","forms":{"default":{"properties":{"name":{"widget":"singleLineText"},"photo":{"widget":"image"},"biography":{"widget":"wysiwygText"}},"order":["name","photo","biography"]}}},"H1TFgJdIb":{"schema":{"type":"object","properties":{"title":{"title":"Title","type":"string","key":"BJfmu0OIZ","minLength":0},"featuredBook":{"relationship":{"type":"single","contentTypeIds":["r166qcP8Z"]},"title":"Featured Book","type":"object","key":"r1xPx1OUW","properties":{"contentTypeId":{"type":"string","enum":["r166qcP8Z"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"hero":{"mutable":true,"title":"Hero","type":"object","key":"ry4VnCD8W","properties":{"image":{"relationship":{"contentTypeIds":["ASSET"]},"title":"Image","type":"object","key":"H1vBnAv8-","properties":{"contentTypeId":{"type":"string","enum":["ASSET"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"featuredPost":{"relationship":{"type":"single","relatedName":"heroFeaturedPost","contentTypeIds":["rJoobhv8W"]},"title":"Featured Post","type":"object","key":"SJ1Xo0v8b","properties":{"contentTypeId":{"type":"string","enum":["rJoobhv8W"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]}}}}},"single":true,"name":"homepage","title":"Homepage","forms":{"default":{"properties":{"title":{"widget":"singleLineText"},"featuredBook":{"widget":"relationship"},"hero":{"properties":{"image":{"widget":"image"},"featuredPost":{"widget":"relationship"}},"widget":"object","order":["image","featuredPost"]}},"order":["title","hero","featuredBook"]}}},"Skp0mAuUb":{"schema":{"type":"object","properties":{"siteTitle":{"title":"Site Title","type":"string","key":"SkVAQA_8Z","minLength":0}}},"single":true,"name":"siteSettings","taxonomy":false,"title":"Site Settings","forms":{"default":{"properties":{"siteTitle":{"widget":"singleLineText"}},"order":["siteTitle"]}}},"ASSET":{"single":false,"schema":{"type":"object","properties":{"path":{"title":"Path","type":"string","key":"Hk6FQuz5","builtIn":true,"minLength":1},"filename":{"title":"Filename","type":"string","key":"H1oYQOM9","builtIn":true,"minLength":1},"description":{"title":"Description","type":"string","key":"B1Zsra3fx","builtIn":true},"caption":{"draftjs":true,"title":"Caption","type":"object","key":"SyWVsd98x","builtIn":true},"uploadStatus":{"title":"Upload status","type":"string","enum":["PENDING","COMPLETE"],"key":"ByeAYXdG9","builtIn":true},"mimeType":{"title":"MIME type","type":"string","key":"SyCYX_Gq","builtIn":true},"title":{"title":"Title","type":"string","key":"By5tQOMc","builtIn":true},"authorTag":{"title":"Author Tag","relationship":{"type":"single","contentTypeIds":["SJDIicDUZ"]},"type":"object","key":"SyQiZrgdX","properties":{"contentTypeId":{"type":"string","enum":["SJDIicDUZ"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"credit":{"draftjs":true,"title":"Credit","type":"object","key":"Skn_i_5Ll","builtIn":true}},"required":["filename","path"]},"name":"asset","description":"The built-in TakeShape asset model","taxonomy":false,"title":"Asset","forms":{"default":{"properties":{"path":{"disabled":true,"widget":"singleLineText"},"filename":{"disabled":true,"widget":"singleLineText"},"description":{"disabled":true,"widget":"paragraphText"},"caption":{"disabled":true,"widget":"wysiwygSingleLineText"},"uploadStatus":{"disabled":true,"widget":"singleLineText"},"mimeType":{"disabled":true,"widget":"singleLineText"},"title":{"disabled":true,"widget":"singleLineText"},"authorTag":{"widget":"relationship"},"credit":{"disabled":true,"widget":"wysiwygSingleLineText"}},"order":["title","authorTag","description","caption","credit","filename","path","mimeType","uploadStatus"]}}},"r166qcP8Z":{"schema":{"type":"object","properties":{"author":{"title":"Author","relationship":{"type":"single","relatedName":"authored","contentTypeIds":["SJDIicDUZ"]},"type":"object","key":"BJ7Xn5vLW","properties":{"contentTypeId":{"type":"string","enum":["SJDIicDUZ"]},"id":{"type":"string"}},"required":["contentTypeId","id"]},"coverImage":{"title":"Cover Image","relationship":{"contentTypeIds":["ASSET"]},"type":"object","key":"SymsKiD8W","properties":{"contentTypeId":{"type":"string","enum":["ASSET"]},"id":{"type":"string"}},"required":["contentTypeId","id"]},"genre":{"title":"Genre","relationship":{"type":"single","relatedName":"books","contentTypeIds":["rJ9bZzk-m"]},"type":"object","key":"B1E4ZMkW7","properties":{"contentTypeId":{"type":"string","enum":["rJ9bZzk-m"]},"id":{"type":"string"}},"required":["contentTypeId","id"]},"publishDate":{"format":"date-time","title":"Publish Date","type":"string","key":"BJtYLE5PZ"},"totalPages":{"title":"Total Pages","type":"integer","minimum":1,"key":"HkDXBoP8W"},"title":{"title":"Title","type":"string","key":"B1An5cwLb","minLength":1},"type":{"oneOf":[{"title":"Hardcover","enum":["hardcover"]},{"title":"Paperback","enum":["paperback"]}],"title":"Type","type":"string","key":"BJM2_ovUZ"},"body":{"draftjs":true,"title":"Body","type":"object","key":"BJ4ZHov8-"}},"required":["title","author"]},"single":false,"name":"book","taxonomy":false,"title":"Book","forms":{"default":{"properties":{"author":{"widget":"relationship"},"coverImage":{"widget":"image"},"genre":{"widget":"relationship"},"publishDate":{"widget":"datetime"},"totalPages":{"widget":"number"},"title":{"widget":"singleLineText"},"type":{"widget":"dropdown"},"body":{"widget":"wysiwygText"}},"order":["title","genre","publishDate","coverImage","author","totalPages","type","body"]}}}},"workflows":{},"projectId":"31834003-4c26-4bd0-adaf-646ef8c7983c","version":1,"updated":1536437805814,"defaultLocale":"en","locales":["en"],"created":1499973370801,"apiVersion":"2"}
+{
+  "workflows": {},
+  "apiVersion": "2",
+  "defaultLocale": "en",
+  "locales": ["en"],
+  "projectId": "735f4000-1ff3-4c3f-8095-17b30765c9d5",
+  "version": 1,
+  "schemaVersion": "3",
+  "queries": {
+    "getGenre": {
+      "shape": "Genre",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Genre"
+        }
+      },
+      "description": "Get a Genre by ID",
+      "args": "TSGetArgs<Genre>"
+    },
+    "getGenreList": {
+      "shape": "PaginatedList<Genre>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Genre"
+        }
+      },
+      "description": "Returns a list Genre in natural order.",
+      "args": "TSListArgs<Genre>"
+    },
+    "getTag": {
+      "shape": "Tag",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Tag"
+        }
+      },
+      "description": "Get a Tag by ID",
+      "args": "TSGetArgs<Tag>"
+    },
+    "getTagList": {
+      "shape": "PaginatedList<Tag>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Tag"
+        }
+      },
+      "description": "Returns a list Tag in natural order.",
+      "args": "TSListArgs<Tag>"
+    },
+    "getPost": {
+      "shape": "Post",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Post"
+        }
+      },
+      "description": "Get a Post by ID",
+      "args": "TSGetArgs<Post>"
+    },
+    "getPostList": {
+      "shape": "PaginatedList<Post>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Post"
+        }
+      },
+      "description": "Returns a list Post in natural order.",
+      "args": "TSListArgs<Post>"
+    },
+    "getAuthor": {
+      "shape": "Author",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Author"
+        }
+      },
+      "description": "Get a Author by ID",
+      "args": "TSGetArgs<Author>"
+    },
+    "getAuthorList": {
+      "shape": "PaginatedList<Author>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Author"
+        }
+      },
+      "description": "Returns a list Author in natural order.",
+      "args": "TSListArgs<Author>"
+    },
+    "getHomepage": {
+      "shape": "Homepage",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Homepage"
+        }
+      },
+      "description": "Get a Homepage by ID",
+      "args": "TSGetSingletonArgs<Homepage>"
+    },
+    "getSiteSettings": {
+      "shape": "SiteSettings",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "SiteSettings"
+        }
+      },
+      "description": "Get a SiteSettings by ID",
+      "args": "TSGetSingletonArgs<SiteSettings>"
+    },
+    "getAsset": {
+      "shape": "Asset",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Get a Asset by ID",
+      "args": "TSGetArgs<Asset>"
+    },
+    "getAssetList": {
+      "shape": "PaginatedList<Asset>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Returns a list Asset in natural order.",
+      "args": "TSListArgs<Asset>"
+    },
+    "getBook": {
+      "shape": "Book",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Book"
+        }
+      },
+      "description": "Get a Book by ID",
+      "args": "TSGetArgs<Book>"
+    },
+    "getBookList": {
+      "shape": "PaginatedList<Book>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Book"
+        }
+      },
+      "description": "Returns a list Book in natural order.",
+      "args": "TSListArgs<Book>"
+    }
+  },
+  "mutations": {
+    "updateGenre": {
+      "shape": "UpdateResult<Genre>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Genre"
+        }
+      },
+      "description": "Update Genre",
+      "args": "UpdateArgs<Genre>"
+    },
+    "createGenre": {
+      "shape": "CreateResult<Genre>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Genre"
+        }
+      },
+      "description": "Create Genre",
+      "args": "CreateArgs<Genre>"
+    },
+    "duplicateGenre": {
+      "shape": "DuplicateResult<Genre>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Genre"
+        }
+      },
+      "description": "Duplicate Genre",
+      "args": "DuplicateArgs<Genre>"
+    },
+    "deleteGenre": {
+      "shape": "DeleteResult<Genre>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Genre"
+        }
+      },
+      "description": "Delete Genre",
+      "args": "DeleteArgs<Genre>"
+    },
+    "updateTag": {
+      "shape": "UpdateResult<Tag>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Tag"
+        }
+      },
+      "description": "Update Tag",
+      "args": "UpdateArgs<Tag>"
+    },
+    "createTag": {
+      "shape": "CreateResult<Tag>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Tag"
+        }
+      },
+      "description": "Create Tag",
+      "args": "CreateArgs<Tag>"
+    },
+    "duplicateTag": {
+      "shape": "DuplicateResult<Tag>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Tag"
+        }
+      },
+      "description": "Duplicate Tag",
+      "args": "DuplicateArgs<Tag>"
+    },
+    "deleteTag": {
+      "shape": "DeleteResult<Tag>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Tag"
+        }
+      },
+      "description": "Delete Tag",
+      "args": "DeleteArgs<Tag>"
+    },
+    "updatePost": {
+      "shape": "UpdateResult<Post>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Post"
+        }
+      },
+      "description": "Update Post",
+      "args": "UpdateArgs<Post>"
+    },
+    "createPost": {
+      "shape": "CreateResult<Post>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Post"
+        }
+      },
+      "description": "Create Post",
+      "args": "CreateArgs<Post>"
+    },
+    "duplicatePost": {
+      "shape": "DuplicateResult<Post>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Post"
+        }
+      },
+      "description": "Duplicate Post",
+      "args": "DuplicateArgs<Post>"
+    },
+    "deletePost": {
+      "shape": "DeleteResult<Post>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Post"
+        }
+      },
+      "description": "Delete Post",
+      "args": "DeleteArgs<Post>"
+    },
+    "updateAuthor": {
+      "shape": "UpdateResult<Author>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Author"
+        }
+      },
+      "description": "Update Author",
+      "args": "UpdateArgs<Author>"
+    },
+    "createAuthor": {
+      "shape": "CreateResult<Author>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Author"
+        }
+      },
+      "description": "Create Author",
+      "args": "CreateArgs<Author>"
+    },
+    "duplicateAuthor": {
+      "shape": "DuplicateResult<Author>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Author"
+        }
+      },
+      "description": "Duplicate Author",
+      "args": "DuplicateArgs<Author>"
+    },
+    "deleteAuthor": {
+      "shape": "DeleteResult<Author>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Author"
+        }
+      },
+      "description": "Delete Author",
+      "args": "DeleteArgs<Author>"
+    },
+    "updateHomepage": {
+      "shape": "UpdateResult<Homepage>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Homepage"
+        }
+      },
+      "description": "Update Homepage",
+      "args": "UpdateArgs<Homepage>"
+    },
+    "updateSiteSettings": {
+      "shape": "UpdateResult<SiteSettings>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "SiteSettings"
+        }
+      },
+      "description": "Update SiteSettings",
+      "args": "UpdateArgs<SiteSettings>"
+    },
+    "updateAsset": {
+      "shape": "UpdateResult<Asset>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Update Asset",
+      "args": "UpdateArgs<Asset>"
+    },
+    "createAsset": {
+      "shape": "CreateResult<Asset>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Create Asset",
+      "args": "CreateArgs<Asset>"
+    },
+    "duplicateAsset": {
+      "shape": "DuplicateResult<Asset>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Duplicate Asset",
+      "args": "DuplicateArgs<Asset>"
+    },
+    "deleteAsset": {
+      "shape": "DeleteResult<Asset>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Asset"
+        }
+      },
+      "description": "Delete Asset",
+      "args": "DeleteArgs<Asset>"
+    },
+    "updateBook": {
+      "shape": "UpdateResult<Book>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Book"
+        }
+      },
+      "description": "Update Book",
+      "args": "UpdateArgs<Book>"
+    },
+    "createBook": {
+      "shape": "CreateResult<Book>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Book"
+        }
+      },
+      "description": "Create Book",
+      "args": "CreateArgs<Book>"
+    },
+    "duplicateBook": {
+      "shape": "DuplicateResult<Book>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Book"
+        }
+      },
+      "description": "Duplicate Book",
+      "args": "DuplicateArgs<Book>"
+    },
+    "deleteBook": {
+      "shape": "DeleteResult<Book>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Book"
+        }
+      },
+      "description": "Delete Book",
+      "args": "DeleteArgs<Book>"
+    }
+  },
+  "created": "2017-07-13T19:16:10.801Z",
+  "updated": "2018-09-08T20:16:45.814Z",
+  "shapes": {
+    "Genre": {
+      "id": "rJ9bZzk-m",
+      "name": "Genre",
+      "title": "Genre",
+      "model": {
+        "type": "taxonomy"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 0,
+            "@mapping": "takeshape:local:Genre.SJgZZzJWm"
+          }
+        }
+      }
+    },
+    "Tag": {
+      "id": "rJBYXVyuQ",
+      "name": "Tag",
+      "title": "Tag",
+      "model": {
+        "type": "taxonomy"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Tag.rkZYm41d7"
+          }
+        },
+        "required": ["name"]
+      }
+    },
+    "Post": {
+      "id": "rJoobhv8W",
+      "name": "Post",
+      "title": "Post",
+      "model": {
+        "type": "multiple"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "body": {
+            "type": "object",
+            "title": "Body",
+            "@mapping": "takeshape:local:Post.rybsZhDU-",
+            "@tag": "draftjs"
+          },
+          "featureImage": {
+            "title": "Feature Image",
+            "@mapping": "takeshape:local:Post.BybUznPIW",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Post.BkJDGhw8W"
+          },
+          "author": {
+            "title": "Author",
+            "@mapping": "takeshape:local:Post.rJgad7TLZ",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["SJDIicDUZ"],
+              "type": "single"
+            }
+          },
+          "deck": {
+            "type": "string",
+            "title": "Deck",
+            "minLength": 0,
+            "@mapping": "takeshape:local:Post.HkJzKRDUb"
+          },
+          "tags": {
+            "title": "Tags",
+            "@mapping": "takeshape:local:Post.Hkb57EkOQ",
+            "type": "array",
+            "items": {
+              "$ref": "#/shapes/TSRelationship/schema"
+            },
+            "@relationship": {
+              "shapeIds": ["rJBYXVyuQ"],
+              "type": "multiple"
+            }
+          }
+        },
+        "required": ["title", "featureImage"]
+      }
+    },
+    "Author": {
+      "id": "SJDIicDUZ",
+      "name": "Author",
+      "title": "Author",
+      "model": {
+        "type": "taxonomy"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Author.Hk8NiqwLb"
+          },
+          "photo": {
+            "title": "Photo",
+            "@mapping": "takeshape:local:Author.BkyFrpUcb",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "biography": {
+            "type": "object",
+            "title": "Biography",
+            "@mapping": "takeshape:local:Author.S1tvt0Hq-",
+            "@tag": "draftjs"
+          }
+        },
+        "required": ["name", "photo", "biography"]
+      }
+    },
+    "Homepage": {
+      "id": "H1TFgJdIb",
+      "name": "Homepage",
+      "title": "Homepage",
+      "model": {
+        "type": "single"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 0,
+            "@mapping": "takeshape:local:Homepage.BJfmu0OIZ"
+          },
+          "featuredBook": {
+            "title": "Featured Book",
+            "@mapping": "takeshape:local:Homepage.r1xPx1OUW",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["r166qcP8Z"],
+              "type": "single"
+            }
+          },
+          "hero": {
+            "title": "Hero",
+            "@mapping": "takeshape:local:Homepage.ry4VnCD8W",
+            "$ref": "#/shapes/HomepageHero/schema"
+          }
+        }
+      }
+    },
+    "HomepageHero": {
+      "id": "ry4VnCD8W",
+      "name": "HomepageHero",
+      "title": "Homepage Hero",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "image": {
+            "title": "Image",
+            "@mapping": "takeshape:local:HomepageHero.H1vBnAv8-",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "featuredPost": {
+            "title": "Featured Post",
+            "@mapping": "takeshape:local:HomepageHero.SJ1Xo0v8b",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["rJoobhv8W"],
+              "type": "single",
+              "relatedName": "heroFeaturedPost"
+            }
+          }
+        }
+      }
+    },
+    "SiteSettings": {
+      "id": "Skp0mAuUb",
+      "name": "SiteSettings",
+      "title": "Site Settings",
+      "model": {
+        "type": "single"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "siteTitle": {
+            "type": "string",
+            "title": "Site Title",
+            "minLength": 0,
+            "@mapping": "takeshape:local:SiteSettings.SkVAQA_8Z"
+          }
+        }
+      }
+    },
+    "Asset": {
+      "id": "ASSET",
+      "name": "Asset",
+      "title": "Asset",
+      "model": {
+        "type": "multiple"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "path": {
+            "type": "string",
+            "title": "Path",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Asset.Hk6FQuz5"
+          },
+          "filename": {
+            "type": "string",
+            "title": "Filename",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Asset.H1oYQOM9"
+          },
+          "description": {
+            "type": "string",
+            "title": "Description",
+            "@mapping": "takeshape:local:Asset.B1Zsra3fx"
+          },
+          "caption": {
+            "type": "object",
+            "title": "Caption",
+            "@mapping": "takeshape:local:Asset.SyWVsd98x",
+            "@tag": "draftjs"
+          },
+          "uploadStatus": {
+            "type": "string",
+            "title": "Upload status",
+            "@mapping": "takeshape:local:Asset.ByeAYXdG9"
+          },
+          "mimeType": {
+            "type": "string",
+            "title": "MIME type",
+            "@mapping": "takeshape:local:Asset.SyCYX_Gq"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "@mapping": "takeshape:local:Asset.By5tQOMc"
+          },
+          "authorTag": {
+            "title": "Author Tag",
+            "@mapping": "takeshape:local:Asset.SyQiZrgdX",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["SJDIicDUZ"],
+              "type": "single"
+            }
+          },
+          "credit": {
+            "type": "object",
+            "title": "Credit",
+            "@mapping": "takeshape:local:Asset.Skn_i_5Ll",
+            "@tag": "draftjs"
+          }
+        },
+        "required": ["filename", "path"]
+      }
+    },
+    "Book": {
+      "id": "r166qcP8Z",
+      "name": "Book",
+      "title": "Book",
+      "model": {
+        "type": "multiple"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "author": {
+            "title": "Author",
+            "@mapping": "takeshape:local:Book.BJ7Xn5vLW",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["SJDIicDUZ"],
+              "type": "single",
+              "relatedName": "authored"
+            }
+          },
+          "coverImage": {
+            "title": "Cover Image",
+            "@mapping": "takeshape:local:Book.SymsKiD8W",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "genre": {
+            "title": "Genre",
+            "@mapping": "takeshape:local:Book.B1E4ZMkW7",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["rJ9bZzk-m"],
+              "type": "single",
+              "relatedName": "books"
+            }
+          },
+          "publishDate": {
+            "type": "string",
+            "title": "Publish Date",
+            "format": "date-time",
+            "@mapping": "takeshape:local:Book.BJtYLE5PZ"
+          },
+          "totalPages": {
+            "type": "integer",
+            "title": "Total Pages",
+            "minimum": 1,
+            "@mapping": "takeshape:local:Book.HkDXBoP8W"
+          },
+          "title": {
+            "type": "string",
+            "title": "Title",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Book.B1An5cwLb"
+          },
+          "type": {
+            "type": "string",
+            "title": "Type",
+            "oneOf": [{
+              "title": "Hardcover",
+              "enum": ["hardcover"]
+            }, {
+              "title": "Paperback",
+              "enum": ["paperback"]
+            }],
+            "@mapping": "takeshape:local:Book.BJM2_ovUZ"
+          },
+          "body": {
+            "type": "object",
+            "title": "Body",
+            "@mapping": "takeshape:local:Book.BJ4ZHov8-",
+            "@tag": "draftjs"
+          }
+        },
+        "required": ["title", "author"]
+      }
+    }
+  },
+  "forms": {
+    "Genre": {
+      "default": {
+        "properties": {
+          "title": {
+            "widget": "singleLineText"
+          }
+        },
+        "order": ["title"]
+      }
+    },
+    "Tag": {
+      "default": {
+        "properties": {
+          "name": {
+            "widget": "singleLineText"
+          }
+        },
+        "order": ["name"]
+      }
+    },
+    "Post": {
+      "default": {
+        "properties": {
+          "body": {
+            "widget": "wysiwygText"
+          },
+          "featureImage": {
+            "widget": "image"
+          },
+          "title": {
+            "widget": "singleLineText"
+          },
+          "author": {
+            "widget": "relationship"
+          },
+          "deck": {
+            "widget": "paragraphText"
+          },
+          "tags": {
+            "widget": "relationship"
+          }
+        },
+        "order": ["title", "deck", "tags", "author", "featureImage", "body"]
+      }
+    },
+    "Author": {
+      "default": {
+        "properties": {
+          "name": {
+            "widget": "singleLineText"
+          },
+          "photo": {
+            "widget": "image"
+          },
+          "biography": {
+            "widget": "wysiwygText"
+          }
+        },
+        "order": ["name", "photo", "biography"]
+      }
+    },
+    "Homepage": {
+      "default": {
+        "properties": {
+          "title": {
+            "widget": "singleLineText"
+          },
+          "featuredBook": {
+            "widget": "relationship"
+          },
+          "hero": {
+            "properties": {
+              "image": {
+                "widget": "image"
+              },
+              "featuredPost": {
+                "widget": "relationship"
+              }
+            },
+            "widget": "object",
+            "order": ["image", "featuredPost"]
+          }
+        },
+        "order": ["title", "hero", "featuredBook"]
+      }
+    },
+    "SiteSettings": {
+      "default": {
+        "properties": {
+          "siteTitle": {
+            "widget": "singleLineText"
+          }
+        },
+        "order": ["siteTitle"]
+      }
+    },
+    "Asset": {
+      "default": {
+        "properties": {
+          "path": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "filename": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "description": {
+            "disabled": true,
+            "widget": "paragraphText"
+          },
+          "caption": {
+            "disabled": true,
+            "widget": "wysiwygSingleLineText"
+          },
+          "uploadStatus": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "mimeType": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "title": {
+            "disabled": true,
+            "widget": "singleLineText"
+          },
+          "authorTag": {
+            "widget": "relationship"
+          },
+          "credit": {
+            "disabled": true,
+            "widget": "wysiwygSingleLineText"
+          }
+        },
+        "order": ["title", "authorTag", "description", "caption", "credit", "filename", "path", "mimeType", "uploadStatus"]
+      }
+    },
+    "Book": {
+      "default": {
+        "properties": {
+          "author": {
+            "widget": "relationship"
+          },
+          "coverImage": {
+            "widget": "image"
+          },
+          "genre": {
+            "widget": "relationship"
+          },
+          "publishDate": {
+            "widget": "datetime"
+          },
+          "totalPages": {
+            "widget": "number"
+          },
+          "title": {
+            "widget": "singleLineText"
+          },
+          "type": {
+            "widget": "dropdown"
+          },
+          "body": {
+            "widget": "wysiwygText"
+          }
+        },
+        "order": ["title", "genre", "publishDate", "coverImage", "author", "totalPages", "type", "body"]
+      }
+    }
+  }
+}

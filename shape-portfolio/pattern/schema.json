@@ -1,1 +1,423 @@
-{"contentTypes":{"r10oVxH9X":{"single":false,"schema":{"type":"object","properties":{"name":{"description":"The name of the project","title":"Name","type":"string","key":"Sk-gQxHc7","minLength":1},"description":{"description":"A short story about the project","draftjs":true,"title":"Description","type":"object","key":"rkyXXgB9Q"},"client":{"description":"Clients comission projects","title":"Client","relationship":{"type":"single","contentTypeIds":["r1eX5UY9m"],"relatedName":"projects"},"type":"object","key":"ByeV5IKcm","properties":{"contentTypeId":{"type":"string","enum":["r1eX5UY9m"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"endDate":{"format":"date-time","type":"string","title":"End Date","key":"rJiDVgS5Q"},"startDate":{"format":"date-time","title":"Start Date","type":"string","key":"ryo84lS5m","minLength":1},"coverImage":{"description":"A single image that captures the essence of the project.","title":"Cover Image","relationship":{"contentTypeIds":["ASSET"]},"type":"object","key":"rJtKQgr5X","properties":{"contentTypeId":{"type":"string","enum":["ASSET"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]}},"required":["name","startDate"]},"name":"project","description":"Work that's completed and featured in my portfolio","taxonomy":false,"title":"Project","forms":{"default":{"properties":{"name":{"widget":"singleLineText"},"description":{"widget":"wysiwygText"},"client":{"widget":"relationship"},"endDate":{"instructions":"If it is complete, when did the project end?","widget":"date"},"startDate":{"instructions":"When did the project start?","widget":"date"},"coverImage":{"widget":"image"}},"order":["name","startDate","endDate","coverImage","description","client"]}}},"S1oNHDYc7":{"single":true,"schema":{"type":"object","properties":{"portrait":{"title":"Portrait","relationship":{"contentTypeIds":["ASSET"]},"type":"object","key":"Bkmyrvtcm","properties":{"contentTypeId":{"type":"string","enum":["ASSET"]},"id":{"type":"string"}},"required":["contentTypeId","id"]},"socialProfiles":{"type":"array","title":"Social Profiles","items":{"type":"object","properties":{"profileUrl":{"type":"string","title":"Profile URL","key":"BJ2-BvKcm","minLength":1},"socialNetworkIcon":{"title":"Social Network Icon","relationship":{"contentTypeIds":["ASSET"]},"type":"object","key":"HyRGrDY9Q","properties":{"contentTypeId":{"type":"string","enum":["ASSET"]},"id":{"type":"string"}},"required":["contentTypeId","id"]},"socialNetwork":{"type":"string","title":"Social Network","key":"HklZHvKqQ","minLength":1}},"required":["profileUrl","socialNetwork"]},"key":"rJA1rvY9Q"},"biography":{"type":"object","draftjs":true,"title":"Biography","key":"r1lRVDtqQ"}}},"name":"about","description":"More information about me","taxonomy":false,"title":"About","forms":{"default":{"properties":{"portrait":{"widget":"image"},"socialProfiles":{"properties":{"profileUrl":{"widget":"singleLineText"},"socialNetworkIcon":{"widget":"image"},"socialNetwork":{"widget":"singleLineText"}},"widget":"repeater","order":["profileUrl","socialNetwork","socialNetworkIcon"]},"biography":{"widget":"wysiwygText"}},"order":["biography","portrait","socialProfiles"]}}},"r1eX5UY9m":{"single":false,"schema":{"type":"object","properties":{"name":{"type":"string","title":"Name","key":"r1A-qUYc7","minLength":1},"logo":{"title":"Logo","relationship":{"contentTypeIds":["ASSET"]},"type":"object","key":"SJAx38Y9m","properties":{"contentTypeId":{"type":"string","enum":["ASSET"],"minLength":1},"id":{"type":"string","minLength":1}},"required":["contentTypeId","id"]},"url":{"title":"URL","type":"string","key":"H1Qq6IY9m","minLength":1}},"required":["name","url"]},"name":"client","description":"Clients comission the projects in my portfolio","taxonomy":true,"title":"Client","forms":{"default":{"properties":{"name":{"widget":"singleLineText"},"logo":{"widget":"image"},"url":{"widget":"singleLineText"}},"order":["name","url","logo"]}}}},"workflows":{},"projectId":"11266031-6c03-410f-b5e2-ea210646e043","version":1,"updated":1539122117992,"defaultLocale":"en","locales":["en"],"created":1538747906432,"apiVersion":"2"}
+{
+  "workflows": {},
+  "apiVersion": "2",
+  "defaultLocale": "en",
+  "locales": ["en"],
+  "projectId": "b489676a-9065-4c95-a89e-2f34a4ba6101",
+  "version": 1,
+  "schemaVersion": "3",
+  "queries": {
+    "getProject": {
+      "shape": "Project",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Project"
+        }
+      },
+      "description": "Get a Project by ID",
+      "args": "TSGetArgs<Project>"
+    },
+    "getProjectList": {
+      "shape": "PaginatedList<Project>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Project"
+        }
+      },
+      "description": "Returns a list Project in natural order.",
+      "args": "TSListArgs<Project>"
+    },
+    "getAbout": {
+      "shape": "About",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "About"
+        }
+      },
+      "description": "Get a About by ID",
+      "args": "TSGetSingletonArgs<About>"
+    },
+    "getClient": {
+      "shape": "Client",
+      "resolver": {
+        "name": "takeshape:get",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Client"
+        }
+      },
+      "description": "Get a Client by ID",
+      "args": "TSGetArgs<Client>"
+    },
+    "getClientList": {
+      "shape": "PaginatedList<Client>",
+      "resolver": {
+        "name": "takeshape:list",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Client"
+        }
+      },
+      "description": "Returns a list Client in natural order.",
+      "args": "TSListArgs<Client>"
+    }
+  },
+  "mutations": {
+    "updateProject": {
+      "shape": "UpdateResult<Project>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Project"
+        }
+      },
+      "description": "Update Project",
+      "args": "UpdateArgs<Project>"
+    },
+    "createProject": {
+      "shape": "CreateResult<Project>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Project"
+        }
+      },
+      "description": "Create Project",
+      "args": "CreateArgs<Project>"
+    },
+    "duplicateProject": {
+      "shape": "DuplicateResult<Project>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Project"
+        }
+      },
+      "description": "Duplicate Project",
+      "args": "DuplicateArgs<Project>"
+    },
+    "deleteProject": {
+      "shape": "DeleteResult<Project>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Project"
+        }
+      },
+      "description": "Delete Project",
+      "args": "DeleteArgs<Project>"
+    },
+    "updateAbout": {
+      "shape": "UpdateResult<About>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "About"
+        }
+      },
+      "description": "Update About",
+      "args": "UpdateArgs<About>"
+    },
+    "updateClient": {
+      "shape": "UpdateResult<Client>",
+      "resolver": {
+        "name": "takeshape:update",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Client"
+        }
+      },
+      "description": "Update Client",
+      "args": "UpdateArgs<Client>"
+    },
+    "createClient": {
+      "shape": "CreateResult<Client>",
+      "resolver": {
+        "name": "takeshape:create",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Client"
+        }
+      },
+      "description": "Create Client",
+      "args": "CreateArgs<Client>"
+    },
+    "duplicateClient": {
+      "shape": "DuplicateResult<Client>",
+      "resolver": {
+        "name": "takeshape:duplicate",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Client"
+        }
+      },
+      "description": "Duplicate Client",
+      "args": "DuplicateArgs<Client>"
+    },
+    "deleteClient": {
+      "shape": "DeleteResult<Client>",
+      "resolver": {
+        "name": "takeshape:delete",
+        "service": "takeshape:local",
+        "options": {
+          "model": "Client"
+        }
+      },
+      "description": "Delete Client",
+      "args": "DeleteArgs<Client>"
+    }
+  },
+  "created": "2018-10-05T13:58:26.432Z",
+  "updated": "2018-10-09T21:55:17.992Z",
+  "shapes": {
+    "Project": {
+      "id": "r10oVxH9X",
+      "name": "Project",
+      "title": "Project",
+      "model": {
+        "type": "multiple"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "description": "The name of the project",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Project.Sk-gQxHc7"
+          },
+          "description": {
+            "type": "object",
+            "title": "Description",
+            "description": "A short story about the project",
+            "@mapping": "takeshape:local:Project.rkyXXgB9Q",
+            "@tag": "draftjs"
+          },
+          "client": {
+            "title": "Client",
+            "description": "Clients comission projects",
+            "@mapping": "takeshape:local:Project.ByeV5IKcm",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["r1eX5UY9m"],
+              "type": "single",
+              "relatedName": "projects"
+            }
+          },
+          "endDate": {
+            "type": "string",
+            "title": "End Date",
+            "format": "date-time",
+            "@mapping": "takeshape:local:Project.rJiDVgS5Q"
+          },
+          "startDate": {
+            "type": "string",
+            "title": "Start Date",
+            "format": "date-time",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Project.ryo84lS5m"
+          },
+          "coverImage": {
+            "title": "Cover Image",
+            "description": "A single image that captures the essence of the project.",
+            "@mapping": "takeshape:local:Project.rJtKQgr5X",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          }
+        },
+        "required": ["name", "startDate"]
+      }
+    },
+    "About": {
+      "id": "S1oNHDYc7",
+      "name": "About",
+      "title": "About",
+      "model": {
+        "type": "single"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "portrait": {
+            "title": "Portrait",
+            "@mapping": "takeshape:local:About.Bkmyrvtcm",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "socialProfiles": {
+            "type": "array",
+            "title": "Social Profiles",
+            "items": {
+              "$ref": "#/shapes/AboutSocialProfiles/schema"
+            },
+            "@mapping": "takeshape:local:About.rJA1rvY9Q"
+          },
+          "biography": {
+            "type": "object",
+            "title": "Biography",
+            "@mapping": "takeshape:local:About.r1lRVDtqQ",
+            "@tag": "draftjs"
+          }
+        }
+      }
+    },
+    "AboutSocialProfiles": {
+      "id": "rJA1rvY9Q",
+      "name": "AboutSocialProfiles",
+      "title": "About SocialProfiles",
+      "schema": {
+        "type": "object",
+        "properties": {
+          "profileUrl": {
+            "type": "string",
+            "title": "Profile URL",
+            "minLength": 1,
+            "@mapping": "takeshape:local:AboutSocialProfiles.BJ2-BvKcm"
+          },
+          "socialNetworkIcon": {
+            "title": "Social Network Icon",
+            "@mapping": "takeshape:local:AboutSocialProfiles.HyRGrDY9Q",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "socialNetwork": {
+            "type": "string",
+            "title": "Social Network",
+            "minLength": 1,
+            "@mapping": "takeshape:local:AboutSocialProfiles.HklZHvKqQ"
+          }
+        },
+        "required": ["profileUrl", "socialNetwork"]
+      }
+    },
+    "Client": {
+      "id": "r1eX5UY9m",
+      "name": "Client",
+      "title": "Client",
+      "model": {
+        "type": "taxonomy"
+      },
+      "schema": {
+        "type": "object",
+        "properties": {
+          "name": {
+            "type": "string",
+            "title": "Name",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Client.r1A-qUYc7"
+          },
+          "logo": {
+            "title": "Logo",
+            "@mapping": "takeshape:local:Client.SJAx38Y9m",
+            "$ref": "#/shapes/TSRelationship/schema",
+            "@relationship": {
+              "shapeIds": ["ASSET"],
+              "type": "single"
+            }
+          },
+          "url": {
+            "type": "string",
+            "title": "URL",
+            "minLength": 1,
+            "@mapping": "takeshape:local:Client.H1Qq6IY9m"
+          }
+        },
+        "required": ["name", "url"]
+      }
+    }
+  },
+  "forms": {
+    "Project": {
+      "default": {
+        "properties": {
+          "name": {
+            "widget": "singleLineText"
+          },
+          "description": {
+            "widget": "wysiwygText"
+          },
+          "client": {
+            "widget": "relationship"
+          },
+          "endDate": {
+            "instructions": "If it is complete, when did the project end?",
+            "widget": "date"
+          },
+          "startDate": {
+            "instructions": "When did the project start?",
+            "widget": "date"
+          },
+          "coverImage": {
+            "widget": "image"
+          }
+        },
+        "order": ["name", "startDate", "endDate", "coverImage", "description", "client"]
+      }
+    },
+    "About": {
+      "default": {
+        "properties": {
+          "portrait": {
+            "widget": "image"
+          },
+          "socialProfiles": {
+            "properties": {
+              "profileUrl": {
+                "widget": "singleLineText"
+              },
+              "socialNetworkIcon": {
+                "widget": "image"
+              },
+              "socialNetwork": {
+                "widget": "singleLineText"
+              }
+            },
+            "widget": "repeater",
+            "order": ["profileUrl", "socialNetwork", "socialNetworkIcon"]
+          },
+          "biography": {
+            "widget": "wysiwygText"
+          }
+        },
+        "order": ["biography", "portrait", "socialProfiles"]
+      }
+    },
+    "Client": {
+      "default": {
+        "properties": {
+          "name": {
+            "widget": "singleLineText"
+          },
+          "logo": {
+            "widget": "image"
+          },
+          "url": {
+            "widget": "singleLineText"
+          }
+        },
+        "order": ["name", "url", "logo"]
+      }
+    }
+  }
+}
