@@ -83,7 +83,7 @@ const PostPage = ({data}) => {
   )
 }
 
-export async function unstable_getStaticProps({ params }) {
+export async function getStaticProps({ params }) {
   try {
     const {slug} = params
     const res = await TakeShape.graphql({query: postQuery(slug)})
@@ -101,16 +101,20 @@ export async function unstable_getStaticProps({ params }) {
   }
 }
 
-export async function unstable_getStaticPaths() {
+export async function getStaticPaths() {
   try {
     const res = await TakeShape.graphql({query: postSlugsQuery})
     const json = await res.json()
     if (json.errors) throw json.errors
     const data = json.data
     const posts = data.posts.items
-    return posts.reduce((pages, post) => pages.concat({
-      params: {slug: post.slug}
-    }), [])
+
+	const output = {
+		paths: posts.map(post => ({params: {slug: post.slug}})),
+		fallback: false
+	};
+	console.log(output)
+	return output
   } catch (error) {
     console.error(error)
     return error

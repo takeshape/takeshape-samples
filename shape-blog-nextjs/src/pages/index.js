@@ -93,7 +93,7 @@ export const homePageQuery = `
 	}
 `
 
-export async function unstable_getStaticProps() {
+export async function getStaticProps() {
 	try {
 		const res = await TakeShape.graphql({query: homePageQuery})
 		const json = await res.json()
