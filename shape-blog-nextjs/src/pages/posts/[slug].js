@@ -109,12 +109,10 @@ export async function getStaticPaths() {
     const data = json.data
     const posts = data.posts.items
 
-	const output = {
+	return {
 		paths: posts.map(post => ({params: {slug: post.slug}})),
 		fallback: false
 	};
-	console.log(output)
-	return output
   } catch (error) {
     console.error(error)
     return error

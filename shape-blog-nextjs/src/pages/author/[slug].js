@@ -87,17 +87,14 @@ export async function getStaticPaths() {
   try {
     const res = await TakeShape.graphql({query: authorSlugsQuery})
     const json = await res.json()
-	console.log(json)
     if (json.errors) throw json.errors
     const data = json.data
     const authors = data.authors.items
 
-	const output = {
+	return {
 		paths: authors.map(author => ({params: {slug: author.slug}})),
 		fallback: false
 	};
-	console.log(output)
-	return output
   } catch (error) {
     console.error(error)
     return error
