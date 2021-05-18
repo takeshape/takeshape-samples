@@ -65,7 +65,7 @@ const AuthorPage = ({data}) => {
   )
 }
 
-export async function unstable_getStaticProps({ params }) { 
+export async function getStaticProps({ params }) {
   try {
     const {slug} = params
     const res = await TakeShape.graphql({query: authorQuery(slug)})
@@ -83,16 +83,18 @@ export async function unstable_getStaticProps({ params }) {
   }
 }
 
-export async function unstable_getStaticPaths() {
+export async function getStaticPaths() {
   try {
     const res = await TakeShape.graphql({query: authorSlugsQuery})
     const json = await res.json()
     if (json.errors) throw json.errors
     const data = json.data
     const authors = data.authors.items
-    return authors.reduce((pages, author) => pages.concat({
-      params: {slug: author.slug}
-    }), [])
+
+	return {
+		paths: authors.map(author => ({params: {slug: author.slug}})),
+		fallback: false
+	};
   } catch (error) {
     console.error(error)
     return error

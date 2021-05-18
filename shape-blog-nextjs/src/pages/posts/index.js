@@ -31,7 +31,7 @@ export const postListQuery = `
 `
 
 const PostListPage = (props) => {
-  const { 
+  const {
     data,
   } = props;
   return (
@@ -48,7 +48,7 @@ const PostListPage = (props) => {
   )
 }
 
-export async function unstable_getStaticProps() {
+export async function getStaticProps() {
   try {
     const res = await TakeShape.graphql({query: postListQuery})
     const json = await res.json()
