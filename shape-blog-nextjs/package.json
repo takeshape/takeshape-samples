@@ -8,7 +8,7 @@
     "date-fns": "^2.9.0",
     "dotenv": "^8.2.0",
     "isomorphic-fetch": "^2.2.1",
-    "next": "^9.3.4",
+    "next": "^13.0.2",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
     "takeshape-routing": "^4.86.0"
