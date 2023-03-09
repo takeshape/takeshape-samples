@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@takeshape/cli": "^5.28.0",
-    "browser-sync": "^2.26.12",
+    "browser-sync": "^2.27.10",
     "eslint": "^5.15.3",
     "npm-run-all": "^4.1.5",
     "stylelint": "^9.10.1",
